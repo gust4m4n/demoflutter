@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import '../../widgets/button_x.dart';
-import '../../widgets/container_x.dart';
-import '../../widgets/image_x.dart';
-import '../../widgets/screen_x.dart';
-import '../../widgets/text_button_x.dart';
-import '../../widgets/text_x.dart';
-import '../../widgets/textfield_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_login_controller.dart';
 
 class DemoLoginScreen extends StatelessWidget {
@@ -16,21 +11,19 @@ class DemoLoginScreen extends StatelessWidget {
         init: DemoLoginController(),
         builder: (controller) => ScreenX(
             lightStatusBar: false,
-            bottomPadding: false,
+            topPadding: true,
+            bottomPadding: true,
             bodyView: Scrollbar(
                 child: SingleChildScrollView(
                     child: Column(
               children: <Widget>[
-                Container(
-                  alignment: Alignment.center,
-                  padding: const EdgeInsets.all(10),
-                  child: const ImageX(
-                    url: 'lib/images/ic_appx_logo.png',
-                    width: 128.0,
-                    height: 128.0,
-                  ),
+                SizedBox(height: 24.0),
+                ImageX(
+                  url: 'lib/images/ic_demo_logo.png',
+                  width: 128.0,
+                  height: 128.0,
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 4.0,
                 ),
                 ContainerX(
@@ -39,24 +32,18 @@ class DemoLoginScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const TextX(
+                      TextX(
                         'Username',
-                        color: Color(0xff343a40),
-                        fontSize: 13.0,
-                        fontWeight: FontWeight.normal,
+                        color: ColorX.black,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
-                        maxLines: 1,
                       ),
                       const SizedBox(height: 4.0),
                       TextFieldX(
                         hint: 'Type your username',
                         obscureText: false,
-                        cornerRadius: 8.0,
-                        borderWidth: 1.0,
-                        borderColor: const Color(0xffcfcfcf),
-                        height: 42.0,
                         keyboardType: TextInputType.text,
-                        multiline: false,
                         readOnly: false,
                         controller: controller.txtUsernameController,
                       ),
@@ -69,32 +56,35 @@ class DemoLoginScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const TextX(
+                      TextX(
                         'Password',
-                        color: Color(0xff343a40),
-                        fontSize: 13.0,
-                        fontWeight: FontWeight.normal,
+                        color: ColorX.black,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
-                        maxLines: 1,
                       ),
                       const SizedBox(height: 4.0),
                       TextFieldX(
                         hint: 'Type your password',
                         obscureText: controller.securedPassword,
-                        cornerRadius: 8.0,
-                        borderWidth: 1.0,
-                        borderColor: const Color(0xffcfcfcf),
-                        height: 42.0,
                         keyboardType: TextInputType.text,
-                        multiline: false,
                         readOnly: false,
-                        rightIcon: controller.securedPassword
-                            ? 'lib/images/ic_appx_eye_closed.png'
-                            : 'lib/images/ic_appx_eye_open.png',
+                        rightIcon: ImageX(
+                          faIcon: controller.securedPassword
+                              ? FontAwesomeIcons.eyeSlash
+                              : FontAwesomeIcons.eye,
+                          width: 16.0,
+                          height: 16.0,
+                          fit: BoxFit.contain,
+                        ),
                         rightIconColor: controller.securedPassword
                             ? Colors.grey
                             : const Color(0xff343a40),
-                        rightAction: () {},
+                        rightAction: () {
+                          controller.securedPassword =
+                              !controller.securedPassword;
+                          controller.update();
+                        },
                         controller: controller.txtPasswordController,
                       ),
                     ],
@@ -106,26 +96,25 @@ class DemoLoginScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const TextX(
+                      TextX(
                         'Role',
-                        color: Color(0xff343a40),
-                        fontSize: 13.0,
-                        fontWeight: FontWeight.normal,
+                        color: ColorX.black,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
-                        maxLines: 1,
                       ),
                       const SizedBox(height: 4.0),
                       TextFieldX(
                           hint: 'Select your role...',
                           obscureText: false,
-                          cornerRadius: 8.0,
-                          borderWidth: 1.0,
-                          borderColor: const Color(0xffcfcfcf),
-                          height: 42.0,
                           keyboardType: TextInputType.text,
-                          multiline: false,
                           readOnly: true,
-                          rightIcon: 'lib/images/ic_bio_chevron.png',
+                          rightIcon: ImageX(
+                            faIcon: FontAwesomeIcons.chevronDown,
+                            width: 16.0,
+                            height: 16.0,
+                            fit: BoxFit.contain,
+                          ),
                           rightIconColor: const Color(0xff343a40),
                           rightAction: () {},
                           controller: controller.txtRoleController,
@@ -143,13 +132,23 @@ class DemoLoginScreen extends StatelessWidget {
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        TextButtonX(
-                            title: 'Forgot Password?', onClicked: () {}),
+                        ButtonX(
+                          width: 150.0,
+                          height: 32.0,
+                          title: 'Forgot Password?',
+                          titleColor: ColorX.black,
+                          fontSize: 14.0,
+                          backgroundColor: ColorX.transparent,
+                          onClicked: () {
+                            controller.btnForgotPasswordClicked();
+                          },
+                        ),
+                        SizedBox(height: 16.0),
                         ButtonX(
                           title: 'Sign In',
-                          backgroundColor: Colors.green,
+                          backgroundColor: ColorX.green,
                           onClicked: () {
-                            Get.back();
+                            controller.btnSignInClicked();
                           },
                         )
                       ]),

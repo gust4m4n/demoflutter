@@ -19,7 +19,7 @@ class TextX extends StatelessWidget {
     required this.fontWeight,
     required this.textAlign,
     this.underline = false,
-    required this.maxLines,
+    this.maxLines = 1,
   }) : super(key: key);
 
   @override

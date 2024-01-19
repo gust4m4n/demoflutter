@@ -30,6 +30,7 @@ class DemoImageScreen extends StatelessWidget {
             height: 84.0,
             cornerRadius: 12.0,
             fit: BoxFit.contain,
+            padding: EdgeInsets.all(24.0),
           )),
     );
   }

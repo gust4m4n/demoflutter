@@ -1,3 +1,4 @@
+import 'package:demoflutter/widgets/colors_x.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -29,34 +30,28 @@ class DemoOnboardingScreen extends StatelessWidget {
                         .map((movie) => Column(
                               children: [
                                 Expanded(
-                                  child: Container(
-                                    padding: const EdgeInsets.only(
-                                        left: 16.0,
-                                        right: 16.0,
-                                        top: 16.0,
-                                        bottom: 16.0),
-                                    child: ImageX(
-                                      url: movie.poster,
-                                      width: double.infinity,
-                                      placeholderColor: Colors.transparent,
-                                      cornerRadius: 16.0,
-                                      fit: BoxFit.cover,
-                                    ),
+                                  child: ImageX(
+                                    url: movie.poster,
+                                    width: double.infinity,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
-                                Container(
+                                ContainerX(
                                   width: double.infinity,
-                                  height: 120.0,
+                                  height: 150.0,
                                   padding: const EdgeInsets.only(
-                                      left: 16.0, right: 16.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
+                                      left: 24.0,
+                                      top: 16.0,
+                                      right: 24.0,
+                                      bottom: 16.0),
+                                  child: Center(
+                                      child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       TextX(
                                         movie.title,
-                                        color: Colors.black,
-                                        fontSize: 36.0,
+                                        color: ColorX.black,
+                                        fontSize: 32.0,
                                         fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w700,
                                         textAlign: TextAlign.center,
@@ -66,7 +61,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                       TextX(
                                         DemoFormatVM.currency(
                                             value: movie.revenue),
-                                        color: Colors.black,
+                                        color: ColorX.black,
                                         fontSize: 16.0,
                                         fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w700,
@@ -74,7 +69,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                         maxLines: 2048,
                                       ),
                                     ],
-                                  ),
+                                  )),
                                 ),
                               ],
                             ))
@@ -83,15 +78,15 @@ class DemoOnboardingScreen extends StatelessWidget {
                 ),
                 ContainerX(
                     padding: const EdgeInsets.only(
-                        left: 16.0, top: 16.0, right: 16.0, bottom: 16.0),
+                        left: 24.0, top: 4.0, right: 24.0, bottom: 4.0),
                     child: SmoothPageIndicator(
                       controller: controller.pageController,
                       count: controller.movieListVM.list.length,
                       effect: SlideEffect(
                         dotHeight: 8,
                         dotWidth: 8,
-                        dotColor: const Color(0XFF2A6482).withOpacity(0.2),
-                        activeDotColor: const Color(0XFF2A6482),
+                        dotColor: ColorX.gray.withOpacity(0.2),
+                        activeDotColor: ColorX.gray,
                       ),
                     )),
                 ContainerX(
@@ -99,7 +94,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                         left: 16.0, top: 16.0, right: 16.0, bottom: 16.0),
                     child: ButtonX(
                       title: 'Next',
-                      backgroundColor: Colors.green,
+                      backgroundColor: ColorX.green,
                       onClicked: () {
                         Get.back();
                       },

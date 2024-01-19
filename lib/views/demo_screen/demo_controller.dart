@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
-
-import '../../widgets/demo_sheet.dart';
+import '../../utils/all_utils.dart';
+import '../../widgets/all_widgets.dart';
 
 class DemoController extends GetxController {
   @override
@@ -40,5 +40,34 @@ class DemoController extends GetxController {
           rightBtnTitle: '',
           onRightBtnClicked: () {});
     }
+  }
+
+  btnBottomSheetClicked() {
+    DemoSheet.showMessage(
+        title: LoremIpsumX.tiny(),
+        message: LoremIpsumX.medium(),
+        imageUrl: 'lib/images/ic_demo_logo.png',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: 'Cancel',
+        onRightBtnClicked: () {
+          Get.back();
+        });
+  }
+
+  btnInternetOfflineClicked() {
+    DemoToast.showCustom(
+      widget: appxInternetOfflineWidget(),
+      duration: 0,
+    );
+  }
+
+  btnInternetOnlineClicked() {
+    DemoToast.showCustom(
+      widget: appxInternetOnlineWidget(),
+      duration: 3500,
+    );
   }
 }

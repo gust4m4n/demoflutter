@@ -158,10 +158,11 @@ class ImageX extends StatelessWidget {
   }
 
   Widget imageAwesome(BuildContext context, IconData icon) {
-    return FaIcon(
+    return Center(
+        child: FaIcon(
       icon,
       size: width - (padding.left + padding.right),
       color: color,
-    );
+    ));
   }
 }

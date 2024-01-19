@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'demo_toast.dart';
-import 'button_x.dart';
-import 'container_x.dart';
-import 'text_x.dart';
+import 'all_widgets.dart';
 
 Widget appxInternetOnlineWidget() {
   return ContainerX(
-    backgroundColor: Colors.green,
+    backgroundColor: ColorX.green,
     padding:
         const EdgeInsets.only(left: 16.0, top: 8.0, right: 16.0, bottom: 8.0),
     child: Wrap(

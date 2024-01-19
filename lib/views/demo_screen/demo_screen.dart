@@ -133,10 +133,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Internet Offline',
                                   backgroundColor: ColorX.green,
                                   onClicked: () {
-                                    DemoToast.showCustom(
-                                      widget: appxInternetOfflineWidget(),
-                                      duration: 0,
-                                    );
+                                    controller.btnInternetOfflineClicked();
                                   },
                                 ),
                               ),
@@ -146,10 +143,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Internet Online',
                                   backgroundColor: ColorX.green,
                                   onClicked: () {
-                                    DemoToast.showCustom(
-                                      widget: appxInternetOnlineWidget(),
-                                      duration: 3500,
-                                    );
+                                    controller.btnInternetOnlineClicked();
                                   },
                                 ),
                               ),
@@ -184,18 +178,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'Bottom Sheet',
                                 backgroundColor: ColorX.green,
                                 onClicked: () {
-                                  DemoSheet.showMessage(
-                                      title: LoremIpsumX.tiny(),
-                                      message: LoremIpsumX.medium(),
-                                      imageUrl: 'lib/images/ic_demo_logo.png',
-                                      leftBtnTitle: 'OK',
-                                      onLeftBtnClicked: () {
-                                        Get.back();
-                                      },
-                                      rightBtnTitle: 'Cancel',
-                                      onRightBtnClicked: () {
-                                        Get.back();
-                                      });
+                                  controller.btnBottomSheetClicked();
                                 },
                               )),
                             ],
@@ -261,7 +244,7 @@ class DemoScreen extends StatelessWidget {
                                 onClicked: () {
                                   Get.to(DemoImageScreen(
                                     url:
-                                        'https://cdn1-production-images-kly.akamaized.net/TzpGyF_jZp7a9gkqUISWCUv5rns=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3460285/original/091337500_1621478958-187295737_827239564547710_457669700148175311_n.jpg',
+                                        'https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png',
                                   ));
                                 },
                               )),

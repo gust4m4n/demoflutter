@@ -11,6 +11,5 @@ export 'loading_view.dart';
 export 'navigationbar_x.dart';
 export 'screen_x.dart';
 export 'statusbar_x.dart';
-export 'text_button_x.dart';
 export 'text_x.dart';
 export 'textfield_x.dart';

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'button_x.dart';
-import 'image_x.dart';
-import 'text_x.dart';
+import 'all_widgets.dart';
 
 class DemoSheet {
   static Future<T?> show<T>(
@@ -155,7 +153,7 @@ class DemoSheet {
                 child: Expanded(
                   child: ButtonX(
                     title: leftBtnTitle,
-                    backgroundColor: Colors.red,
+                    backgroundColor: ColorX.green,
                     onClicked: onLeftBtnClicked,
                   ),
                 ),
@@ -168,7 +166,7 @@ class DemoSheet {
                 child: Expanded(
                   child: ButtonX(
                     title: rightBtnTitle,
-                    backgroundColor: Colors.black,
+                    backgroundColor: ColorX.red,
                     onClicked: onRightBtnClicked ?? () => {},
                   ),
                 ),

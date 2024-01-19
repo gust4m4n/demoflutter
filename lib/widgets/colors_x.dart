@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class ColorX {
   static const Color blue = Color(0xff007bff);
   static const Color teal = Color(0xff17a2b8);
@@ -8,4 +10,5 @@ class ColorX {
   static const Color red = Color(0xffdc3545);
   static const Color black = Color(0xff343a40);
   static const Color gray = Color(0xff6c757d);
+  static const Color transparent = Colors.transparent;
 }

@@ -11,4 +11,14 @@ class DemoLoginController extends GetxController {
   void onReady() {
     super.onReady();
   }
+
+  btnForgotPasswordClicked() {
+    FocusManager.instance.primaryFocus?.unfocus();
+    Get.back();
+  }
+
+  btnSignInClicked() {
+    FocusManager.instance.primaryFocus?.unfocus();
+    Get.back();
+  }
 }

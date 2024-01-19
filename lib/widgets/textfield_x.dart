@@ -1,8 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'container_x.dart';
-import 'image_x.dart';
-import 'text_x.dart';
+import 'all_widgets.dart';
 
 class TextFieldX extends StatelessWidget {
   final String hint;
@@ -14,7 +12,7 @@ class TextFieldX extends StatelessWidget {
   final TextInputType keyboardType;
   final bool multiline;
   final bool readOnly;
-  final String? rightIcon;
+  final ImageX? rightIcon;
   final Color? rightIconColor;
   final GestureTapCallback? rightAction;
   final TextEditingController? controller;
@@ -28,12 +26,12 @@ class TextFieldX extends StatelessWidget {
     Key? key,
     required this.hint,
     required this.obscureText,
-    required this.cornerRadius,
-    required this.borderWidth,
-    required this.borderColor,
-    required this.height,
+    this.cornerRadius = 8.0,
+    this.borderWidth = 1.0,
+    this.borderColor = ColorX.gray,
+    this.height = 48.0,
     required this.keyboardType,
-    required this.multiline,
+    this.multiline = false,
     required this.readOnly,
     this.rightIcon,
     this.rightIconColor,
@@ -79,18 +77,7 @@ class TextFieldX extends StatelessWidget {
           ),
           child: InkWell(
             onTap: () => rightAction != null ? rightAction!() : null,
-            child: ImageX(
-              url: (rightIcon != null && rightIcon!.isNotEmpty)
-                  ? rightIcon!
-                  : '',
-              width: double.infinity,
-              height: double.infinity,
-              color: (rightIcon != null && rightIcon!.isNotEmpty)
-                  ? rightIconColor!
-                  : Colors.transparent,
-              fit: BoxFit.contain,
-              padding: const EdgeInsets.all(8.0),
-            ),
+            child: rightIcon,
           ),
         ),
       ),
@@ -119,18 +106,7 @@ class TextFieldX extends StatelessWidget {
               child: ContainerX(
                 width: 38.0 - (borderWidth * 1),
                 height: height - (borderWidth * 2),
-                child: ImageX(
-                  url: (rightIcon != null && rightIcon!.isNotEmpty)
-                      ? rightIcon!
-                      : '',
-                  width: double.infinity,
-                  height: double.infinity,
-                  color: (rightIcon != null && rightIcon!.isNotEmpty)
-                      ? rightIconColor!
-                      : Colors.transparent,
-                  fit: BoxFit.contain,
-                  padding: const EdgeInsets.all(8.0),
-                ),
+                child: rightIcon,
               ),
               onSelected: (value) {
                 dropdownSelected != null
@@ -151,7 +127,7 @@ class TextFieldX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerX(
-        backgroundColor: (rightIcon != null && rightIcon!.isNotEmpty)
+        backgroundColor: (rightIcon != null)
             ? Colors.white
             : readOnly == false
                 ? Colors.white
@@ -182,7 +158,7 @@ class TextFieldX extends StatelessWidget {
                   ? 1
                   : multiline
                       ? 8
-                      : null,
+                      : 1,
               readOnly: readOnly,
               decoration: InputDecoration(
                 isDense: true,
@@ -194,13 +170,11 @@ class TextFieldX extends StatelessWidget {
             ),
           ),
           Visibility(
-            visible:
-                (rightIcon != null && rightIcon!.isNotEmpty) ? true : false,
+            visible: (rightIcon != null) ? true : false,
             child: const SizedBox(width: 4.0),
           ),
           Visibility(
-            visible:
-                (rightIcon != null && rightIcon!.isNotEmpty) ? true : false,
+            visible: (rightIcon != null) ? true : false,
             child: (dropdownList != null && dropdownList!.isNotEmpty)
                 ? rightContainerDropdown(context)
                 : rightContainerButton(context),

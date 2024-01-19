@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
@@ -20,7 +23,7 @@ class DemoController extends GetxController {
       source: ImageSource.gallery,
     );
     if (pickedFile != null) {
-      Share.shareFiles([pickedFile.path]);
+      Share.shareXFiles([pickedFile]);
     }
   }
 
@@ -30,7 +33,7 @@ class DemoController extends GetxController {
       source: ImageSource.gallery,
     );
     if (pickedFile != null) {
-      DemoSheet.showMessage(
+      SheetX.showMessage(
           title: 'Image Picker',
           message: pickedFile.path,
           leftBtnTitle: 'OK',
@@ -43,7 +46,7 @@ class DemoController extends GetxController {
   }
 
   btnBottomSheetClicked() {
-    DemoSheet.showMessage(
+    SheetX.showMessage(
         title: LoremIpsumX.tiny(),
         message: LoremIpsumX.medium(),
         imageUrl: 'lib/images/ic_demo_logo.png',
@@ -58,16 +61,27 @@ class DemoController extends GetxController {
   }
 
   btnInternetOfflineClicked() {
-    DemoToast.showCustom(
+    ToastX.showCustom(
       widget: appxInternetOfflineWidget(),
       duration: 0,
     );
   }
 
   btnInternetOnlineClicked() {
-    DemoToast.showCustom(
+    ToastX.showCustom(
       widget: appxInternetOnlineWidget(),
       duration: 3500,
     );
+  }
+
+  btnLoadingClicked() {
+    Get.loading();
+    Timer(Duration(seconds: 5), () {
+      Get.back();
+    });
+  }
+
+  btnToastClicked() {
+    Fluttertoast.showToast(msg: 'Hello world!');
   }
 }

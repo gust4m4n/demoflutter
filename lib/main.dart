@@ -59,12 +59,12 @@ Future<void> main() async {
   ReachabilityX.startListening(handler: (connected) {
     /*
     if (connected == true) {      
-      DemoToast.showCustom(
+      SheetX.showCustom(
         widget: appxInternetOnlineWidget(),
         duration: 3500,
       );
     } else {
-      DemoToast.showCustom(
+      SheetX.showCustom(
         widget: appxInternetOfflineWidget(),
         duration: 0,
       );

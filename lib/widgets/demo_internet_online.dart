@@ -28,7 +28,7 @@ Widget appxInternetOnlineWidget() {
             width: 50.0,
             height: 32.0,
             onClicked: () async {
-              await DemoToast.dismissCustom();
+              await ToastX.dismissCustom();
             },
           )
         ]),

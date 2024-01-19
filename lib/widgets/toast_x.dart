@@ -1,30 +1,31 @@
 import 'package:flash/flash.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-class DemoToast {
+class ToastX {
   static FlashController? controller;
 
   static show({required String message}) {
-//    Fluttertoast.showToast(msg: message);
+    Fluttertoast.showToast(msg: message);
   }
 
   static showCustom(
       {required Widget widget,
       required int duration,
       bool force = true}) async {
-    if (DemoToast.controller != null) {
+    if (ToastX.controller != null) {
       if (force == true) {
-        await DemoToast.dismissCustom();
+        await ToastX.dismissCustom();
       } else {
         return;
       }
     }
-    DemoToast.controller = await showFlash(
+    ToastX.controller = await showFlash(
         context: Get.context!,
         duration: duration == 0 ? null : Duration(milliseconds: duration),
         builder: (context, controller) {
-          DemoToast.controller = controller;
+          ToastX.controller = controller;
           return FlashBar(
             shadowColor: Colors.transparent,
             backgroundColor: Colors.transparent,
@@ -36,11 +37,11 @@ class DemoToast {
             content: widget,
           );
         });
-    DemoToast.controller = null;
+    ToastX.controller = null;
   }
 
   static dismissCustom() async {
-    await DemoToast.controller?.dismiss();
-    DemoToast.controller = null;
+    await ToastX.controller?.dismiss();
+    ToastX.controller = null;
   }
 }

@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'all_widgets.dart';
 
-class DemoSheet {
+class SheetX {
   static Future<T?> show<T>(
       {required Color backgroundColor,
       required double cornerRadius,
@@ -47,7 +47,7 @@ class DemoSheet {
       required bool avoidingKeyboard,
       required Widget widget,
       bool autoClose = true}) {
-    return DemoSheet.show(
+    return SheetX.show(
         backgroundColor: backgroundColor,
         cornerRadius: cornerRadius,
         avoidingKeyboard: avoidingKeyboard,
@@ -73,7 +73,7 @@ class DemoSheet {
       required Widget contentWidget,
       required Widget footerWidget,
       bool autoClose = true}) {
-    return DemoSheet.showWithGrip(
+    return SheetX.showWithGrip(
         backgroundColor: Colors.white,
         cornerRadius: 24.0,
         avoidingKeyboard: avoidingKeyboard,
@@ -103,7 +103,7 @@ class DemoSheet {
       String rightBtnTitle = '',
       VoidCallback? onRightBtnClicked,
       bool autoClose = true}) {
-    return DemoSheet.showContent(
+    return SheetX.showContent(
         backgroundColor: Colors.white,
         cornerRadius: 24.0,
         avoidingKeyboard: false,
@@ -186,7 +186,7 @@ class DemoSheet {
       String rightBtnTitle = '',
       VoidCallback? onRightBtnClicked,
       bool autoClose = true}) {
-    return DemoSheet.showContent(
+    return SheetX.showContent(
         backgroundColor: Colors.white,
         cornerRadius: 24.0,
         avoidingKeyboard: false,

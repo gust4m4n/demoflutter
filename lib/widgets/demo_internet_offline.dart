@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'all_widgets.dart';
+import 'toast_x.dart';
 
 Widget appxInternetOfflineWidget() {
   return ContainerX(
@@ -28,7 +29,7 @@ Widget appxInternetOfflineWidget() {
             width: 50.0,
             height: 32.0,
             onClicked: () async {
-              await DemoToast.dismissCustom();
+              await ToastX.dismissCustom();
             },
           )
         ]),

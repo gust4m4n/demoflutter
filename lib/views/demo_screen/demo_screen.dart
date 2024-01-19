@@ -1,17 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../utils/aes_utils.dart';
-import '../../utils/base64_utils.dart';
-import '../../utils/crc_utils.dart';
-import '../../utils/hex_utils.dart';
-import '../../utils/lorem_ipsum_x.dart';
-import '../../utils/md5_utils.dart';
-import '../../utils/sha_utils.dart';
-import '../../utils/utf8_utils.dart';
-import '../../utils/xor_utils.dart';
+import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../../utils/logger_x.dart';
 import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import '../demo_drawer_screen/demo_drawer_screen.dart';
 import '../demo_gridview_screen/demo_gridview_screen.dart';
@@ -106,7 +97,9 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'Toast',
                                   backgroundColor: ColorX.green,
-                                  onClicked: () {},
+                                  onClicked: () {
+                                    controller.btnToastClicked();
+                                  },
                                 ),
                               ),
                               const SizedBox(width: 8.0),
@@ -158,7 +151,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'Dialog',
                                 backgroundColor: ColorX.green,
                                 onClicked: () {
-                                  DemoDialog.showMessage(
+                                  SheetX.showMessage(
                                       title: LoremIpsumX.tiny(),
                                       message: LoremIpsumX.medium(),
                                       imageUrl: 'lib/images/ic_demo_logo.png',
@@ -179,6 +172,20 @@ class DemoScreen extends StatelessWidget {
                                 backgroundColor: ColorX.green,
                                 onClicked: () {
                                   controller.btnBottomSheetClicked();
+                                },
+                              )),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'Loading',
+                                backgroundColor: ColorX.green,
+                                onClicked: () {
+                                  controller.btnLoadingClicked();
                                 },
                               )),
                             ],
@@ -456,7 +463,7 @@ class DemoScreen extends StatelessWidget {
                                         Utf8Utils.encode(plain));
                                     var decoded = Base64Utils.decode(encoded);
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'Base64',
                                         message:
                                             'plain: $plain\nencoded: $encoded\ndecoded: ${Utf8Utils.decode(decoded)}',
@@ -480,7 +487,7 @@ class DemoScreen extends StatelessWidget {
                                     final digest = Md5Utils.convert(
                                         Utf8Utils.encode(plain));
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'MD5',
                                         message:
                                             'plain: $plain\ndigest: ${HexUtils.encode(digest)}',
@@ -509,7 +516,7 @@ class DemoScreen extends StatelessWidget {
                                     final digest = ShaUtils.convert(
                                         Utf8Utils.encode(plain));
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'SHA',
                                         message:
                                             'plain: $plain\ndigest: ${HexUtils.encode(digest)}',
@@ -548,7 +555,7 @@ class DemoScreen extends StatelessWidget {
                                     LoggerX.log(
                                         '[AES] decrypted: ${Utf8Utils.decode(decrypted)}\n');
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'AES',
                                         message:
                                             'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: ${Utf8Utils.decode(decrypted)}',
@@ -583,7 +590,7 @@ class DemoScreen extends StatelessWidget {
                                     final decrypted = XorUtils.decrypt(
                                         encrypted, Utf8Utils.encode(key));
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'XOR',
                                         message:
                                             'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: $decrypted',
@@ -607,7 +614,7 @@ class DemoScreen extends StatelessWidget {
                                     final value = CrcUtils.convert(
                                         Utf8Utils.encode(plain));
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'CRC',
                                         message: 'plain: $plain\nCRC: $value',
                                         leftBtnTitle: 'OK',
@@ -636,7 +643,7 @@ class DemoScreen extends StatelessWidget {
                                         Utf8Utils.encode(plain));
                                     final decoded = HexUtils.decode(encoded);
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'HEX',
                                         message:
                                             'plain: $plain\nencoded: $encoded\ndecoded: ${Utf8Utils.decode(decoded)}',
@@ -662,7 +669,7 @@ class DemoScreen extends StatelessWidget {
                                     final decrypted =
                                         DemoSecurityVM.doubleDecrypt(encrypted);
 
-                                    DemoSheet.showMessage(
+                                    SheetX.showMessage(
                                         title: 'DoubleEncrypt',
                                         message:
                                             'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: ${Utf8Utils.decode(decrypted)}',

@@ -8,7 +8,7 @@ import 'utils/reachability_x.dart';
 import 'viewmodels/demo_preferences_vm.dart';
 import 'viewmodels/demo_session_vm.dart';
 import 'views/demo_screen/demo_screen.dart';
-import 'widgets/container_x.dart';
+import 'widgets/all_widgets.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -57,18 +57,17 @@ Future<void> main() async {
   });
 
   ReachabilityX.startListening(handler: (connected) {
-    /*
-    if (connected == true) {      
-      SheetX.showCustom(
-        widget: demoInternetOnlineWidget(),
+    if (connected == true) {
+      ToastX.showCustom(
+        widget: InternetOfflineToast(),
         duration: 3500,
       );
     } else {
-      SheetX.showCustom(
-        widget: demoInternetOfflineWidget(),
+      ToastX.showCustom(
+        widget: InternetOnlineToast(),
         duration: 0,
       );
-    } */
+    }
   });
 
 /*

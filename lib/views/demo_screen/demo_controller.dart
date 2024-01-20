@@ -62,14 +62,14 @@ class DemoController extends GetxController {
 
   btnInternetOfflineClicked() {
     ToastX.showCustom(
-      widget: demoInternetOfflineWidget(),
+      widget: InternetOfflineToast(),
       duration: 0,
     );
   }
 
   btnInternetOnlineClicked() {
     ToastX.showCustom(
-      widget: demoInternetOnlineWidget(),
+      widget: InternetOnlineToast(),
       duration: 3500,
     );
   }

@@ -5,7 +5,7 @@
     <item
         android:width="240dp"
         android:height="240dp"
-        android:drawable="@drawable/ic_appx_launch"
+        android:drawable="@drawable/ic_demo_launch"
         android:gravity="center" />
 
 </layer-list>

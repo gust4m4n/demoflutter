@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'all_widgets.dart';
-import 'toast_x.dart';
 
-Widget appxInternetOfflineWidget() {
+Widget demoInternetOfflineWidget() {
   return ContainerX(
     backgroundColor: ColorX.red,
     padding:

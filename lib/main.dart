@@ -60,12 +60,12 @@ Future<void> main() async {
     /*
     if (connected == true) {      
       SheetX.showCustom(
-        widget: appxInternetOnlineWidget(),
+        widget: demoInternetOnlineWidget(),
         duration: 3500,
       );
     } else {
       SheetX.showCustom(
-        widget: appxInternetOfflineWidget(),
+        widget: demoInternetOfflineWidget(),
         duration: 0,
       );
     } */

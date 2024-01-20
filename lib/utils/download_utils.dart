@@ -5,7 +5,7 @@ import 'package:path/path.dart' as path;
 import 'package:http/http.dart' as http;
 
 Future<String> downloadFile(String url, String filename, String dirName) async {
-  LoggerX.log('[APPX] Downloading $url');
+  LoggerX.log('[DEMO] Downloading $url');
   final response = await http.get(Uri.parse(url));
   final docDir = await path_provider.getApplicationDocumentsDirectory();
   var dir = Directory('${docDir.path}/');
@@ -20,6 +20,6 @@ Future<String> downloadFile(String url, String filename, String dirName) async {
   final localPath = path.join(dir.path, fname);
   final imageFile = File(localPath);
   await imageFile.writeAsBytes(response.bodyBytes);
-  LoggerX.log('[APPX] Saved to $localPath');
+  LoggerX.log('[DEMO] Saved to $localPath');
   return localPath;
 }

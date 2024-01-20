@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'all_widgets.dart';
 
-Widget appxInternetOnlineWidget() {
+Widget demoInternetOnlineWidget() {
   return ContainerX(
     backgroundColor: ColorX.green,
     padding:

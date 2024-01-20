@@ -5,7 +5,6 @@ import 'demo_drawer.dart';
 import 'demo_drawer_controller.dart';
 
 class DemoDrawerScreen extends StatelessWidget {
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey(); // Create a key
   DemoDrawerScreen({Key? key}) : super(key: key);
 
   backAction() {
@@ -17,20 +16,20 @@ class DemoDrawerScreen extends StatelessWidget {
     return GetBuilder<DemoDrawerController>(
       init: DemoDrawerController(),
       builder: (controller) => ScreenX(
-        scaffoldKey: _scaffoldKey,
+        scaffoldKey: controller.scaffoldKey,
         drawer: DemoDrawer(),
         lightStatusBar: true,
         headerView: NavigationBarX(
           title: 'Drawer',
           leftBtn: ImageX(
-            faIcon: FontAwesomeIcons.arrowLeft,
+            faIcon: FontAwesomeIcons.bars,
             width: 20.0,
             height: 20.0,
             color: Colors.white,
             fit: BoxFit.contain,
           ),
           leftAction: () {
-            Get.back();
+            controller.openDrawer();
           },
         ),
         bottomPadding: false,

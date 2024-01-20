@@ -1,13 +1,16 @@
 import 'package:flash/flash.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import 'all_widgets.dart';
 
 class ToastX {
   static FlashController? controller;
 
   static show({required String message}) {
-    Fluttertoast.showToast(msg: message);
+    ToastX.showCustom(
+      widget: BasicToast(msg: message),
+      duration: 4000,
+    );
   }
 
   static showCustom(
@@ -43,5 +46,35 @@ class ToastX {
   static dismissCustom() async {
     await ToastX.controller?.dismiss();
     ToastX.controller = null;
+  }
+}
+
+class BasicToast extends StatelessWidget {
+  final String msg;
+  BasicToast({required this.msg});
+
+  @override
+  Widget build(BuildContext context) {
+    return ContainerX(
+      backgroundColor: ColorX.transparent,
+      padding: EdgeInsets.all(24.0),
+      child: Center(
+        child: ContainerX(
+          backgroundColor: ColorX.black.withOpacity(0.85),
+          padding: EdgeInsets.all(16.0),
+          cornerRadius: 16.0,
+          child: Wrap(children: [
+            TextX(
+              msg,
+              color: Colors.white,
+              fontSize: 15.0,
+              fontWeight: FontWeight.w500,
+              textAlign: TextAlign.center,
+              maxLines: 16,
+            ),
+          ]),
+        ),
+      ),
+    );
   }
 }

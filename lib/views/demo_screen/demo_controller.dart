@@ -1,6 +1,4 @@
 import 'dart:async';
-
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
@@ -70,7 +68,7 @@ class DemoController extends GetxController {
   btnInternetOnlineClicked() {
     ToastX.showCustom(
       widget: InternetOnlineToast(),
-      duration: 3500,
+      duration: 4000,
     );
   }
 
@@ -82,6 +80,6 @@ class DemoController extends GetxController {
   }
 
   btnToastClicked() {
-    Fluttertoast.showToast(msg: 'Hello world!');
+    ToastX.show(message: LoremIpsumX.medium());
   }
 }

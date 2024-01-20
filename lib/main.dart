@@ -58,12 +58,12 @@ Future<void> main() async {
 
   ReachabilityX.startListening(handler: (connected) {
     if (connected == true) {
-      ToastX.showCustom(
+      ToastX.snackBarCustom(
         widget: InternetOfflineToast(),
         duration: 3500,
       );
     } else {
-      ToastX.showCustom(
+      ToastX.snackBarCustom(
         widget: InternetOnlineToast(),
         duration: 0,
       );

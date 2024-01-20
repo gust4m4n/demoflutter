@@ -108,10 +108,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'SnackBar',
                                   backgroundColor: ColorX.green,
                                   onClicked: () {
-                                    ScaffoldMessenger.of(Get.context!)
-                                        .showSnackBar(const SnackBar(
-                                            content: Text(
-                                                "Hello world! A snackbar from Flutter!")));
+                                    controller.btnSnackBarClicked();
                                   },
                                 ),
                               ),

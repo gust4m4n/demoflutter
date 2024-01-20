@@ -6,14 +6,21 @@ import 'all_widgets.dart';
 class ToastX {
   static FlashController? controller;
 
-  static show({required String message}) {
-    ToastX.showCustom(
-      widget: BasicToast(msg: message),
+  static show({required String msg}) {
+    ToastX.snackBarCustom(
+      widget: BasicToast(msg: msg),
       duration: 4000,
     );
   }
 
-  static showCustom(
+  static snackBar({required String msg}) {
+    ToastX.snackBarCustom(
+      widget: BasicSnackBar(msg: msg),
+      duration: 4000,
+    );
+  }
+
+  static snackBarCustom(
       {required Widget widget,
       required int duration,
       bool force = true}) async {
@@ -57,7 +64,7 @@ class BasicToast extends StatelessWidget {
   Widget build(BuildContext context) {
     return ContainerX(
       backgroundColor: ColorX.transparent,
-      padding: EdgeInsets.all(24.0),
+      padding: EdgeInsets.all(16.0),
       child: Center(
         child: ContainerX(
           backgroundColor: ColorX.black.withOpacity(0.85),
@@ -75,6 +82,29 @@ class BasicToast extends StatelessWidget {
           ]),
         ),
       ),
+    );
+  }
+}
+
+class BasicSnackBar extends StatelessWidget {
+  final String msg;
+  BasicSnackBar({required this.msg});
+
+  @override
+  Widget build(BuildContext context) {
+    return ContainerX(
+      backgroundColor: ColorX.black.withOpacity(0.85),
+      padding: EdgeInsets.all(16.0),
+      child: Wrap(children: [
+        TextX(
+          msg,
+          color: Colors.white,
+          fontSize: 15.0,
+          fontWeight: FontWeight.w500,
+          textAlign: TextAlign.start,
+          maxLines: 16,
+        ),
+      ]),
     );
   }
 }

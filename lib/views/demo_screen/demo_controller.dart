@@ -59,14 +59,14 @@ class DemoController extends GetxController {
   }
 
   btnInternetOfflineClicked() {
-    ToastX.showCustom(
+    ToastX.snackBarCustom(
       widget: InternetOfflineToast(),
       duration: 0,
     );
   }
 
   btnInternetOnlineClicked() {
-    ToastX.showCustom(
+    ToastX.snackBarCustom(
       widget: InternetOnlineToast(),
       duration: 4000,
     );
@@ -80,6 +80,10 @@ class DemoController extends GetxController {
   }
 
   btnToastClicked() {
-    ToastX.show(message: LoremIpsumX.medium());
+    ToastX.show(msg: LoremIpsumX.medium());
+  }
+
+  btnSnackBarClicked() {
+    ToastX.snackBar(msg: LoremIpsumX.medium());
   }
 }

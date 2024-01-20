@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../widgets/navigationbar_x.dart';
-import '../../widgets/screen_x.dart';
-import '../../widgets/text_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_tabbar_controller.dart';
 
 class DemoTabBarScreen extends StatelessWidget {
@@ -15,8 +13,13 @@ class DemoTabBarScreen extends StatelessWidget {
         builder: (controller) => ScreenX(
               headerView: NavigationBarX(
                 title: 'TabBar',
-                leftIcon: 'lib/images/ic_demo_back.png',
-                leftIconColor: Colors.white,
+                leftBtn: ImageX(
+                  faIcon: FontAwesomeIcons.arrowLeft,
+                  width: 20.0,
+                  height: 20.0,
+                  color: Colors.white,
+                  fit: BoxFit.contain,
+                ),
                 leftAction: () {
                   Get.back();
                 },

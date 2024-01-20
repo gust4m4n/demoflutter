@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../widgets/navigationbar_x.dart';
-import '../../widgets/screen_x.dart';
-import '../../widgets/text_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_drawer.dart';
 import 'demo_drawer_controller.dart';
 
@@ -24,8 +22,13 @@ class DemoDrawerScreen extends StatelessWidget {
         lightStatusBar: true,
         headerView: NavigationBarX(
           title: 'Drawer',
-          leftIcon: 'lib/images/ic_demo_back.png',
-          leftIconColor: Colors.white,
+          leftBtn: ImageX(
+            faIcon: FontAwesomeIcons.arrowLeft,
+            width: 20.0,
+            height: 20.0,
+            color: Colors.white,
+            fit: BoxFit.contain,
+          ),
           leftAction: () {
             Get.back();
           },

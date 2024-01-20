@@ -11,3 +11,4 @@ export 'text_x.dart';
 export 'textfield_x.dart';
 export 'get+loading.dart';
 export 'toast_x.dart';
+export 'package:font_awesome_flutter/font_awesome_flutter.dart';

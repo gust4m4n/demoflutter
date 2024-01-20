@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'all_widgets.dart';
 
 class ImageX extends StatelessWidget {
   final String url;
@@ -158,11 +159,16 @@ class ImageX extends StatelessWidget {
   }
 
   Widget imageAwesome(BuildContext context, IconData icon) {
-    return Center(
-        child: FaIcon(
-      icon,
-      size: width - (padding.left + padding.right),
-      color: color,
-    ));
+    return ContainerX(
+        width: width,
+        height: height,
+        child: Center(
+            child: FaIcon(
+          icon,
+          size: width < height
+              ? (width - (padding.left + padding.right))
+              : (height - (padding.top + padding.bottom)),
+          color: color,
+        )));
   }
 }

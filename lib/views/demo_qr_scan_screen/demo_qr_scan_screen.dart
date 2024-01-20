@@ -15,8 +15,13 @@ class DemoQRScanScreen extends StatelessWidget {
             lightStatusBar: true,
             headerView: NavigationBarX(
               title: 'QR Scan',
-              leftIcon: 'lib/images/ic_demo_back.png',
-              leftIconColor: Colors.white,
+              leftBtn: ImageX(
+                faIcon: FontAwesomeIcons.arrowLeft,
+                width: 20.0,
+                height: 20.0,
+                color: Colors.white,
+                fit: BoxFit.contain,
+              ),
               leftAction: () {
                 Get.back();
               },

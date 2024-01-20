@@ -4,19 +4,15 @@ import 'all_widgets.dart';
 
 class NavigationBarX extends StatelessWidget {
   final String? title;
-  final String? leftIcon;
-  final Color? leftIconColor;
+  final Widget? leftBtn;
   final GestureTapCallback? leftAction;
-  final String? rightIcon;
-  final Color? rightIconColor;
+  final Widget? rightBtn;
   final GestureTapCallback? rightAction;
   NavigationBarX(
       {this.title,
-      this.leftIcon,
-      this.leftIconColor,
+      this.leftBtn,
       this.leftAction,
-      this.rightIcon,
-      this.rightIconColor,
+      this.rightBtn,
       this.rightAction});
 
   @override
@@ -36,18 +32,15 @@ class NavigationBarX extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        leftIcon != null
+                        leftBtn != null
                             ? InkWell(
                                 splashFactory: NoSplash.splashFactory,
                                 onTap: () =>
                                     leftAction != null ? leftAction!() : null,
-                                child: ImageX(
-                                  url: leftIcon!,
-                                  width: 60.0,
-                                  height: 50.0,
-                                  color: leftIconColor,
-                                  fit: BoxFit.contain,
-                                ),
+                                child: ContainerX(
+                                    width: 60.0,
+                                    height: 50.0,
+                                    child: Center(child: leftBtn!)),
                               )
                             : const SizedBox(width: 60.0, height: 50.0),
                         Expanded(
@@ -61,17 +54,14 @@ class NavigationBarX extends StatelessWidget {
                             maxLines: 1,
                           ),
                         ),
-                        rightIcon != null
+                        rightBtn != null
                             ? InkWell(
                                 onTap: () =>
                                     rightAction != null ? rightAction!() : null,
-                                child: ImageX(
-                                  url: rightIcon!,
-                                  width: 60.0,
-                                  height: 50.0,
-                                  color: rightIconColor,
-                                  fit: BoxFit.contain,
-                                ),
+                                child: ContainerX(
+                                    width: 60.0,
+                                    height: 50.0,
+                                    child: Center(child: rightBtn!)),
                               )
                             : const SizedBox(width: 60.0, height: 50.0),
                       ],

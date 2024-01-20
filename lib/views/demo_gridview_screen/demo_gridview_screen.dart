@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../widgets/navigationbar_x.dart';
-import '../../widgets/screen_x.dart';
+import '../../widgets/all_widgets.dart';
 import '../demo_image_screen/demo_image_screen.dart';
 import 'demo_gridview_controller.dart';
 import 'demo_gridview_cell.dart';
@@ -17,8 +16,13 @@ class DemoGridViewScreen extends StatelessWidget {
           lightStatusBar: true,
           headerView: NavigationBarX(
             title: 'GridView',
-            leftIcon: 'lib/images/ic_demo_back.png',
-            leftIconColor: Colors.white,
+            leftBtn: ImageX(
+              faIcon: FontAwesomeIcons.arrowLeft,
+              width: 20.0,
+              height: 20.0,
+              color: Colors.white,
+              fit: BoxFit.contain,
+            ),
             leftAction: () {
               Get.back();
             },

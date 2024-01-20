@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../widgets/image_x.dart';
-import '../../widgets/navigationbar_x.dart';
-import '../../widgets/screen_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_image_controller.dart';
 
 class DemoImageScreen extends StatelessWidget {
@@ -17,8 +15,13 @@ class DemoImageScreen extends StatelessWidget {
           lightStatusBar: true,
           headerView: NavigationBarX(
             title: 'Image',
-            leftIcon: 'lib/images/ic_demo_back.png',
-            leftIconColor: Colors.white,
+            leftBtn: ImageX(
+              faIcon: FontAwesomeIcons.arrowLeft,
+              width: 20.0,
+              height: 20.0,
+              color: Colors.white,
+              fit: BoxFit.contain,
+            ),
             leftAction: () {
               Get.back();
             },
@@ -26,11 +29,7 @@ class DemoImageScreen extends StatelessWidget {
           bottomPadding: false,
           bodyView: ImageX(
             url: url,
-            width: 84.0,
-            height: 84.0,
-            cornerRadius: 12.0,
             fit: BoxFit.contain,
-            padding: EdgeInsets.all(24.0),
           )),
     );
   }

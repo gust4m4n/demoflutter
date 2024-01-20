@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import '../../widgets/navigationbar_x.dart';
-import '../../widgets/screen_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_html_controller.dart';
 
 class DemoHtmlScreen extends StatelessWidget {
@@ -18,8 +17,13 @@ class DemoHtmlScreen extends StatelessWidget {
               lightStatusBar: true,
               headerView: NavigationBarX(
                 title: 'HTML',
-                leftIcon: 'lib/images/ic_demo_back.png',
-                leftIconColor: Colors.white,
+                leftBtn: ImageX(
+                  faIcon: FontAwesomeIcons.arrowLeft,
+                  width: 20.0,
+                  height: 20.0,
+                  color: Colors.white,
+                  fit: BoxFit.contain,
+                ),
                 leftAction: () {
                   Get.back();
                 },

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
+import '../../widgets/dialog_x.dart';
 import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import '../demo_drawer_screen/demo_drawer_screen.dart';
 import '../demo_gridview_screen/demo_gridview_screen.dart';
@@ -148,7 +149,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'Dialog',
                                 backgroundColor: ColorX.green,
                                 onClicked: () {
-                                  SheetX.showMessage(
+                                  DialogX.showMessage(
                                       title: LoremIpsumX.tiny(),
                                       message: LoremIpsumX.medium(),
                                       imageUrl: 'lib/images/ic_demo_logo.png',

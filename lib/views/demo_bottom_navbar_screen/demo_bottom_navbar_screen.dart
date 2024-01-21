@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import '../../widgets/screen_x.dart';
-import '../../widgets/text_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_bottom_navbar_controller.dart';
 
 class DemoBottomNavBarScreen extends StatelessWidget {

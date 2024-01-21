@@ -247,10 +247,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'Image',
                                 backgroundColor: ColorX.yellow,
                                 onClicked: () {
-                                  Get.to(DemoImageScreen(
-                                    url:
-                                        'https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png',
-                                  ));
+                                  controller.btnImageClicked();
                                 },
                               )),
                             ],
@@ -389,7 +386,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Text',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () {
-                                    controller.demoShareText();
+                                    controller.btnShareTextClicked();
                                   },
                                 ),
                               ),
@@ -399,7 +396,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Image',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () {
-                                    controller.demoShareImage();
+                                    controller.btnShareImageClicked();
                                   },
                                 ),
                               ),
@@ -427,7 +424,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Image Picker',
                                   backgroundColor: ColorX.red,
                                   onClicked: () {
-                                    controller.demoImagePicker();
+                                    controller.btnImagePickerClicked();
                                   },
                                 ),
                               ),

@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:demoflutter/utils/all_utils.dart';
+import 'package:demoflutter/views/demo_drawer_screen/demo_drawer_menu.dart';
 
 import '../../widgets/all_widgets.dart';
 
@@ -15,31 +16,48 @@ class DemoDrawerState extends State<DemoDrawer> {
     return Drawer(
       elevation: 0.0,
       child: Container(
-        color: ColorX.blue,
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
+        color: Colors.white,
+        child: Column(
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text('Drawer Header'),
-            ),
-            ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
+            DrawerHeader(
+                decoration: BoxDecoration(
+                  color: ColorX.blue,
+                ),
+                child: Row(
+                  children: [
+                    ImageX(
+                      url:
+                          'https://assets-prd.ignimgs.com/2023/04/27/transformers-rise-of-the-beast-new-button-1682603563738.jpg',
+                      width: 80.0,
+                      height: 80.0,
+                      cornerRadius: 40.0,
+                    ),
+                    SizedBox(width: 16.0),
+                    TextX(
+                      'Header',
+                      color: ColorX.white,
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w700,
+                      textAlign: TextAlign.center,
+                      maxLines: 1,
+                    ),
+                  ],
+                )),
+            Expanded(
+                child: Scrollbar(
+                    child: SingleChildScrollView(
+                        child: Column(
+              children: [
+                DemoDrawerMenu(
+                    icon: FontAwesomeIcons.addressBook,
+                    title: 'Menu 1',
+                    onClicked: () {}),
+                DemoDrawerMenu(
+                    icon: FontAwesomeIcons.powerOff,
+                    title: 'Menu 2',
+                    onClicked: () {}),
+              ],
+            )))),
           ],
         ),
       ),

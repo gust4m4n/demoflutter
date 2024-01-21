@@ -1,13 +1,6 @@
-import 'package:demoflutter/widgets/colors_x.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../viewmodels/demo_format_vm.dart';
-import '../../widgets/button_x.dart';
-import '../../widgets/container_x.dart';
-import '../../widgets/image_x.dart';
-import '../../widgets/screen_x.dart';
-import '../../widgets/text_x.dart';
+import '../../widgets/all_widgets.dart';
 import 'demo_onboarding_controller.dart';
 
 class DemoOnboardingScreen extends StatelessWidget {
@@ -19,12 +12,13 @@ class DemoOnboardingScreen extends StatelessWidget {
         init: DemoOnboardingController(),
         builder: (controller) => ScreenX(
             lightStatusBar: false,
-            topPadding: true,
+            topPadding: false,
             bottomPadding: true,
             bodyView: Column(
               children: [
                 Expanded(
                   child: PageView(
+                    physics: ClampingScrollPhysics(),
                     controller: controller.pageController,
                     children: controller.movieListVM.list
                         .map((movie) => Column(
@@ -55,7 +49,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                         fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w700,
                                         textAlign: TextAlign.center,
-                                        maxLines: 2048,
+                                        maxLines: 2,
                                       ),
                                       const SizedBox(height: 8.0),
                                       TextX(
@@ -66,7 +60,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                         fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w700,
                                         textAlign: TextAlign.center,
-                                        maxLines: 2048,
+                                        maxLines: 1,
                                       ),
                                     ],
                                   )),
@@ -93,8 +87,11 @@ class DemoOnboardingScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(
                         left: 16.0, top: 16.0, right: 16.0, bottom: 16.0),
                     child: ButtonX(
+                      width: 100.0,
                       title: 'Next',
-                      backgroundColor: ColorX.green,
+                      fontWeight: FontWeight.w700,
+                      titleColor: ColorX.black,
+                      backgroundColor: ColorX.transparent,
                       onClicked: () {
                         Get.back();
                       },

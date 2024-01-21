@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_image_screen/demo_image_screen.dart';
 import 'demo_listview_controller.dart';
@@ -49,7 +47,7 @@ class DemoListViewScreen extends StatelessWidget {
                       return Material(
                           color: Colors.transparent,
                           child: InkWell(
-                              highlightColor: const Color(0xffE3E3E3),
+                              highlightColor: ColorX.highlight,
                               onTap: () {
                                 Get.to(DemoImageScreen(url: movie.poster));
                               },

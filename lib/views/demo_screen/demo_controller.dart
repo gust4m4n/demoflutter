@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../utils/all_utils.dart';
 import '../../widgets/all_widgets.dart';
+import '../demo_image_screen/demo_image_screen.dart';
 
 class DemoController extends GetxController {
   @override
@@ -11,11 +11,11 @@ class DemoController extends GetxController {
     super.onReady();
   }
 
-  demoShareText() {
-    Share.share('check out my website https://example.com');
+  btnShareTextClicked() {
+    Share.share('Check out my website https://example.com');
   }
 
-  demoShareImage() async {
+  btnShareImageClicked() async {
     final imagePicker = ImagePicker();
     final pickedFile = await imagePicker.pickImage(
       source: ImageSource.gallery,
@@ -25,7 +25,7 @@ class DemoController extends GetxController {
     }
   }
 
-  demoImagePicker() async {
+  btnImagePickerClicked() async {
     final imagePicker = ImagePicker();
     final pickedFile = await imagePicker.pickImage(
       source: ImageSource.gallery,
@@ -85,5 +85,12 @@ class DemoController extends GetxController {
 
   btnSnackBarClicked() {
     ToastX.snackBar(msg: LoremIpsumX.medium());
+  }
+
+  btnImageClicked() {
+    Get.to(DemoImageScreen(
+      url:
+          'https://assets-prd.ignimgs.com/2023/04/27/transformers-rise-of-the-beast-new-button-1682603563738.jpg',
+    ));
   }
 }

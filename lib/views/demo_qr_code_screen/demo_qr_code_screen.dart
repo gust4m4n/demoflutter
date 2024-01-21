@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../../widgets/all_widgets.dart';
 import 'demo_qr_code_controller.dart';

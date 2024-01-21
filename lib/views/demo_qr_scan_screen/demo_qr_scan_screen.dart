@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 import '../../widgets/all_widgets.dart';
 import 'demo_qr_scan_controller.dart';

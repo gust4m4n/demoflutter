@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_image_screen/demo_image_screen.dart';
 import 'demo_gridview_controller.dart';
@@ -51,7 +49,7 @@ class DemoGridViewScreen extends StatelessWidget {
                     child: InkWell(
                         customBorder: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0)),
-                        highlightColor: const Color(0xffE3E3E3),
+                        highlightColor: ColorX.highlight,
                         onTap: () {
                           Get.to(DemoImageScreen(url: movie.poster));
                         },

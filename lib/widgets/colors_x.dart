@@ -9,4 +9,6 @@ class ColorX {
   static const Color black = Color(0xff343a40);
   static const Color gray = Color(0xff6c757d);
   static const Color transparent = Colors.transparent;
+  static const Color white = Colors.white;
+  static const Color highlight = Color(0xffE3E3E3);
 }

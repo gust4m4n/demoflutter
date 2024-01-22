@@ -1,16 +1,7 @@
-import 'package:demoflutter/utils/all_utils.dart';
 import 'package:demoflutter/views/demo_drawer_screen/demo_drawer_menu.dart';
-
 import '../../widgets/all_widgets.dart';
 
-class DemoDrawer extends StatefulWidget {
-  const DemoDrawer({Key? key}) : super(key: key);
-
-  @override
-  DemoDrawerState createState() => DemoDrawerState();
-}
-
-class DemoDrawerState extends State<DemoDrawer> {
+class DemoDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(

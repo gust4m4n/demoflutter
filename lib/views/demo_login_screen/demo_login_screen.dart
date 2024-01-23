@@ -79,7 +79,7 @@ class DemoLoginScreen extends StatelessWidget {
                         ),
                         rightIconColor: controller.securedPassword
                             ? Colors.grey
-                            : const Color(0xff343a40),
+                            : ColorX.black,
                         rightAction: () {
                           controller.securedPassword =
                               !controller.securedPassword;
@@ -115,7 +115,7 @@ class DemoLoginScreen extends StatelessWidget {
                             height: 16.0,
                             fit: BoxFit.contain,
                           ),
-                          rightIconColor: const Color(0xff343a40),
+                          rightIconColor: ColorX.black,
                           rightAction: () {},
                           controller: controller.txtRoleController,
                           dropdownList: const ['User', 'Admin'],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'button_x.dart';
+import 'colors_x.dart';
 import 'image_x.dart';
 import 'text_x.dart';
 
@@ -77,7 +78,7 @@ class DialogX {
             ),
             TextX(
               title,
-              color: const Color(0xff343a40),
+              color: ColorX.black,
               fontSize: 17.0,
               fontWeight: FontWeight.w600,
               textAlign: TextAlign.center,
@@ -86,7 +87,7 @@ class DialogX {
             const SizedBox(height: 8.0),
             TextX(
               message,
-              color: const Color(0xff343a40),
+              color: ColorX.black,
               fontSize: 15.0,
               fontWeight: FontWeight.normal,
               textAlign: TextAlign.center,
@@ -102,7 +103,7 @@ class DialogX {
             Expanded(
               child: ButtonX(
                 title: leftBtnTitle,
-                backgroundColor: Colors.green,
+                backgroundColor: ColorX.green,
                 onClicked: onLeftBtnClicked,
               ),
             ),
@@ -114,7 +115,7 @@ class DialogX {
               child: Expanded(
                 child: ButtonX(
                   title: rightBtnTitle,
-                  backgroundColor: Colors.red,
+                  backgroundColor: ColorX.red,
                   onClicked: onRightBtnClicked,
                 ),
               ),

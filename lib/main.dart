@@ -1,17 +1,35 @@
 import 'dart:io';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
 import 'utils/reachability_x.dart';
 import 'viewmodels/demo_preferences_vm.dart';
 import 'viewmodels/demo_session_vm.dart';
 import 'views/demo_screen/demo_screen.dart';
 import 'widgets/all_widgets.dart';
 
+var jailbroken = false;
+var developerMode = false;
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  if (!kIsWeb) {
+    if (Platform.isAndroid || Platform.isIOS) {
+      jailbroken = await FlutterJailbreakDetection.jailbroken;
+      if (jailbroken == true) {
+        DemoSessionVM.forceQuit();
+        return;
+      }
+      if (Platform.isAndroid) {
+        developerMode = await FlutterJailbreakDetection.developerMode;
+        if (developerMode == true) {
+          if (kReleaseMode) {
+            DemoSessionVM.forceQuit();
+            return;
+          }
+        }
+      }
+    }
+  }
 
   var firstInstall = await DemoPreferencesVM.getFirstInstall();
   if (firstInstall == true) {
@@ -101,14 +119,6 @@ class MyApp extends StatelessWidget {
             TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
           })),
     );
-  }
-}
-
-void forceQuit() {
-  if (Platform.isAndroid) {
-    SystemNavigator.pop();
-  } else if (Platform.isIOS) {
-    exit(0);
   }
 }
 

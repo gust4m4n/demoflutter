@@ -34,6 +34,8 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   file: ^6.1.4
   fluttertoast: ^8.2.4
+  flutter_jailbreak_detection: ^1.10.0
+  carousel_slider: ^4.2.1
 
 
 dev_dependencies: 

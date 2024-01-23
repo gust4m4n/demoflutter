@@ -15,3 +15,6 @@ export 'toast_x.dart';
 export 'package:font_awesome_flutter/font_awesome_flutter.dart';
 export 'package:flutter/material.dart';
 export 'package:get/get.dart';
+export 'package:flutter/services.dart';
+export 'package:flutter/foundation.dart';
+export 'package:flutter/gestures.dart';

@@ -125,7 +125,7 @@ class SheetX {
               ),
               TextX(
                 title,
-                color: const Color(0xff343a40),
+                color: ColorX.black,
                 fontSize: 17.0,
                 fontWeight: FontWeight.w600,
                 textAlign: TextAlign.center,
@@ -134,7 +134,7 @@ class SheetX {
               const SizedBox(height: 8.0),
               TextX(
                 message,
-                color: const Color(0xff343a40),
+                color: ColorX.black,
                 fontSize: 15.0,
                 fontWeight: FontWeight.normal,
                 textAlign: centered ? TextAlign.center : TextAlign.start,
@@ -207,7 +207,7 @@ class SheetX {
               ),
               TextX(
                 title,
-                color: const Color(0xff343a40),
+                color: ColorX.black,
                 fontSize: 17.0,
                 fontWeight: FontWeight.w600,
                 textAlign: TextAlign.center,
@@ -216,7 +216,7 @@ class SheetX {
               const SizedBox(height: 8.0),
               TextX(
                 message,
-                color: const Color(0xff343a40),
+                color: ColorX.black,
                 fontSize: 15.0,
                 fontWeight: FontWeight.normal,
                 textAlign: TextAlign.center,
@@ -234,7 +234,7 @@ class SheetX {
                 child: Expanded(
                   child: ButtonX(
                     title: leftBtnTitle,
-                    backgroundColor: Colors.red,
+                    backgroundColor: ColorX.red,
                     onClicked: onLeftBtnClicked,
                   ),
                 ),
@@ -247,7 +247,7 @@ class SheetX {
                 child: Expanded(
                   child: ButtonX(
                     title: rightBtnTitle,
-                    backgroundColor: Colors.black,
+                    backgroundColor: ColorX.green,
                     onClicked: onRightBtnClicked ?? () => {},
                   ),
                 ),

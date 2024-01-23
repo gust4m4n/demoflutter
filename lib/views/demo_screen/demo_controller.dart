@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demoflutter/views/demo_carousel_screen/demo_carousel_screen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../utils/all_utils.dart';
@@ -92,5 +93,10 @@ class DemoController extends GetxController {
       url:
           'https://assets-prd.ignimgs.com/2023/04/27/transformers-rise-of-the-beast-new-button-1682603563738.jpg',
     ));
+  }
+
+  btnCarouselClicked() {
+    Get.to(DemoCarouselScreen());
+    ;
   }
 }

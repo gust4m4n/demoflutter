@@ -145,18 +145,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'Dialog',
                                 backgroundColor: ColorX.green,
                                 onClicked: () {
-                                  DialogX.showMessage(
-                                      title: LoremIpsumX.tiny(),
-                                      message: LoremIpsumX.medium(),
-                                      imageUrl: 'lib/images/ic_demo_logo.png',
-                                      leftBtnTitle: 'OK',
-                                      onLeftBtnClicked: () {
-                                        Get.back();
-                                      },
-                                      rightBtnTitle: 'Cancel',
-                                      onRightBtnClicked: () {
-                                        Get.back();
-                                      });
+                                  controller.btnDialogClicked();
                                 },
                               )),
                               const SizedBox(width: 8.0),

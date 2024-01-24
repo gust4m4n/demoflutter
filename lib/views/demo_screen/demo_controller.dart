@@ -44,11 +44,36 @@ class DemoController extends GetxController {
     }
   }
 
-  btnBottomSheetClicked() {
-    SheetX.showMessage(
+  btnDialogClicked() {
+    DialogX.showMessage(
+        icon: ImageX(
+          url: 'lib/images/ic_demo_logo.png',
+          width: 64.0,
+          height: 64.0,
+          fit: BoxFit.contain,
+        ),
         title: LoremIpsumX.tiny(),
         message: LoremIpsumX.medium(),
-        imageUrl: 'lib/images/ic_demo_logo.png',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: 'Cancel',
+        onRightBtnClicked: () {
+          Get.back();
+        });
+  }
+
+  btnBottomSheetClicked() {
+    SheetX.showMessage(
+        icon: ImageX(
+          url: 'lib/images/ic_demo_logo.png',
+          width: 64.0,
+          height: 64.0,
+          fit: BoxFit.contain,
+        ),
+        title: LoremIpsumX.tiny(),
+        message: LoremIpsumX.medium(),
         leftBtnTitle: 'OK',
         onLeftBtnClicked: () {
           Get.back();

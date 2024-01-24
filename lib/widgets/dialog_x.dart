@@ -1,55 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'button_x.dart';
-import 'colors_x.dart';
-import 'image_x.dart';
-import 'text_x.dart';
+import 'all_widgets.dart';
 
 class DialogX {
-  static Future<T?> show<T>(
-      {required Color backgroundColor,
-      required double cornerRadius,
-      required Widget widget}) {
-    return Get.dialog(
-        AlertDialog(
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-            Radius.circular(cornerRadius),
-          )),
-          backgroundColor: backgroundColor,
-          contentPadding: const EdgeInsets.all(0.0),
-          content: widget,
-        ),
-        transitionDuration: Duration.zero,
-        transitionCurve: null);
-  }
-
-  static Future<T?> showContent<T>(
-      {required Color backgroundColor,
-      required double cornerRadius,
-      required double contentMaxHeight,
-      required Widget contentWidget,
-      required Widget footerWidget}) {
-    return DialogX.show(
-        backgroundColor: backgroundColor,
-        cornerRadius: 8.0,
-        widget: Column(mainAxisSize: MainAxisSize.min, children: [
-          const SizedBox(height: 16.0),
-          ConstrainedBox(
-            constraints: BoxConstraints(
-              maxHeight: contentMaxHeight,
-            ),
-            child: Scrollbar(
-                child: SingleChildScrollView(
-              child: contentWidget,
-            )),
-          ),
-          footerWidget
-        ]));
-  }
-
   static Future<T?> showMessage<T>({
-    String imageUrl = '',
+    Widget? icon,
     required String title,
     required String message,
     required String leftBtnTitle,
@@ -66,13 +19,9 @@ class DialogX {
         child: Column(
           children: [
             Visibility(
-              visible: imageUrl.isNotEmpty,
+              visible: icon != null,
               child: Column(children: [
-                ImageX(
-                  url: imageUrl,
-                  width: 160.0,
-                  height: 160.0,
-                ),
+                icon!,
                 const SizedBox(height: 12.0),
               ]),
             ),
@@ -126,17 +75,45 @@ class DialogX {
     );
   }
 
-  static loading() {
-    Get.dialog(
+  static Future<T?> show<T>(
+      {required Color backgroundColor,
+      required double cornerRadius,
+      required Widget widget}) {
+    return Get.dialog(
         AlertDialog(
-          backgroundColor: Colors.transparent,
-          shadowColor: Colors.transparent,
-          content: const Center(
-            child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Colors.white)),
-          ),
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(
+            Radius.circular(cornerRadius),
+          )),
+          backgroundColor: backgroundColor,
+          contentPadding: const EdgeInsets.all(0.0),
+          content: widget,
         ),
         transitionDuration: Duration.zero,
         transitionCurve: null);
+  }
+
+  static Future<T?> showContent<T>(
+      {required Color backgroundColor,
+      required double cornerRadius,
+      required double contentMaxHeight,
+      required Widget contentWidget,
+      required Widget footerWidget}) {
+    return DialogX.show(
+        backgroundColor: backgroundColor,
+        cornerRadius: 8.0,
+        widget: Column(mainAxisSize: MainAxisSize.min, children: [
+          const SizedBox(height: 16.0),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: contentMaxHeight,
+            ),
+            child: Scrollbar(
+                child: SingleChildScrollView(
+              child: contentWidget,
+            )),
+          ),
+          footerWidget
+        ]));
   }
 }

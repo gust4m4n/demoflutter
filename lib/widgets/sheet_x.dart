@@ -52,11 +52,11 @@ class SheetX {
         avoidingKeyboard: avoidingKeyboard,
         widget: Column(mainAxisSize: MainAxisSize.min, children: [
           const SizedBox(height: 16.0),
-          const ImageX(
-            url: 'lib/images/ic_demo_sheet_grip.png',
-            fit: BoxFit.contain,
-            width: 42.0,
+          ContainerX(
+            backgroundColor: ColorX.gray.withOpacity(0.3),
+            width: 54.0,
             height: 4.0,
+            cornerRadius: 2.0,
           ),
           const SizedBox(height: 16.0),
           widget

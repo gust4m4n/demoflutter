@@ -5,7 +5,7 @@ import '../utils/logger_x.dart';
 import 'package:http/http.dart' as http;
 import 'jason_x.dart';
 import 'reachability_x.dart';
-import 'string+json+map.dart';
+import 'map+json.dart';
 
 class ApiXResponse {
   Map headers = {};

@@ -249,6 +249,15 @@ class DemoScreen extends StatelessWidget {
                                   controller.btnCarouselClicked();
                                 },
                               )),
+                              const SizedBox(width: 8.0),
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'Database',
+                                backgroundColor: ColorX.yellow,
+                                onClicked: () {
+                                  controller.btnDatabaseClicked();
+                                },
+                              )),
                             ],
                           ),
                           const SizedBox(height: 4.0),

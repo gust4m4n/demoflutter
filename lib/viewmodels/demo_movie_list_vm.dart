@@ -16,7 +16,7 @@ class DemoMovieListVM {
       if (resp.statusCode == 200) {
         list = [];
         for (var item in resp.jason['result'].jasonListValue) {
-          var movie = DemoMovieModel(item);
+          var movie = DemoMovieModel.fromJason(item);
           list.add(movie);
         }
       } else {

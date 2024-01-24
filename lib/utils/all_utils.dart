@@ -17,6 +17,7 @@ export 'md5_utils.dart';
 export 'reachability_x.dart';
 export 'sha_utils.dart';
 export 'string_utils.dart';
-export 'string+json+map.dart';
+export 'map+json.dart';
 export 'utf8_utils.dart';
 export 'xor_utils.dart';
+export 'map+getter.dart';

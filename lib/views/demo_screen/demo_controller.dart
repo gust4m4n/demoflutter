@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demoflutter/viewmodels/demo_database_vm.dart';
 import 'package:demoflutter/views/demo_carousel_screen/demo_carousel_screen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
@@ -123,5 +124,9 @@ class DemoController extends GetxController {
   btnCarouselClicked() {
     Get.to(DemoCarouselScreen());
     ;
+  }
+
+  btnDatabaseClicked() {
+    DemoDatabaseVM.demo();
   }
 }

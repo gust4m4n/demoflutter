@@ -1,15 +1,33 @@
-import '../utils/jason_x.dart';
+import 'package:demoflutter/utils/all_utils.dart';
 
 class DemoMovieModel {
-  int id = 0;
+  int movie_id = 0;
   String poster = '';
   int revenue = 0;
   String title = '';
 
-  DemoMovieModel(Jason jason) {
-    id = jason['id'].intValue;
+  DemoMovieModel();
+
+  DemoMovieModel.fromJason(Jason jason) {
+    movie_id = jason['movie_id'].intValue;
     poster = jason['poster'].stringValue;
     revenue = jason['revenue'].intValue;
     title = jason['title'].stringValue;
+  }
+
+  DemoMovieModel.fromMap(Map<String, dynamic> map) {
+    movie_id = map.getInt('movie_id');
+    poster = map.getString('poster');
+    revenue = map.getInt('revenue');
+    title = map.getString('title');
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'movie_id': movie_id,
+      'poster': poster,
+      'revenue': revenue,
+      'title': title,
+    };
   }
 }

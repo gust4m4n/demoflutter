@@ -10,26 +10,27 @@ class DemoCarouselScreen extends StatelessWidget {
     return GetBuilder<DemoCarouselController>(
       init: DemoCarouselController(),
       builder: (controller) => ScreenX(
-          lightStatusBar: true,
-          headerView: NavigationBarX(
-            title: 'Carousel',
-            leftBtn: ImageX(
-              faIcon: FontAwesomeIcons.arrowLeft,
-              width: 20.0,
-              height: 20.0,
-              color: Colors.white,
-              fit: BoxFit.contain,
-            ),
-            leftAction: () {
-              Get.back();
-            },
+        lightStatusBar: true,
+        headerView: NavigationBarX(
+          title: 'Carousel',
+          leftBtn: ImageX(
+            faIcon: FontAwesomeIcons.arrowLeft,
+            width: 20.0,
+            height: 20.0,
+            color: Colors.white,
+            fit: BoxFit.contain,
           ),
-          bottomPadding: false,
-          bodyView: Scrollbar(
-              child: Material(
-            child: CarouselSlider.builder(
+          leftAction: () {
+            Get.back();
+          },
+        ),
+        bottomPadding: false,
+        bodyView: controller.movieListVM.list.length > 0
+            ? CarouselSlider.builder(
                 options: CarouselOptions(
                   autoPlay: true,
+                  viewportFraction: 0.85,
+                  height: 180.0,
                   onPageChanged: (index, reason) {
                     controller.setPageIndex(index);
                   },
@@ -37,22 +38,19 @@ class DemoCarouselScreen extends StatelessWidget {
                 itemCount: controller.movieListVM.list.length,
                 itemBuilder:
                     (BuildContext context, int index, int pageViewIndex) {
-                  if (controller.movieListVM.list.length > 0) {
-                    final movie = controller.movieListVM.list[index];
-                    return Padding(
-                        padding: EdgeInsets.all(4.0),
-                        child: ImageX(
-                          url: movie.poster,
-                          width: double.infinity,
-                          height: double.infinity,
-                          cornerRadius: 8.0,
-                          fit: BoxFit.cover,
-                        ));
-                  } else {
-                    return Container();
-                  }
-                }),
-          ))),
+                  final movie = controller.movieListVM.list[index];
+                  return Padding(
+                      padding: EdgeInsets.all(4.0),
+                      child: ImageX(
+                        url: movie.poster,
+                        width: double.infinity,
+                        height: double.infinity,
+                        cornerRadius: 8.0,
+                        fit: BoxFit.cover,
+                      ));
+                })
+            : Container(),
+      ),
     );
   }
 }

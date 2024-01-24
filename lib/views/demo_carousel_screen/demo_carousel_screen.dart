@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import '../../widgets/all_widgets.dart';
+import '../demo_image_screen/demo_image_screen.dart';
 import 'demo_carousel_controller.dart';
 
 class DemoCarouselScreen extends StatelessWidget {
@@ -39,15 +40,24 @@ class DemoCarouselScreen extends StatelessWidget {
                 itemBuilder:
                     (BuildContext context, int index, int pageViewIndex) {
                   final movie = controller.movieListVM.list[index];
-                  return Padding(
-                      padding: EdgeInsets.all(4.0),
-                      child: ImageX(
-                        url: movie.poster,
-                        width: double.infinity,
-                        height: double.infinity,
-                        cornerRadius: 8.0,
-                        fit: BoxFit.cover,
-                      ));
+                  return Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                          customBorder: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)),
+                          highlightColor: ColorX.highlight,
+                          onTap: () {
+                            Get.to(DemoImageScreen(url: movie.poster));
+                          },
+                          child: Padding(
+                              padding: EdgeInsets.all(4.0),
+                              child: ImageX(
+                                url: movie.poster,
+                                width: double.infinity,
+                                height: double.infinity,
+                                cornerRadius: 8.0,
+                                fit: BoxFit.cover,
+                              ))));
                 })
             : Container(),
       ),

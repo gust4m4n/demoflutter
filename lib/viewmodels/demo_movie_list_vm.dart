@@ -3,9 +3,11 @@ import '../models/demo_movie_model.dart';
 import 'demo_apis.dart';
 
 class DemoMovieListVM {
+  var loading = false;
   List<DemoMovieModel> list = [];
 
   Future<DemoApiResponse> request() {
+    loading = true;
     return DemoApi.get(
             endpoint: '/movies',
             params: {},
@@ -13,6 +15,7 @@ class DemoMovieListVM {
             contractFile: 'lib/contracts/DemoMovieListContract.json',
             contract: true)
         .then((resp) async {
+      loading = false;
       if (resp.statusCode == 200) {
         list = [];
         for (var item in resp.jason['result'].jasonListValue) {

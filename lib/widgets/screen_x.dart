@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'container_x.dart';
-import 'statusbar_x.dart';
+import 'all_widgets.dart';
 
 class ScreenX extends StatelessWidget {
   final Key? scaffoldKey;
@@ -12,6 +8,7 @@ class ScreenX extends StatelessWidget {
   final bool topPadding;
   final bool bottomPadding;
   final bool lightStatusBar;
+  final bool loading;
 
   const ScreenX({
     Key? key,
@@ -22,6 +19,7 @@ class ScreenX extends StatelessWidget {
     this.topPadding = false,
     this.bottomPadding = false,
     required this.lightStatusBar,
+    this.loading = false,
   }) : super(key: key);
 
   @override
@@ -53,8 +51,15 @@ class ScreenX extends StatelessWidget {
                           height: double.infinity,
                           width: double.infinity,
                           clipBehavior: Clip.none,
-                          child: bodyView ??
-                              ContainerX(backgroundColor: Colors.transparent))),
+                          child: loading
+                              ? Center(
+                                  child: CircularProgressIndicator(
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                          ColorX.gray)),
+                                )
+                              : bodyView ??
+                                  ContainerX(
+                                      backgroundColor: Colors.transparent))),
                   SizedBox(
                     height: bottomPadding
                         ? MediaQuery.of(Get.context!).padding.bottom

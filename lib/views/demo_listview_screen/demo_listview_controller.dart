@@ -7,10 +7,9 @@ class DemoListViewController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    update();
     movieListVM.request().then((resp) {
-      if (resp.statusCode == 200) {
-        update();
-      }
+      update();
     });
   }
 }

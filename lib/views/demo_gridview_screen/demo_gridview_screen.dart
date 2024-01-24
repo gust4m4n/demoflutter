@@ -12,6 +12,7 @@ class DemoGridViewScreen extends StatelessWidget {
       init: DemoGridViewController(),
       builder: (controller) => ScreenX(
           lightStatusBar: true,
+          loading: controller.movieListVM.loading,
           headerView: NavigationBarX(
             title: 'GridView',
             leftBtn: ImageX(

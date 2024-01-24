@@ -12,6 +12,7 @@ class DemoListViewScreen extends StatelessWidget {
       init: DemoListViewController(),
       builder: (controller) => ScreenX(
           lightStatusBar: true,
+          loading: controller.movieListVM.loading,
           headerView: NavigationBarX(
             title: 'ListView',
             leftBtn: ImageX(

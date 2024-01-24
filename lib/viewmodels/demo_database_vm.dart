@@ -27,6 +27,16 @@ class DemoDatabaseVM {
     }, onUpgrade: (Database db, int oldVersion, int newVersion) async {});
   }
 
+  beginTransaction() async {
+    final db = await database;
+    db.rawDelete('BEGIN TRANSACTION;');
+  }
+
+  commit() async {
+    final db = await database;
+    db.rawDelete('COMMIT;');
+  }
+
   Future<int> movieInsert(DemoMovieModel movie) async {
     final db = await database;
     var insertedId = await db.rawInsert(
@@ -102,7 +112,7 @@ class DemoDatabaseVM {
 
   movieDeleteAll() async {
     final db = await database;
-    db.rawDelete('delete from movies;');
+    db.rawDelete('DELETE FROM movies;');
   }
 
   static demo() async {

@@ -15,13 +15,13 @@ class DemoDatabaseController extends GetxController {
 
     await DemoDatabaseVM.db.beginTransaction();
     await DemoDatabaseVM.db.movieDeleteAll();
-    for (var i = 0; i < 1000; i++) {
+    for (var i = 0; i < 10000; i++) {
       final movie = DemoMovieModel();
       movie.movie_id = i + 1;
       movie.poster =
           'https://assets-prd.ignimgs.com/2023/04/27/transformers-rise-of-the-beast-new-button-1682603563738.jpg';
       movie.title = 'Transformers: Rise of the Beasts';
-      movie.revenue = i + 1;
+      movie.revenue = 100000000000;
       await DemoDatabaseVM.db.movieInsert(movie);
     }
     await DemoDatabaseVM.db.commit();

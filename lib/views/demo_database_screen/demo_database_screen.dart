@@ -17,7 +17,7 @@ class DemoDatabaseScreen extends StatelessWidget {
           lightStatusBar: true,
           loading: controller.loading,
           headerView: NavigationBarX(
-            title: 'Database',
+            title: 'Database 10,000 rows',
             leftBtn: ImageX(
               faIcon: FontAwesomeIcons.arrowLeft,
               width: 20.0,

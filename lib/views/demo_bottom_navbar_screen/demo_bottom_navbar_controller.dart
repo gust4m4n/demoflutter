@@ -20,9 +20,7 @@ class DemoBottomNavBarController extends GetxController {
     if (selectedTab == 0) {
       content = 'Home';
     } else if (selectedTab == 1) {
-      content = 'Business';
-    } else if (selectedTab == 2) {
-      content = 'School';
+      content = 'Profile';
     }
     update();
   }

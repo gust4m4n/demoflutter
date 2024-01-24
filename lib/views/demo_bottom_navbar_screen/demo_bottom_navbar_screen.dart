@@ -30,26 +30,31 @@ class DemoBottomNavBarScreen extends StatelessWidget {
                 BottomNavigationBar(
                   items: const <BottomNavigationBarItem>[
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.home),
+                      icon: ImageX(
+                        faIcon: FontAwesomeIcons.house,
+                        width: 20.0,
+                        height: 20.0,
+                        fit: BoxFit.contain,
+                      ),
                       label: 'Home',
                       tooltip: '',
                     ),
                     BottomNavigationBarItem(
-                      icon: Icon(Icons.business),
-                      label: 'Business',
-                      tooltip: '',
-                    ),
-                    BottomNavigationBarItem(
-                      icon: Icon(Icons.school),
-                      label: 'School',
+                      icon: ImageX(
+                        faIcon: FontAwesomeIcons.user,
+                        width: 20.0,
+                        height: 20.0,
+                        fit: BoxFit.contain,
+                      ),
+                      label: 'Profile',
                       tooltip: '',
                     ),
                   ],
                   currentIndex: controller.selectedTab,
                   unselectedFontSize: 13.0,
-                  unselectedItemColor: const Color(0xff6c757d),
+                  unselectedItemColor: ColorX.black,
                   selectedFontSize: 13.0,
-                  selectedItemColor: const Color(0xff007bff),
+                  selectedItemColor: ColorX.blue,
                   onTap: controller.onTabSelected,
                 ),
               ]),

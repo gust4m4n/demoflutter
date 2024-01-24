@@ -28,7 +28,7 @@ class DemoTabBarScreen extends StatelessWidget {
                 children: [
                   TabBar(
                     controller: controller.tabController,
-                    indicatorColor: Color(0xff7029C2),
+                    indicatorColor: ColorX.blue,
                     indicatorWeight: 2.0,
                     tabs: const [
                       Tab(
@@ -44,7 +44,7 @@ class DemoTabBarScreen extends StatelessWidget {
                         Center(
                           child: const TextX(
                             'Page 1',
-                            color: Colors.black,
+                            color: ColorX.black,
                             fontSize: 22.0,
                             fontWeight: FontWeight.w700,
                             textAlign: TextAlign.start,
@@ -54,7 +54,7 @@ class DemoTabBarScreen extends StatelessWidget {
                         Center(
                           child: const TextX(
                             'Page 2',
-                            color: Colors.black,
+                            color: ColorX.black,
                             fontSize: 22.0,
                             fontWeight: FontWeight.w700,
                             textAlign: TextAlign.start,

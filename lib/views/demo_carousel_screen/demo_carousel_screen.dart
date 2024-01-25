@@ -29,6 +29,7 @@ class DemoCarouselScreen extends StatelessWidget {
         bodyView: controller.movieListVM.list.length > 0
             ? CarouselSlider.builder(
                 options: CarouselOptions(
+                  padEnds: false,
                   autoPlay: true,
                   viewportFraction: 0.85,
                   height: 180.0,

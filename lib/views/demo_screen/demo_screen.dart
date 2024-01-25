@@ -61,7 +61,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'Login',
@@ -99,7 +99,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'SnackBar',
@@ -124,7 +124,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'Internet Online',
@@ -148,7 +148,7 @@ class DemoScreen extends StatelessWidget {
                                   controller.btnDialogClicked();
                                 },
                               )),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                   child: ButtonX(
                                 title: 'Bottom Sheet',
@@ -200,7 +200,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'GridView',
@@ -226,7 +226,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                   child: ButtonX(
                                 title: 'Image',
@@ -249,7 +249,7 @@ class DemoScreen extends StatelessWidget {
                                   controller.btnCarouselClicked();
                                 },
                               )),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                   child: ButtonX(
                                 title: 'Database',
@@ -285,7 +285,7 @@ class DemoScreen extends StatelessWidget {
                                   Get.to(DemoWebViewScreen());
                                 },
                               )),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                   child: ButtonX(
                                 title: 'HTML',
@@ -322,7 +322,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'QR Scan',
@@ -360,7 +360,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'BottomNavBar',
@@ -398,7 +398,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'Image',
@@ -479,7 +479,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'MD5',
@@ -532,7 +532,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'AES',
@@ -606,7 +606,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'CRC',
@@ -659,7 +659,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'DoubleEncrypt',

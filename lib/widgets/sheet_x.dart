@@ -63,7 +63,7 @@ class SheetX {
               ),
               Visibility(
                   visible: leftBtnTitle.isNotEmpty && rightBtnTitle.isNotEmpty,
-                  child: const SizedBox(width: 8.0)),
+                  child: const SizedBox(width: 4.0)),
               Visibility(
                 visible: rightBtnTitle.isNotEmpty,
                 child: Expanded(

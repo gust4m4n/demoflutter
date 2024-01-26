@@ -28,8 +28,14 @@ class DemoTabBarScreen extends StatelessWidget {
                 children: [
                   TabBar(
                     controller: controller.tabController,
-                    indicatorColor: ColorX.blue,
+                    indicatorColor: ColorX.black,
                     indicatorWeight: 2.0,
+                    labelStyle: TextStyle(
+                      color: ColorX.black,
+                      fontSize: 17.0,
+                      fontWeight: FontWeight.w500,
+                      fontFamily: 'Roboto',
+                    ),
                     tabs: const [
                       Tab(
                         text: 'Tab 1',

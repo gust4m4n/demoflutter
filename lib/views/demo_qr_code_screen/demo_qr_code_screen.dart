@@ -39,7 +39,7 @@ class DemoQRCodeScreen extends StatelessWidget {
                       controller.code,
                       color: ColorX.black,
                       fontSize: 17.0,
-                      fontWeight: FontWeight.normal,
+                      fontWeight: FontWeight.w400,
                       textAlign: TextAlign.start,
                       maxLines: 3,
                     ),

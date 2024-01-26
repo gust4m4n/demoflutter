@@ -50,7 +50,7 @@ class DemoQRScanScreen extends StatelessWidget {
                         : 'Scan something!',
                     color: ColorX.black,
                     fontSize: 17.0,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                     textAlign: TextAlign.center,
                     maxLines: 3,
                   ),

@@ -23,7 +23,7 @@ class SheetX {
               Visibility(
                 visible: icon != null,
                 child: Column(children: [
-                  icon!,
+                  icon ?? Container(),
                   const SizedBox(height: 12.0),
                 ]),
               ),
@@ -31,7 +31,7 @@ class SheetX {
                 title,
                 color: ColorX.black,
                 fontSize: 17.0,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
                 textAlign: TextAlign.center,
                 maxLines: 2048,
               ),
@@ -40,7 +40,7 @@ class SheetX {
                 message,
                 color: ColorX.black,
                 fontSize: 17.0,
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w400,
                 textAlign: centered ? TextAlign.center : TextAlign.start,
                 maxLines: 2048,
               ),

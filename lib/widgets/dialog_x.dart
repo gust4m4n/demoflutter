@@ -21,7 +21,7 @@ class DialogX {
             Visibility(
               visible: icon != null,
               child: Column(children: [
-                icon!,
+                icon ?? Container(),
                 const SizedBox(height: 12.0),
               ]),
             ),
@@ -29,7 +29,7 @@ class DialogX {
               title,
               color: ColorX.black,
               fontSize: 17.0,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
               textAlign: TextAlign.center,
               maxLines: 2048,
             ),
@@ -38,7 +38,7 @@ class DialogX {
               message,
               color: ColorX.black,
               fontSize: 17.0,
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w400,
               textAlign: TextAlign.center,
               maxLines: 2048,
             ),

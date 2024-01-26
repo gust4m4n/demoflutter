@@ -37,7 +37,7 @@ class DialogX {
             TextX(
               message,
               color: ColorX.black,
-              fontSize: 15.0,
+              fontSize: 17.0,
               fontWeight: FontWeight.normal,
               textAlign: TextAlign.center,
               maxLines: 2048,

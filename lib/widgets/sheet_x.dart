@@ -39,7 +39,7 @@ class SheetX {
               TextX(
                 message,
                 color: ColorX.black,
-                fontSize: 15.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.normal,
                 textAlign: centered ? TextAlign.center : TextAlign.start,
                 maxLines: 2048,

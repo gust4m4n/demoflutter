@@ -35,7 +35,7 @@ class DemoLoginScreen extends StatelessWidget {
                       TextX(
                         'Username',
                         color: ColorX.black,
-                        fontSize: 14.0,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
                       ),
@@ -59,7 +59,7 @@ class DemoLoginScreen extends StatelessWidget {
                       TextX(
                         'Password',
                         color: ColorX.black,
-                        fontSize: 14.0,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
                       ),
@@ -99,7 +99,7 @@ class DemoLoginScreen extends StatelessWidget {
                       TextX(
                         'Role',
                         color: ColorX.black,
-                        fontSize: 14.0,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
                       ),
@@ -137,7 +137,7 @@ class DemoLoginScreen extends StatelessWidget {
                           height: 32.0,
                           title: 'Forgot Password?',
                           titleColor: ColorX.black,
-                          fontSize: 14.0,
+                          fontSize: 17.0,
                           backgroundColor: ColorX.transparent,
                           onClicked: () {
                             controller.btnForgotPasswordClicked();

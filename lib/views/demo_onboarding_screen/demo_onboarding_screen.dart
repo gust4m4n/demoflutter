@@ -56,7 +56,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                         DemoFormatVM.currency(
                                             value: movie.revenue),
                                         color: ColorX.black,
-                                        fontSize: 16.0,
+                                        fontSize: 17.0,
                                         fontFamily: 'Roboto',
                                         fontWeight: FontWeight.w700,
                                         textAlign: TextAlign.center,
@@ -89,7 +89,6 @@ class DemoOnboardingScreen extends StatelessWidget {
                     child: ButtonX(
                       width: 100.0,
                       title: 'Next',
-                      fontWeight: FontWeight.w700,
                       titleColor: ColorX.black,
                       backgroundColor: ColorX.transparent,
                       onClicked: () {

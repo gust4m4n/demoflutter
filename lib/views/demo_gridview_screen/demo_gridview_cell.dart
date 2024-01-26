@@ -38,7 +38,7 @@ class DemoGridViewCell extends StatelessWidget {
               TextX(
                 DemoFormatVM.currency(value: movie.revenue),
                 color: Colors.black,
-                fontSize: 16.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w400,
                 textAlign: TextAlign.center,
                 maxLines: 1,

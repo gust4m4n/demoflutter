@@ -50,7 +50,7 @@ class TextFieldX extends StatelessWidget {
       child: TextX(
         title,
         color: color,
-        fontSize: 14.0,
+        fontSize: 17.0,
         fontWeight: FontWeight.w500,
         textAlign: TextAlign.left,
         maxLines: 1,
@@ -149,7 +149,7 @@ class TextFieldX extends StatelessWidget {
               onChanged: onChanged,
               focusNode: focusNode,
               obscureText: obscureText,
-              style: const TextStyle(fontSize: 16.0, color: Color(0xff434343)),
+              style: const TextStyle(fontSize: 17.0, color: Color(0xff434343)),
               keyboardType: multiline ? TextInputType.multiline : keyboardType,
               textInputAction:
                   multiline ? TextInputAction.newline : TextInputAction.done,
@@ -164,7 +164,7 @@ class TextFieldX extends StatelessWidget {
                 border: InputBorder.none,
                 hintText: hint,
                 hintStyle:
-                    const TextStyle(fontSize: 16.0, color: Color(0xffcccccc)),
+                    const TextStyle(fontSize: 17.0, color: Color(0xffcccccc)),
               ),
             ),
           ),

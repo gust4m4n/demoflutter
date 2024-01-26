@@ -72,7 +72,7 @@ class BasicToast extends StatelessWidget {
             TextX(
               msg,
               color: Colors.white,
-              fontSize: 15.0,
+              fontSize: 17.0,
               fontWeight: FontWeight.w500,
               textAlign: TextAlign.center,
               maxLines: 16,
@@ -97,7 +97,7 @@ class BasicSnackBar extends StatelessWidget {
         TextX(
           msg,
           color: Colors.white,
-          fontSize: 15.0,
+          fontSize: 17.0,
           fontWeight: FontWeight.w500,
           textAlign: TextAlign.start,
           maxLines: 16,

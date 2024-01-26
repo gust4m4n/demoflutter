@@ -44,7 +44,7 @@ class DemoDatabaseCell extends StatelessWidget {
                   TextX(
                     DemoFormatVM.currency(value: movie.revenue),
                     color: Colors.black,
-                    fontSize: 16.0,
+                    fontSize: 17.0,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
                     textAlign: TextAlign.start,

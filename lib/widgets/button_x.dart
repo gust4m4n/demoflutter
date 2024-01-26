@@ -42,8 +42,8 @@ class ButtonX extends StatelessWidget {
     this.width = double.infinity,
     this.height = 48.0,
     this.horizontalPadding = 8.0,
-    this.fontSize = 16.0,
-    this.fontWeight = FontWeight.w700,
+    this.fontSize = 17.0,
+    this.fontWeight = FontWeight.w600,
     this.enabled = true,
     required this.onClicked,
   }) : super(key: key);

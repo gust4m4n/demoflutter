@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'all_widgets.dart';
 
 class InternetOfflineToast extends StatelessWidget {
@@ -15,7 +14,7 @@ class InternetOfflineToast extends StatelessWidget {
               child: TextX(
                 'No internet connection',
                 color: Colors.white,
-                fontSize: 15.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w500,
                 textAlign: TextAlign.left,
                 maxLines: 16,
@@ -54,7 +53,7 @@ class InternetOnlineToast extends StatelessWidget {
               child: TextX(
                 'Back to online',
                 color: Colors.white,
-                fontSize: 15.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w500,
                 textAlign: TextAlign.start,
                 maxLines: 16,

@@ -30,7 +30,7 @@ class DemoDrawerMenu extends StatelessWidget {
                 TextX(
                   title,
                   color: ColorX.black,
-                  fontSize: 14.0,
+                  fontSize: 17.0,
                   fontWeight: FontWeight.w500,
                   textAlign: TextAlign.start,
                   maxLines: 1,

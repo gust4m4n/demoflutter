@@ -1,7 +1,6 @@
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import '../demo_drawer_screen/demo_drawer_screen.dart';
 import '../demo_gridview_screen/demo_gridview_screen.dart';
 import '../demo_html_screen/demo_html_screen.dart';
@@ -366,7 +365,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'BottomNavBar',
                                   backgroundColor: ColorX.green,
                                   onClicked: () async {
-                                    Get.to(DemoBottomNavBarScreen());
+                                    controller.btnTabBarClicked();
                                   },
                                 ),
                               ),

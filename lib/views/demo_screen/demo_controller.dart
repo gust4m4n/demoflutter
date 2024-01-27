@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demoflutter/views/appx_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../utils/all_utils.dart';
@@ -127,5 +128,9 @@ class DemoController extends GetxController {
 
   btnDatabaseClicked() {
     Get.to(DemoDatabaseScreen());
+  }
+
+  btnTabBarClicked() {
+    Get.to(DemoBottomNavBarScreen());
   }
 }

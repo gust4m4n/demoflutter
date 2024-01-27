@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:demoflutter/views/appx_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
 import 'utils/reachability_x.dart';
 import 'viewmodels/demo_preferences_vm.dart';
@@ -49,7 +50,7 @@ Future<void> main() async {
       if (biometricEnabled == true) {
         firstScreen = DemoLoginScreen();
       } else {
-        firstScreen = DemoTabbarScreen();
+        firstScreen = DemoBottomNavBarScreen();
       }
     } else {
       firstScreen = DemoLoginScreen();
@@ -57,6 +58,7 @@ Future<void> main() async {
   } */
 
   firstScreen = DemoScreen();
+//  firstScreen = DemoBottomNavBarScreen();
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

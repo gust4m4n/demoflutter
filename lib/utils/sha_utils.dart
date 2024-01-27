@@ -1,8 +1,6 @@
 import 'dart:typed_data';
-
 import '../utils/logger_x.dart';
 import 'package:crypto/crypto.dart';
-
 import 'hex_utils.dart';
 import 'utf8_utils.dart';
 

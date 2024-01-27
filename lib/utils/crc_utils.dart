@@ -1,7 +1,5 @@
 import 'dart:typed_data';
-
 import 'package:crclib/catalog.dart';
-
 import 'logger_x.dart';
 import 'utf8_utils.dart';
 

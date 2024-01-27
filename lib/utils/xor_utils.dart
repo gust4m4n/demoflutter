@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:typed_data';
-
 import 'hex_utils.dart';
 import 'logger_x.dart';
 import 'utf8_utils.dart';

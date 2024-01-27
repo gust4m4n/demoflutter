@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:encrypt/encrypt.dart' as enc;
 import 'hex_utils.dart';
 import 'logger_x.dart';

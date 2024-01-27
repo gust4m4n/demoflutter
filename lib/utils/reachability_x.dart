@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import '../utils/logger_x.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 

@@ -1,7 +1,6 @@
 import 'dart:typed_data';
 import '../utils/utf8_utils.dart';
 import 'package:hex/hex.dart';
-
 import 'logger_x.dart';
 
 class HexUtils {

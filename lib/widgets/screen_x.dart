@@ -5,6 +5,7 @@ class ScreenX extends StatelessWidget {
   final Widget? drawer;
   final Widget? headerView;
   final Widget? bodyView;
+  final Widget? bottomNavigationBar;
   final bool topPadding;
   final bool bottomPadding;
   final bool lightStatusBar;
@@ -16,9 +17,10 @@ class ScreenX extends StatelessWidget {
     this.drawer,
     this.headerView,
     this.bodyView,
+    this.bottomNavigationBar,
     this.topPadding = false,
     this.bottomPadding = false,
-    required this.lightStatusBar,
+    this.lightStatusBar = true,
     this.loading = false,
   }) : super(key: key);
 
@@ -39,6 +41,7 @@ class ScreenX extends StatelessWidget {
                 key: scaffoldKey,
                 backgroundColor: Colors.white,
                 drawer: drawer,
+                bottomNavigationBar: bottomNavigationBar,
                 body: Column(children: [
                   SizedBox(
                     height: topPadding

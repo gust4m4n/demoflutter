@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:demoflutter/widgets/all_widgets.dart';
 
 class TextX extends StatelessWidget {
   final String text;
@@ -14,10 +14,10 @@ class TextX extends StatelessWidget {
     this.text, {
     Key? key,
     this.fontFamily = 'Roboto',
-    required this.color,
-    required this.fontSize,
-    required this.fontWeight,
-    required this.textAlign,
+    this.color = ColorX.black,
+    this.fontSize = 17.0,
+    this.fontWeight = FontWeight.w400,
+    this.textAlign = TextAlign.start,
     this.underline = false,
     this.maxLines = 1,
   }) : super(key: key);

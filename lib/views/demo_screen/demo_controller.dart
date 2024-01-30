@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'package:demoflutter/views/appx_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
+import 'package:demoflutter/views/demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
+import 'package:demoflutter/views/demo_pin_sheet/demo_pin_sheet.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
 import '../../utils/all_utils.dart';
@@ -7,6 +8,7 @@ import '../../widgets/all_widgets.dart';
 import '../demo_carousel_screen/demo_carousel_screen.dart';
 import '../demo_database_screen/demo_database_screen.dart';
 import '../demo_image_screen/demo_image_screen.dart';
+import '../demo_onboarding_screen/demo_onboarding_screen.dart';
 
 class DemoController extends GetxController {
   @override
@@ -132,5 +134,16 @@ class DemoController extends GetxController {
 
   btnTabBarClicked() {
     Get.to(DemoBottomNavBarScreen());
+  }
+
+  btnPinSheetClicked() {
+    final sheet = DemoPinSheet();
+    sheet.show().then((value) {
+      LoggerX.log('PIN: $value');
+    });
+  }
+
+  btnOnboardingClicked() {
+    Get.to(DemoOnboardingScreen());
   }
 }

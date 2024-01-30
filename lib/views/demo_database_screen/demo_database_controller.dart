@@ -15,7 +15,7 @@ class DemoDatabaseController extends GetxController {
 
     await DemoDatabaseVM.db.beginTransaction();
     await DemoDatabaseVM.db.movieDeleteAll();
-    for (var i = 0; i < 10000; i++) {
+    for (var i = 0; i < 2000; i++) {
       final movie = DemoMovieModel();
       movie.movie_id = i + 1;
       movie.poster =

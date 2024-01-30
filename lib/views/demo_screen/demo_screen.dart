@@ -6,7 +6,6 @@ import '../demo_gridview_screen/demo_gridview_screen.dart';
 import '../demo_html_screen/demo_html_screen.dart';
 import '../demo_listview_screen/demo_listview_screen.dart';
 import '../demo_login_screen/demo_login_screen.dart';
-import '../demo_onboarding_screen/demo_onboarding_screen.dart';
 import '../demo_qr_code_screen/demo_qr_code_screen.dart';
 import '../demo_qr_scan_screen/demo_qr_scan_screen.dart';
 import '../demo_tabbar_screen/demo_tabbar_screen.dart';
@@ -56,7 +55,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Onboarding',
                                   backgroundColor: ColorX.teal,
                                   onClicked: () {
-                                    Get.to(DemoOnboardingScreen());
+                                    controller.btnOnboardingClicked();
                                   },
                                 ),
                               ),
@@ -67,6 +66,34 @@ class DemoScreen extends StatelessWidget {
                                   backgroundColor: ColorX.teal,
                                   onClicked: () {
                                     Get.to(DemoLoginScreen(), popGesture: true);
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          const ContainerX(
+                            backgroundColor: ColorX.gray,
+                            width: double.infinity,
+                            padding: EdgeInsets.all(4.0),
+                            cornerRadius: 8.0,
+                            child: TextX('OTP and PIN',
+                                color: Colors.white,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.center,
+                                maxLines: 1),
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'PIN Sheet',
+                                  backgroundColor: ColorX.teal,
+                                  onClicked: () {
+                                    controller.btnPinSheetClicked();
                                   },
                                 ),
                               ),

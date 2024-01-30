@@ -71,18 +71,22 @@ class DemoOnboardingScreen extends StatelessWidget {
                   ),
                 ),
                 ContainerX(
-                    padding: const EdgeInsets.only(
-                        left: 24.0, top: 4.0, right: 24.0, bottom: 4.0),
-                    child: SmoothPageIndicator(
-                      controller: controller.pageController,
-                      count: controller.movieListVM.list.length,
-                      effect: SlideEffect(
-                        dotHeight: 8,
-                        dotWidth: 8,
-                        dotColor: ColorX.gray.withOpacity(0.2),
-                        activeDotColor: ColorX.gray,
-                      ),
-                    )),
+                  padding: const EdgeInsets.only(
+                      left: 24.0, top: 4.0, right: 24.0, bottom: 4.0),
+                  height: 20.0,
+                  child: Visibility(
+                      visible: controller.movieListVM.list.length > 0,
+                      child: SmoothPageIndicator(
+                        controller: controller.pageController,
+                        count: controller.movieListVM.list.length,
+                        effect: SlideEffect(
+                          dotHeight: 8,
+                          dotWidth: 8,
+                          dotColor: ColorX.gray.withOpacity(0.2),
+                          activeDotColor: ColorX.gray,
+                        ),
+                      )),
+                ),
                 ContainerX(
                     padding: const EdgeInsets.only(
                         left: 16.0, top: 16.0, right: 16.0, bottom: 16.0),

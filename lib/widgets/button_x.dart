@@ -22,7 +22,7 @@ class ButtonX extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final bool enabled;
-  final GestureTapCallback onClicked;
+  final GestureTapCallback? onClicked;
 
   const ButtonX({
     Key? key,
@@ -45,7 +45,7 @@ class ButtonX extends StatelessWidget {
     this.fontSize = 17.0,
     this.fontWeight = FontWeight.w600,
     this.enabled = true,
-    required this.onClicked,
+    this.onClicked,
   }) : super(key: key);
 
   @override

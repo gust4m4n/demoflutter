@@ -90,10 +90,35 @@ class DemoScreen extends StatelessWidget {
                             children: <Widget>[
                               Expanded(
                                 child: ButtonX(
+                                  title: 'OTP',
+                                  backgroundColor: ColorX.teal,
+                                  onClicked: () {
+                                    controller.btnOtpClicked();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
                                   title: 'PIN Sheet',
                                   backgroundColor: ColorX.teal,
                                   onClicked: () {
                                     controller.btnPinSheetClicked();
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'PIN',
+                                  backgroundColor: ColorX.teal,
+                                  onClicked: () {
+                                    controller.btnPinClicked();
                                   },
                                 ),
                               ),

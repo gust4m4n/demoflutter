@@ -37,6 +37,7 @@ dependencies:
   flutter_jailbreak_detection: ^1.10.0
   carousel_slider: ^4.2.1
   sqflite: ^2.3.0
+  fl_chart: ^0.63.0
 
 
 dev_dependencies: 

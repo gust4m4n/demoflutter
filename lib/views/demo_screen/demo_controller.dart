@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:demoflutter/views/demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import 'package:demoflutter/views/demo_otp_screen/demo_otp_screen.dart';
+import 'package:demoflutter/views/demo_piechart_screen/demo_piechart_screen.dart';
 import 'package:demoflutter/views/demo_pin_sheet/demo_pin_sheet.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:share_plus/share_plus.dart';
@@ -9,6 +10,7 @@ import '../../widgets/all_widgets.dart';
 import '../demo_carousel_screen/demo_carousel_screen.dart';
 import '../demo_database_screen/demo_database_screen.dart';
 import '../demo_image_screen/demo_image_screen.dart';
+import '../demo_linechart_screen/demo_linechart_screen.dart';
 import '../demo_onboarding_screen/demo_onboarding_screen.dart';
 import '../demo_pin_screen/demo_pin_screen.dart';
 
@@ -155,5 +157,13 @@ class DemoController extends GetxController {
 
   btnOtpClicked() {
     Get.to(DemoOtpScreen());
+  }
+
+  btnLineChartClicked() {
+    Get.to(DemoLineChartScreen());
+  }
+
+  btnPieChartClicked() {
+    Get.to(DemoPieChartScreen());
   }
 }

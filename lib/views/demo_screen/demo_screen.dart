@@ -429,6 +429,44 @@ class DemoScreen extends StatelessWidget {
                             width: double.infinity,
                             padding: EdgeInsets.all(4.0),
                             cornerRadius: 8.0,
+                            child: TextX('Charts',
+                                color: Colors.white,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.center,
+                                maxLines: 1),
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'LineChart',
+                                  backgroundColor: ColorX.green,
+                                  onClicked: () async {
+                                    controller.btnLineChartClicked();
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'PieChart',
+                                  backgroundColor: ColorX.green,
+                                  onClicked: () async {
+                                    controller.btnPieChartClicked();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          const ContainerX(
+                            backgroundColor: ColorX.gray,
+                            width: double.infinity,
+                            padding: EdgeInsets.all(4.0),
+                            cornerRadius: 8.0,
                             child: TextX('Share',
                                 color: Colors.white,
                                 fontSize: 17.0,

@@ -26,7 +26,7 @@ class DemoPieChartScreen extends StatelessWidget {
           bodyView: Container(
             padding: const EdgeInsets.all(16.0),
             child: PieChart(
-              PieChartData(sections: controller.pieChartSectionData),
+              PieChartData(sections: controller.pieChartData),
             ),
           )),
     );

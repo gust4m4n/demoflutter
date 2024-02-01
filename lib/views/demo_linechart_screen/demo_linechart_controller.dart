@@ -3,17 +3,14 @@ import 'package:fl_chart/fl_chart.dart';
 
 class DemoLineChartController extends GetxController {
   List<FlSpot> chartData = [
-    FlSpot(0, 1),
-    FlSpot(1, 3),
-    FlSpot(2, 10),
-    FlSpot(3, 7),
-    FlSpot(4, 12),
-    FlSpot(5, 13),
-    FlSpot(6, 17),
-    FlSpot(7, 15),
-    FlSpot(8, 20),
+    FlSpot(1, 400),
+    FlSpot(2, 800),
+    FlSpot(3, 500),
+    FlSpot(4, 100),
+    FlSpot(5, 300),
+    FlSpot(6, 300),
   ];
-  
+
   @override
   void onReady() {
     super.onReady();

@@ -1,28 +1,22 @@
-import 'dart:ui';
-import 'package:get/get.dart';
 import 'package:fl_chart/fl_chart.dart';
+import '../../widgets/all_widgets.dart';
 
 class DemoPieChartController extends GetxController {
-  List<PieChartSectionData> pieChartSectionData = [
+  List<PieChartSectionData> pieChartData = [
     PieChartSectionData(
-      value: 20,
-      title: '20%',
-      color: Color(0xffed733f),
-    ),
-    PieChartSectionData(
-      value: 35,
-      title: '35%',
-      color: Color(0xff584f84),
-    ),
-    PieChartSectionData(
-      value: 15,
-      title: '15%',
-      color: Color(0xffd86f9b),
+      value: 10,
+      title: '10%',
+      color: ColorX.teal,
     ),
     PieChartSectionData(
       value: 30,
       title: '30%',
-      color: Color(0xffa2663e),
+      color: ColorX.green,
+    ),
+    PieChartSectionData(
+      value: 60,
+      title: '60%',
+      color: ColorX.red,
     ),
   ];
 

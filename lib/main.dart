@@ -1,6 +1,5 @@
-import 'dart:io';
-import 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
-import 'utils/reachability_x.dart';
+import 'package:demoflutter/viewmodels/demo_reachability_vm.dart';
+import 'viewmodels/demo_anti_jailbreak_vm.dart';
 import 'viewmodels/demo_preferences_vm.dart';
 import 'viewmodels/demo_session_vm.dart';
 import 'views/demo_screen/demo_screen.dart';
@@ -11,25 +10,8 @@ var developerMode = false;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  if (!kIsWeb) {
-    if (Platform.isAndroid || Platform.isIOS) {
-      jailbroken = await FlutterJailbreakDetection.jailbroken;
-      if (jailbroken == true) {
-        DemoSessionVM.forceQuit();
-        return;
-      }
-      if (Platform.isAndroid) {
-        developerMode = await FlutterJailbreakDetection.developerMode;
-        if (developerMode == true) {
-          if (kReleaseMode) {
-            DemoSessionVM.forceQuit();
-            return;
-          }
-        }
-      }
-    }
-  }
+  await DemoAntiJailbreakVM.check();
+  DemoReachabilityVM.startListening();
 
   var firstInstall = await DemoPreferencesVM.getFirstInstall();
   if (firstInstall == true) {
@@ -74,21 +56,6 @@ Future<void> main() async {
       ),
     );
   });
-
-  ReachabilityX.startListening(handler: (connected) {
-    if (connected == true) {
-      ToastX.snackBarCustom(
-        widget: InternetOfflineToast(),
-        duration: 3500,
-      );
-    } else {
-      ToastX.snackBarCustom(
-        widget: InternetOnlineToast(),
-        duration: 0,
-      );
-    }
-  });
-
 /*
   if (DemoSessionVM.token.isNotEmpty) {
     DemoSessionVM.checkPinAndBiometric();

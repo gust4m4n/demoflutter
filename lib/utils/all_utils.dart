@@ -1,5 +1,5 @@
+export 'package:flutter_jailbreak_detection/flutter_jailbreak_detection.dart';
 export 'aes_utils.dart';
-export 'all_utils.dart';
 export 'api_x.dart';
 export 'asset_utils.dart';
 export 'base64_utils.dart';

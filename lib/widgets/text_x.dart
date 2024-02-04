@@ -1,4 +1,4 @@
-import 'package:demoflutter/widgets/all_widgets.dart';
+import 'all_widgets.dart';
 
 class TextX extends StatelessWidget {
   final String text;

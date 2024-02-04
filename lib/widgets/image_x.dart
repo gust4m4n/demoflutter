@@ -1,6 +1,4 @@
 import 'dart:io';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_svg/svg.dart';
 import 'all_widgets.dart';
 
 class ImageX extends StatelessWidget {

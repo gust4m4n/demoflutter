@@ -27,7 +27,7 @@ class TextFieldX extends StatelessWidget {
     required this.obscureText,
     this.cornerRadius = 8.0,
     this.borderWidth = 1.0,
-    this.borderColor = ColorX.gray,
+    this.borderColor = ColorX.lightGray,
     this.height = 48.0,
     required this.keyboardType,
     this.multiline = false,
@@ -149,7 +149,7 @@ class TextFieldX extends StatelessWidget {
               onChanged: onChanged,
               focusNode: focusNode,
               obscureText: obscureText,
-              style: const TextStyle(fontSize: 17.0, color: Color(0xff434343)),
+              style: const TextStyle(fontSize: 17.0, color: ColorX.black),
               keyboardType: multiline ? TextInputType.multiline : keyboardType,
               textInputAction:
                   multiline ? TextInputAction.newline : TextInputAction.done,

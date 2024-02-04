@@ -31,7 +31,7 @@ class DemoLoginScreen extends StatelessWidget {
                     children: [
                       TextX(
                         'Username',
-                        color: ColorX.black,
+                        color: ColorX.gray,
                         fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
@@ -55,7 +55,7 @@ class DemoLoginScreen extends StatelessWidget {
                     children: [
                       TextX(
                         'Password',
-                        color: ColorX.black,
+                        color: ColorX.gray,
                         fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,
@@ -95,7 +95,7 @@ class DemoLoginScreen extends StatelessWidget {
                     children: [
                       TextX(
                         'Role',
-                        color: ColorX.black,
+                        color: ColorX.gray,
                         fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                         textAlign: TextAlign.start,

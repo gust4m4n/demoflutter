@@ -23,8 +23,6 @@ class DemoReceiptController extends GetxController {
         XFile.fromData(capturedImage!,
             mimeType: 'image/png', name: 'receipt.png')
       ]);
-    }).catchError((onError) {
-      print(onError);
-    });
+    }).catchError((onError) {});
   }
 }

@@ -36,7 +36,6 @@ class DemoReceiptScreen extends StatelessWidget {
                     child: SingleChildScrollView(
                         physics: ClampingScrollPhysics(),
                         child: Column(children: [
-                          SizedBox(height: 24.0),
                           Screenshot(
                               controller: controller.screenshotController,
                               child: ContainerX(

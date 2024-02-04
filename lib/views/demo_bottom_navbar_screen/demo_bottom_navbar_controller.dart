@@ -6,9 +6,29 @@ class DemoBottomNavBarController extends SuperController {
   DemoBottomNavBarController({this.tabBarIndex = 0});
 
   @override
-  Future<void> onReady() async {
+  void onReady() {
     super.onReady();
     StatusBarX.setDark();
+  }
+
+  @override
+  void onDetached() {
+    LoggerX.log('[DemoBottomNavBarController] onDetached');
+  }
+
+  @override
+  void onInactive() {
+    LoggerX.log('[DemoBottomNavBarController] onInactive');
+  }
+
+  @override
+  void onPaused() {
+    LoggerX.log('[DemoBottomNavBarController] onPaused');
+  }
+
+  @override
+  void onResumed() {
+    LoggerX.log('[DemoBottomNavBarController] onResumed');
   }
 
   @override
@@ -34,25 +54,5 @@ class DemoBottomNavBarController extends SuperController {
         StatusBarX.setLight();
         break;
     }
-  }
-
-  @override
-  void onDetached() {
-    LoggerX.log('[TabBar] onDetached');
-  }
-
-  @override
-  void onInactive() {
-    LoggerX.log('[TabBar] onInactive');
-  }
-
-  @override
-  void onPaused() {
-    LoggerX.log('[TabBar] onPaused');
-  }
-
-  @override
-  void onResumed() {
-    LoggerX.log('[TabBar] onResumed');
   }
 }

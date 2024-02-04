@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import '../../utils/all_utils.dart';
+import '../../widgets/all_widgets.dart';
 
-class DemoLoginController extends GetxController {
+class DemoLoginController extends SuperController {
   final txtUsernameController = TextEditingController();
   bool securedPassword = true;
   final txtPasswordController = TextEditingController();
@@ -10,6 +10,26 @@ class DemoLoginController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+  }
+
+  @override
+  void onDetached() {
+    LoggerX.log('[DemoLoginController] onDetached');
+  }
+
+  @override
+  void onInactive() {
+    LoggerX.log('[DemoLoginController] onInactive');
+  }
+
+  @override
+  void onPaused() {
+    LoggerX.log('[DemoLoginController] onPaused');
+  }
+
+  @override
+  void onResumed() {
+    LoggerX.log('[DemoLoginController] onResumed');
   }
 
   btnForgotPasswordClicked() {

@@ -24,10 +24,30 @@ import '../demo_receipt_screen/demo_receipt_screen.dart';
 import '../demo_tabbar_screen/demo_tabbar_screen.dart';
 import '../demo_webview_screen/demo_webview_screen.dart';
 
-class DemoController extends GetxController {
+class DemoController extends SuperController {
   @override
   void onReady() {
     super.onReady();
+  }
+
+  @override
+  void onDetached() {
+    LoggerX.log('[DemoController] onDetached');
+  }
+
+  @override
+  void onInactive() {
+    LoggerX.log('[DemoController] onInactive');
+  }
+
+  @override
+  void onPaused() {
+    LoggerX.log('[DemoController] onPaused');
+  }
+
+  @override
+  void onResumed() {
+    LoggerX.log('[DemoController] onResumed');
   }
 
   btnOnboardingClicked() {

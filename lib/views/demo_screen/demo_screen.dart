@@ -1,15 +1,6 @@
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
-import '../demo_drawer_screen/demo_drawer_screen.dart';
-import '../demo_gridview_screen/demo_gridview_screen.dart';
-import '../demo_html_screen/demo_html_screen.dart';
-import '../demo_listview_screen/demo_listview_screen.dart';
-import '../demo_login_screen/demo_login_screen.dart';
-import '../demo_qr_code_screen/demo_qr_code_screen.dart';
-import '../demo_qr_scan_screen/demo_qr_scan_screen.dart';
-import '../demo_tabbar_screen/demo_tabbar_screen.dart';
-import '../demo_webview_screen/demo_webview_screen.dart';
 import 'demo_controller.dart';
 
 class DemoScreen extends StatelessWidget {
@@ -65,7 +56,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Login',
                                   backgroundColor: ColorX.teal,
                                   onClicked: () {
-                                    Get.to(DemoLoginScreen(), popGesture: true);
+                                    controller.btnLoginClicked();
                                   },
                                 ),
                               ),
@@ -91,7 +82,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'OTP',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.green,
                                   onClicked: () {
                                     controller.btnOtpClicked();
                                   },
@@ -105,123 +96,23 @@ class DemoScreen extends StatelessWidget {
                             children: <Widget>[
                               Expanded(
                                 child: ButtonX(
-                                  title: 'PIN Sheet',
-                                  backgroundColor: ColorX.teal,
-                                  onClicked: () {
-                                    controller.btnPinSheetClicked();
-                                  },
-                                ),
-                              ),
-                              const SizedBox(width: 4.0),
-                              Expanded(
-                                child: ButtonX(
                                   title: 'PIN',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.green,
                                   onClicked: () {
                                     controller.btnPinClicked();
                                   },
                                 ),
                               ),
-                            ],
-                          ),
-                          const SizedBox(height: 4.0),
-                          const ContainerX(
-                            backgroundColor: ColorX.gray,
-                            width: double.infinity,
-                            padding: EdgeInsets.all(4.0),
-                            cornerRadius: 8.0,
-                            child: TextX('Alert and Toasts',
-                                color: Colors.white,
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.w400,
-                                textAlign: TextAlign.center,
-                                maxLines: 1),
-                          ),
-                          const SizedBox(height: 4.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                child: ButtonX(
-                                  title: 'Toast',
-                                  backgroundColor: ColorX.green,
-                                  onClicked: () {
-                                    controller.btnToastClicked();
-                                  },
-                                ),
-                              ),
                               const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
-                                  title: 'SnackBar',
+                                  title: 'PIN Sheet',
                                   backgroundColor: ColorX.green,
                                   onClicked: () {
-                                    controller.btnSnackBarClicked();
+                                    controller.btnPinSheetClicked();
                                   },
                                 ),
                               ),
-                            ],
-                          ),
-                          const SizedBox(height: 4.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                child: ButtonX(
-                                  title: 'Internet Offline',
-                                  backgroundColor: ColorX.green,
-                                  onClicked: () {
-                                    controller.btnInternetOfflineClicked();
-                                  },
-                                ),
-                              ),
-                              const SizedBox(width: 4.0),
-                              Expanded(
-                                child: ButtonX(
-                                  title: 'Internet Online',
-                                  backgroundColor: ColorX.green,
-                                  onClicked: () {
-                                    controller.btnInternetOnlineClicked();
-                                  },
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 4.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                  child: ButtonX(
-                                title: 'Dialog',
-                                backgroundColor: ColorX.green,
-                                onClicked: () {
-                                  controller.btnDialogClicked();
-                                },
-                              )),
-                              const SizedBox(width: 4.0),
-                              Expanded(
-                                  child: ButtonX(
-                                title: 'Bottom Sheet',
-                                backgroundColor: ColorX.green,
-                                onClicked: () {
-                                  controller.btnBottomSheetClicked();
-                                },
-                              )),
-                            ],
-                          ),
-                          const SizedBox(height: 4.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                  child: ButtonX(
-                                title: 'Loading',
-                                backgroundColor: ColorX.green,
-                                onClicked: () {
-                                  controller.btnLoadingClicked();
-                                },
-                              )),
                             ],
                           ),
                           const SizedBox(height: 4.0),
@@ -246,8 +137,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'ListView',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () {
-                                    Get.to(DemoListViewScreen(),
-                                        popGesture: true);
+                                    controller.btnListViewClicked();
                                   },
                                 ),
                               ),
@@ -257,8 +147,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'GridView',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () {
-                                    Get.to(DemoGridViewScreen(),
-                                        popGesture: true);
+                                    controller.btnGridViewClicked();
                                   },
                                 ),
                               ),
@@ -273,7 +162,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Drawer',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () {
-                                    Get.to(DemoDrawerScreen());
+                                    controller.btnDrawerClicked();
                                   },
                                 ),
                               ),
@@ -333,7 +222,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'WebView',
                                 backgroundColor: ColorX.red,
                                 onClicked: () {
-                                  Get.to(DemoWebViewScreen());
+                                  controller.btnWebViewClicked();
                                 },
                               )),
                               const SizedBox(width: 4.0),
@@ -342,7 +231,7 @@ class DemoScreen extends StatelessWidget {
                                 title: 'HTML',
                                 backgroundColor: ColorX.red,
                                 onClicked: () {
-                                  Get.to(DemoHtmlScreen());
+                                  controller.btnHtmlClicked();
                                 },
                               )),
                             ],
@@ -369,7 +258,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'QR Code',
                                   backgroundColor: ColorX.teal,
                                   onClicked: () async {
-                                    Get.to(DemoQRCodeScreen());
+                                    controller.btnQrCodeClicked();
                                   },
                                 ),
                               ),
@@ -379,7 +268,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'QR Scan',
                                   backgroundColor: ColorX.teal,
                                   onClicked: () async {
-                                    Get.to(DemoQRScanScreen());
+                                    controller.btnQrScanClicked();
                                   },
                                 ),
                               ),
@@ -407,7 +296,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'TabBar',
                                   backgroundColor: ColorX.green,
                                   onClicked: () async {
-                                    Get.to(DemoTabBarScreen());
+                                    controller.btnTabBarClicked();
                                   },
                                 ),
                               ),
@@ -417,7 +306,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'BottomNavBar',
                                   backgroundColor: ColorX.green,
                                   onClicked: () async {
-                                    controller.btnTabBarClicked();
+                                    controller.btnBottomNavBarClicked();
                                   },
                                 ),
                               ),
@@ -443,7 +332,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'LineChart',
-                                  backgroundColor: ColorX.green,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     controller.btnLineChartClicked();
                                   },
@@ -453,12 +342,112 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'PieChart',
-                                  backgroundColor: ColorX.green,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     controller.btnPieChartClicked();
                                   },
                                 ),
                               ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          const ContainerX(
+                            backgroundColor: ColorX.gray,
+                            width: double.infinity,
+                            padding: EdgeInsets.all(4.0),
+                            cornerRadius: 8.0,
+                            child: TextX('Alert and Toasts',
+                                color: Colors.white,
+                                fontSize: 17.0,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.center,
+                                maxLines: 1),
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Toast',
+                                  backgroundColor: ColorX.red,
+                                  onClicked: () {
+                                    controller.btnToastClicked();
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'SnackBar',
+                                  backgroundColor: ColorX.red,
+                                  onClicked: () {
+                                    controller.btnSnackBarClicked();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Internet Offline',
+                                  backgroundColor: ColorX.red,
+                                  onClicked: () {
+                                    controller.btnInternetOfflineClicked();
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Internet Online',
+                                  backgroundColor: ColorX.red,
+                                  onClicked: () {
+                                    controller.btnInternetOnlineClicked();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'Dialog',
+                                backgroundColor: ColorX.red,
+                                onClicked: () {
+                                  controller.btnDialogClicked();
+                                },
+                              )),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'Bottom Sheet',
+                                backgroundColor: ColorX.red,
+                                onClicked: () {
+                                  controller.btnBottomSheetClicked();
+                                },
+                              )),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'Loading',
+                                backgroundColor: ColorX.red,
+                                onClicked: () {
+                                  controller.btnLoadingClicked();
+                                },
+                              )),
                             ],
                           ),
                           const SizedBox(height: 4.0),
@@ -481,7 +470,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'Text',
-                                  backgroundColor: ColorX.yellow,
+                                  backgroundColor: ColorX.teal,
                                   onClicked: () {
                                     controller.btnShareTextClicked();
                                   },
@@ -491,7 +480,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'Image',
-                                  backgroundColor: ColorX.yellow,
+                                  backgroundColor: ColorX.teal,
                                   onClicked: () {
                                     controller.btnShareImageClicked();
                                   },
@@ -506,7 +495,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'Receipt',
-                                  backgroundColor: ColorX.yellow,
+                                  backgroundColor: ColorX.teal,
                                   onClicked: () {
                                     controller.btnReceiptClicked();
                                   },
@@ -534,7 +523,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'Image Picker',
-                                  backgroundColor: ColorX.red,
+                                  backgroundColor: ColorX.green,
                                   onClicked: () {
                                     controller.btnImagePickerClicked();
                                   },
@@ -562,7 +551,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'Base64',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     Base64Utils.demo();
                                     final plain = LoremIpsumX.medium();
@@ -587,7 +576,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'MD5',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     Md5Utils.demo();
                                     final plain = LoremIpsumX.medium();
@@ -616,7 +605,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'SHA',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     ShaUtils.demo();
                                     final plain = LoremIpsumX.medium();
@@ -640,7 +629,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'AES',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     AesUtils.demo();
                                     final plain = LoremIpsumX.medium();
@@ -684,7 +673,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'XOR',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     XorUtils.demo();
 
@@ -714,7 +703,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'CRC',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     CrcUtils.demo();
                                     final plain = LoremIpsumX.medium();
@@ -742,7 +731,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'HEX',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     HexUtils.demo();
                                     final plain = LoremIpsumX.medium();
@@ -767,7 +756,7 @@ class DemoScreen extends StatelessWidget {
                               Expanded(
                                 child: ButtonX(
                                   title: 'DoubleEncrypt',
-                                  backgroundColor: ColorX.teal,
+                                  backgroundColor: ColorX.yellow,
                                   onClicked: () async {
                                     final plain = LoremIpsumX.medium();
                                     final encrypted =

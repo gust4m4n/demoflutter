@@ -3,8 +3,8 @@ import 'package:demoflutter/views/demo_bottom_navbar_screen/demo_bottom_navbar_s
 import 'package:demoflutter/views/demo_otp_screen/demo_otp_screen.dart';
 import 'package:demoflutter/views/demo_piechart_screen/demo_piechart_screen.dart';
 import 'package:demoflutter/views/demo_pin_sheet/demo_pin_sheet.dart';
+import 'package:demoflutter/views/demo_receipt_screen/demo_receipt_screen.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:share_plus/share_plus.dart';
 import '../../utils/all_utils.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_carousel_screen/demo_carousel_screen.dart';
@@ -165,5 +165,17 @@ class DemoController extends GetxController {
 
   btnPieChartClicked() {
     Get.to(DemoPieChartScreen());
+  }
+
+  btnReceiptClicked() {
+    Get.to(DemoReceiptScreen(
+      details: {
+        'Order ID': 'AB00001',
+        'Total': 'Rp100.000',
+        'Tax (8%)': 'Rp8.000',
+        '-': '',
+        'Grand Total': 'Rp108.000',
+      },
+    ));
   }
 }

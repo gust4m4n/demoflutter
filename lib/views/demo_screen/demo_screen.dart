@@ -500,6 +500,21 @@ class DemoScreen extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Receipt',
+                                  backgroundColor: ColorX.yellow,
+                                  onClicked: () {
+                                    controller.btnReceiptClicked();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
                           const ContainerX(
                             backgroundColor: ColorX.gray,
                             width: double.infinity,

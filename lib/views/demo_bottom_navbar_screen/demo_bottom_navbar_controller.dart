@@ -1,4 +1,5 @@
 import '../../../utils/all_utils.dart';
+import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class DemoBottomNavBarController extends SuperController {
@@ -27,8 +28,9 @@ class DemoBottomNavBarController extends SuperController {
   }
 
   @override
-  void onResumed() {
+  Future<void> onResumed() async {
     LoggerX.log('[DemoBottomNavBarController] onResumed');
+    await DemoAntiJailbreakVM.check();
   }
 
   @override

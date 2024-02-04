@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:image_picker/image_picker.dart';
 import '../../utils/all_utils.dart';
+import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
@@ -46,8 +47,9 @@ class DemoController extends SuperController {
   }
 
   @override
-  void onResumed() {
+  Future<void> onResumed() async {
     LoggerX.log('[DemoController] onResumed');
+    await DemoAntiJailbreakVM.check();
   }
 
   btnOnboardingClicked() {

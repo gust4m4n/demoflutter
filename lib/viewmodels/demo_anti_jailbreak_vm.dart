@@ -1,7 +1,6 @@
 import 'dart:io';
 import '../utils/all_utils.dart';
 import '../widgets/all_widgets.dart';
-import 'demo_session_vm.dart';
 
 class DemoAntiJailbreakVM {
   static var jailbroken = false;
@@ -29,6 +28,10 @@ class DemoAntiJailbreakVM {
   }
 
   static block() {
-    DemoSessionVM.forceQuit();
+    if (Platform.isAndroid) {
+      SystemNavigator.pop();
+    } else if (Platform.isIOS) {
+      exit(0);
+    }
   }
 }

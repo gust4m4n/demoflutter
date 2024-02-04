@@ -1,4 +1,5 @@
 import '../../utils/all_utils.dart';
+import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class DemoLoginController extends SuperController {
@@ -28,8 +29,9 @@ class DemoLoginController extends SuperController {
   }
 
   @override
-  void onResumed() {
+  Future<void> onResumed() async {
     LoggerX.log('[DemoLoginController] onResumed');
+    await DemoAntiJailbreakVM.check();
   }
 
   btnForgotPasswordClicked() {

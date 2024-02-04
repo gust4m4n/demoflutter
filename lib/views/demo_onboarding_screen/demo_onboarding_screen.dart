@@ -53,7 +53,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                       ),
                                       const SizedBox(height: 8.0),
                                       TextX(
-                                        DemoFormatVM.currency(
+                                        DemoFormatVM.currencyUSD(
                                             value: movie.revenue),
                                         color: ColorX.black,
                                         fontSize: 17.0,

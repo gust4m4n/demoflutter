@@ -40,7 +40,7 @@ class DemoListViewCell extends StatelessWidget {
                   ),
                   SizedBox(height: 4.0),
                   TextX(
-                    DemoFormatVM.currency(value: movie.revenue),
+                    DemoFormatVM.currencyUSD(value: movie.revenue),
                     color: ColorX.black,
                     fontSize: 17.0,
                     fontFamily: 'Roboto',

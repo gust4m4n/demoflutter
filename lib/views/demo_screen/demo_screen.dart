@@ -553,22 +553,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'Base64',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    Base64Utils.demo();
-                                    final plain = LoremIpsumX.medium();
-                                    var encoded = Base64Utils.encode(
-                                        Utf8Utils.encode(plain));
-                                    var decoded = Base64Utils.decode(encoded);
-
-                                    SheetX.showMessage(
-                                        title: 'Base64',
-                                        message:
-                                            'plain: $plain\nencoded: $encoded\ndecoded: ${Utf8Utils.decode(decoded)}',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnBase64Clicked();
                                   },
                                 ),
                               ),
@@ -578,21 +563,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'MD5',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    Md5Utils.demo();
-                                    final plain = LoremIpsumX.medium();
-                                    final digest = Md5Utils.convert(
-                                        Utf8Utils.encode(plain));
-
-                                    SheetX.showMessage(
-                                        title: 'MD5',
-                                        message:
-                                            'plain: $plain\ndigest: ${HexUtils.encode(digest)}',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnM5Clicked();
                                   },
                                 ),
                               ),
@@ -607,21 +578,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'SHA',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    ShaUtils.demo();
-                                    final plain = LoremIpsumX.medium();
-                                    final digest = ShaUtils.convert(
-                                        Utf8Utils.encode(plain));
-
-                                    SheetX.showMessage(
-                                        title: 'SHA',
-                                        message:
-                                            'plain: $plain\ndigest: ${HexUtils.encode(digest)}',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnShaClicked();
                                   },
                                 ),
                               ),
@@ -631,36 +588,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'AES',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    AesUtils.demo();
-                                    final plain = LoremIpsumX.medium();
-                                    const key =
-                                        'd3b91f0ebf75cc407114307b0ed67f3cd3b91f0ebf75cc407114307b0ed67f3c';
-                                    const iv =
-                                        '89e4ea9f678d2e94d9548043f54db492';
-                                    final encrypted = AesUtils.encrypt(
-                                        Utf8Utils.encode(plain),
-                                        HexUtils.decode(key),
-                                        HexUtils.decode(iv));
-                                    final decrypted = AesUtils.decrypt(
-                                        encrypted,
-                                        HexUtils.decode(key),
-                                        HexUtils.decode(iv));
-                                    LoggerX.log('[AES] plain: $plain\n');
-                                    LoggerX.log(
-                                        '[AES] encrypted: ${HexUtils.encode(encrypted)}\n');
-                                    LoggerX.log(
-                                        '[AES] decrypted: ${Utf8Utils.decode(decrypted)}\n');
-
-                                    SheetX.showMessage(
-                                        title: 'AES',
-                                        message:
-                                            'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: ${Utf8Utils.decode(decrypted)}',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnAesClicked();
                                   },
                                 ),
                               ),
@@ -675,27 +603,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'XOR',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    XorUtils.demo();
-
-                                    final plain = LoremIpsumX.medium();
-                                    const key =
-                                        '9b2611f319e2c88f1dce0a7a612bcf1f5b037bc66b9e8144725da7faf16cc3f2';
-                                    final encrypted = XorUtils.encrypt(
-                                        Utf8Utils.encode(plain),
-                                        Utf8Utils.encode(key));
-                                    final decrypted = XorUtils.decrypt(
-                                        encrypted, Utf8Utils.encode(key));
-
-                                    SheetX.showMessage(
-                                        title: 'XOR',
-                                        message:
-                                            'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: $decrypted',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnXorClicked();
                                   },
                                 ),
                               ),
@@ -705,20 +613,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'CRC',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    CrcUtils.demo();
-                                    final plain = LoremIpsumX.medium();
-                                    final value = CrcUtils.convert(
-                                        Utf8Utils.encode(plain));
-
-                                    SheetX.showMessage(
-                                        title: 'CRC',
-                                        message: 'plain: $plain\nCRC: $value',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnCrcClicked();
                                   },
                                 ),
                               ),
@@ -733,22 +628,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'HEX',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    HexUtils.demo();
-                                    final plain = LoremIpsumX.medium();
-                                    final encoded = HexUtils.encode(
-                                        Utf8Utils.encode(plain));
-                                    final decoded = HexUtils.decode(encoded);
-
-                                    SheetX.showMessage(
-                                        title: 'HEX',
-                                        message:
-                                            'plain: $plain\nencoded: $encoded\ndecoded: ${Utf8Utils.decode(decoded)}',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnHexClicked();
                                   },
                                 ),
                               ),
@@ -758,23 +638,7 @@ class DemoScreen extends StatelessWidget {
                                   title: 'DoubleEncrypt',
                                   backgroundColor: ColorX.yellow,
                                   onClicked: () async {
-                                    final plain = LoremIpsumX.medium();
-                                    final encrypted =
-                                        DemoSecurityVM.doubleEncrypt(
-                                            Utf8Utils.encode(plain));
-                                    final decrypted =
-                                        DemoSecurityVM.doubleDecrypt(encrypted);
-
-                                    SheetX.showMessage(
-                                        title: 'DoubleEncrypt',
-                                        message:
-                                            'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: ${Utf8Utils.decode(decrypted)}',
-                                        leftBtnTitle: 'OK',
-                                        onLeftBtnClicked: () {
-                                          Get.back();
-                                        },
-                                        rightBtnTitle: '',
-                                        onRightBtnClicked: () {});
+                                    controller.btnDoubleEncryptClicked();
                                   },
                                 ),
                               ),

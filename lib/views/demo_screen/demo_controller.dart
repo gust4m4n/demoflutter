@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:image_picker/image_picker.dart';
 import '../../utils/all_utils.dart';
+import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import '../demo_carousel_screen/demo_carousel_screen.dart';
@@ -103,6 +104,83 @@ class DemoController extends GetxController {
     Get.to(DemoBottomNavBarScreen());
   }
 
+  btnLineChartClicked() {
+    Get.to(DemoLineChartScreen());
+  }
+
+  btnPieChartClicked() {
+    Get.to(DemoPieChartScreen());
+  }
+
+  btnToastClicked() {
+    ToastX.show(msg: LoremIpsumX.medium());
+  }
+
+  btnSnackBarClicked() {
+    ToastX.snackBar(msg: LoremIpsumX.medium());
+  }
+
+  btnInternetOfflineClicked() {
+    ToastX.snackBarCustom(
+      widget: InternetOfflineToast(),
+      duration: 0,
+    );
+  }
+
+  btnInternetOnlineClicked() {
+    ToastX.snackBarCustom(
+      widget: InternetOnlineToast(),
+      duration: 4000,
+    );
+  }
+
+  btnDialogClicked() {
+    DialogX.showMessage(
+        icon: ImageX(
+          url: 'lib/images/ic_demo_logo.png',
+          width: 64.0,
+          height: 64.0,
+          fit: BoxFit.contain,
+        ),
+        title: LoremIpsumX.tiny(),
+        message: LoremIpsumX.medium(),
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: 'Cancel',
+        onRightBtnClicked: () {
+          Get.back();
+        });
+  }
+
+  btnBottomSheetClicked() {
+    SheetX.showMessage(
+        icon: ImageX(
+          url: 'lib/images/ic_demo_logo.png',
+          width: 64.0,
+          height: 64.0,
+          fit: BoxFit.contain,
+        ),
+        title: LoremIpsumX.tiny(),
+        message: LoremIpsumX.medium(),
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: 'Cancel',
+        onRightBtnClicked: () {
+          Get.back();
+        });
+  }
+
+  btnLoadingClicked() {
+    Get.loading();
+    Timer(Duration(seconds: 5), () {
+      Get.back();
+    });
+  }
+
   btnShareTextClicked() {
     Share.share('Check out my website https://example.com');
   }
@@ -147,80 +225,152 @@ class DemoController extends GetxController {
     }
   }
 
-  btnDialogClicked() {
-    DialogX.showMessage(
-        icon: ImageX(
-          url: 'lib/images/ic_demo_logo.png',
-          width: 64.0,
-          height: 64.0,
-          fit: BoxFit.contain,
-        ),
-        title: LoremIpsumX.tiny(),
-        message: LoremIpsumX.medium(),
-        leftBtnTitle: 'OK',
-        onLeftBtnClicked: () {
-          Get.back();
-        },
-        rightBtnTitle: 'Cancel',
-        onRightBtnClicked: () {
-          Get.back();
-        });
-  }
+  btnBase64Clicked() {
+    Base64Utils.demo();
+    final plain = LoremIpsumX.medium();
+    var encoded = Base64Utils.encode(Utf8Utils.encode(plain));
+    var decoded = Base64Utils.decode(encoded);
 
-  btnBottomSheetClicked() {
     SheetX.showMessage(
-        icon: ImageX(
-          url: 'lib/images/ic_demo_logo.png',
-          width: 64.0,
-          height: 64.0,
-          fit: BoxFit.contain,
-        ),
-        title: LoremIpsumX.tiny(),
-        message: LoremIpsumX.medium(),
+        title: 'Base64',
+        message:
+            'plain: $plain\nencoded: $encoded\ndecoded: ${Utf8Utils.decode(decoded)}',
         leftBtnTitle: 'OK',
         onLeftBtnClicked: () {
           Get.back();
         },
-        rightBtnTitle: 'Cancel',
-        onRightBtnClicked: () {
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
+  }
+
+  btnM5Clicked() {
+    Md5Utils.demo();
+    final plain = LoremIpsumX.medium();
+    final digest = Md5Utils.convert(Utf8Utils.encode(plain));
+
+    SheetX.showMessage(
+        title: 'MD5',
+        message: 'plain: $plain\ndigest: ${HexUtils.encode(digest)}',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
           Get.back();
-        });
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 
-  btnInternetOfflineClicked() {
-    ToastX.snackBarCustom(
-      widget: InternetOfflineToast(),
-      duration: 0,
-    );
+  btnShaClicked() {
+    ShaUtils.demo();
+    final plain = LoremIpsumX.medium();
+    final digest = ShaUtils.convert(Utf8Utils.encode(plain));
+
+    SheetX.showMessage(
+        title: 'SHA',
+        message: 'plain: $plain\ndigest: ${HexUtils.encode(digest)}',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 
-  btnInternetOnlineClicked() {
-    ToastX.snackBarCustom(
-      widget: InternetOnlineToast(),
-      duration: 4000,
-    );
+  btnAesClicked() {
+    AesUtils.demo();
+    final plain = LoremIpsumX.medium();
+    const key =
+        'd3b91f0ebf75cc407114307b0ed67f3cd3b91f0ebf75cc407114307b0ed67f3c';
+    const iv = '89e4ea9f678d2e94d9548043f54db492';
+    final encrypted = AesUtils.encrypt(
+        Utf8Utils.encode(plain), HexUtils.decode(key), HexUtils.decode(iv));
+    final decrypted =
+        AesUtils.decrypt(encrypted, HexUtils.decode(key), HexUtils.decode(iv));
+    LoggerX.log('[AES] plain: $plain\n');
+    LoggerX.log('[AES] encrypted: ${HexUtils.encode(encrypted)}\n');
+    LoggerX.log('[AES] decrypted: ${Utf8Utils.decode(decrypted)}\n');
+
+    SheetX.showMessage(
+        title: 'AES',
+        message:
+            'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: ${Utf8Utils.decode(decrypted)}',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 
-  btnLoadingClicked() {
-    Get.loading();
-    Timer(Duration(seconds: 5), () {
-      Get.back();
-    });
+  btnXorClicked() {
+    XorUtils.demo();
+
+    final plain = LoremIpsumX.medium();
+    const key =
+        '9b2611f319e2c88f1dce0a7a612bcf1f5b037bc66b9e8144725da7faf16cc3f2';
+    final encrypted =
+        XorUtils.encrypt(Utf8Utils.encode(plain), Utf8Utils.encode(key));
+    final decrypted = XorUtils.decrypt(encrypted, Utf8Utils.encode(key));
+
+    SheetX.showMessage(
+        title: 'XOR',
+        message:
+            'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: $decrypted',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 
-  btnToastClicked() {
-    ToastX.show(msg: LoremIpsumX.medium());
+  btnCrcClicked() {
+    CrcUtils.demo();
+    final plain = LoremIpsumX.medium();
+    final value = CrcUtils.convert(Utf8Utils.encode(plain));
+
+    SheetX.showMessage(
+        title: 'CRC',
+        message: 'plain: $plain\nCRC: $value',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 
-  btnSnackBarClicked() {
-    ToastX.snackBar(msg: LoremIpsumX.medium());
+  btnHexClicked() {
+    HexUtils.demo();
+    final plain = LoremIpsumX.medium();
+    final encoded = HexUtils.encode(Utf8Utils.encode(plain));
+    final decoded = HexUtils.decode(encoded);
+
+    SheetX.showMessage(
+        title: 'HEX',
+        message:
+            'plain: $plain\nencoded: $encoded\ndecoded: ${Utf8Utils.decode(decoded)}',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 
-  btnLineChartClicked() {
-    Get.to(DemoLineChartScreen());
-  }
+  btnDoubleEncryptClicked() {
+    final plain = LoremIpsumX.medium();
+    final encrypted = DemoSecurityVM.doubleEncrypt(Utf8Utils.encode(plain));
+    final decrypted = DemoSecurityVM.doubleDecrypt(encrypted);
 
-  btnPieChartClicked() {
-    Get.to(DemoPieChartScreen());
+    SheetX.showMessage(
+        title: 'DoubleEncrypt',
+        message:
+            'plain: $plain\nencrypted: ${HexUtils.encode(encrypted)}\ndecrypted: ${Utf8Utils.decode(decrypted)}',
+        leftBtnTitle: 'OK',
+        onLeftBtnClicked: () {
+          Get.back();
+        },
+        rightBtnTitle: '',
+        onRightBtnClicked: () {});
   }
 }

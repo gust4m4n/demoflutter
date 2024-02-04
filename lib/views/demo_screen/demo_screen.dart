@@ -255,7 +255,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'QR Code',
                                   backgroundColor: ColorX.teal,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnQrCodeClicked();
                                   },
                                 ),
@@ -265,7 +265,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'QR Scan',
                                   backgroundColor: ColorX.teal,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnQrScanClicked();
                                   },
                                 ),
@@ -293,7 +293,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'TabBar',
                                   backgroundColor: ColorX.green,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnTabBarClicked();
                                   },
                                 ),
@@ -303,7 +303,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'BottomNavBar',
                                   backgroundColor: ColorX.green,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnBottomNavBarClicked();
                                   },
                                 ),
@@ -331,7 +331,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'LineChart',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnLineChartClicked();
                                   },
                                 ),
@@ -341,7 +341,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'PieChart',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnPieChartClicked();
                                   },
                                 ),
@@ -550,7 +550,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'Base64',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnBase64Clicked();
                                   },
                                 ),
@@ -560,7 +560,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'MD5',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnM5Clicked();
                                   },
                                 ),
@@ -575,7 +575,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'SHA',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnShaClicked();
                                   },
                                 ),
@@ -585,7 +585,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'AES',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnAesClicked();
                                   },
                                 ),
@@ -600,7 +600,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'XOR',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnXorClicked();
                                   },
                                 ),
@@ -610,7 +610,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'CRC',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnCrcClicked();
                                   },
                                 ),
@@ -625,7 +625,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'HEX',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnHexClicked();
                                   },
                                 ),
@@ -635,7 +635,7 @@ class DemoScreen extends StatelessWidget {
                                 child: ButtonX(
                                   title: 'DoubleEncrypt',
                                   backgroundColor: ColorX.yellow,
-                                  onClicked: () async {
+                                  onClicked: () {
                                     controller.btnDoubleEncryptClicked();
                                   },
                                 ),

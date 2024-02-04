@@ -22,7 +22,7 @@ class DemoDatabaseScreen extends StatelessWidget {
               faIcon: FontAwesomeIcons.arrowLeft,
               width: 20.0,
               height: 20.0,
-              color: Colors.white,
+              color: ColorX.white,
               fit: BoxFit.contain,
             ),
             leftAction: () {
@@ -55,7 +55,7 @@ class DemoDatabaseScreen extends StatelessWidget {
                             if (snapshot.hasData) {
                               var movie = snapshot.data;
                               return Material(
-                                  color: Colors.transparent,
+                                  color: ColorX.transparent,
                                   child: InkWell(
                                       highlightColor: ColorX.highlight,
                                       onTap: () {

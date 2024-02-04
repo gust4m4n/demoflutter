@@ -18,7 +18,7 @@ class DemoCarouselScreen extends StatelessWidget {
             faIcon: FontAwesomeIcons.arrowLeft,
             width: 20.0,
             height: 20.0,
-            color: Colors.white,
+            color: ColorX.white,
             fit: BoxFit.contain,
           ),
           leftAction: () {
@@ -42,7 +42,7 @@ class DemoCarouselScreen extends StatelessWidget {
                     (BuildContext context, int index, int pageViewIndex) {
                   final movie = controller.movieListVM.list[index];
                   return Material(
-                      color: Colors.transparent,
+                      color: ColorX.transparent,
                       child: InkWell(
                           customBorder: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8.0)),

@@ -35,8 +35,8 @@ class ToastX {
         builder: (context, controller) {
           ToastX.controller = controller;
           return FlashBar(
-            shadowColor: Colors.transparent,
-            backgroundColor: Colors.transparent,
+            shadowColor: ColorX.transparent,
+            backgroundColor: ColorX.transparent,
             controller: controller,
             behavior: FlashBehavior.floating,
             position: FlashPosition.bottom,
@@ -71,7 +71,7 @@ class BasicToast extends StatelessWidget {
           child: Wrap(children: [
             TextX(
               msg,
-              color: Colors.white,
+              color: ColorX.white,
               fontSize: 17.0,
               fontWeight: FontWeight.w500,
               textAlign: TextAlign.center,
@@ -96,7 +96,7 @@ class BasicSnackBar extends StatelessWidget {
       child: Wrap(children: [
         TextX(
           msg,
-          color: Colors.white,
+          color: ColorX.white,
           fontSize: 17.0,
           fontWeight: FontWeight.w500,
           textAlign: TextAlign.start,

@@ -19,7 +19,7 @@ class DemoReceiptScreen extends StatelessWidget {
                 faIcon: FontAwesomeIcons.arrowLeft,
                 width: 20.0,
                 height: 20.0,
-                color: Colors.white,
+                color: ColorX.white,
                 fit: BoxFit.contain,
               ),
               leftAction: () {
@@ -28,7 +28,7 @@ class DemoReceiptScreen extends StatelessWidget {
             ),
             bottomPadding: false,
             bodyView: ContainerX(
-                backgroundColor: Colors.white,
+                backgroundColor: ColorX.white,
                 topLeftRadius: 32.0,
                 topRightRadius: 32.0,
                 child: Column(children: [

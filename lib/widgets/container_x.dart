@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'all_widgets.dart';
 
 class ContainerX extends StatelessWidget {
   final Color? backgroundColor;
@@ -16,11 +16,11 @@ class ContainerX extends StatelessWidget {
 
   const ContainerX({
     Key? key,
-    this.backgroundColor = Colors.transparent,
+    this.backgroundColor = ColorX.transparent,
     this.width,
     this.height,
     this.borderWidth = 0.0,
-    this.borderColor = Colors.transparent,
+    this.borderColor = ColorX.transparent,
     this.cornerRadius = 0.0,
     this.topLeftRadius = 0.0,
     this.topRightRadius = 0.0,

@@ -12,7 +12,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showWithGrip(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorX.white,
         cornerRadius: 32.0,
         avoidingKeyboard: false,
         widget: this);
@@ -23,7 +23,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
     return GetBuilder<DemoPinSheetController>(
         init: DemoPinSheetController(),
         builder: (controller) => ContainerX(
-            backgroundColor: Colors.white,
+            backgroundColor: ColorX.white,
             topLeftRadius: 32.0,
             topRightRadius: 32.0,
             child: Wrap(children: [
@@ -147,7 +147,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                 ),
               ),
               ContainerX(
-                backgroundColor: Colors.white,
+                backgroundColor: ColorX.white,
                 child: Column(
                   children: [
                     SizedBox(height: 24.0),

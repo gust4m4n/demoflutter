@@ -23,7 +23,7 @@ class DemoDrawerScreen extends StatelessWidget {
             faIcon: FontAwesomeIcons.bars,
             width: 20.0,
             height: 20.0,
-            color: Colors.white,
+            color: ColorX.white,
             fit: BoxFit.contain,
           ),
           leftAction: () {
@@ -34,7 +34,7 @@ class DemoDrawerScreen extends StatelessWidget {
         bodyView: Center(
           child: const TextX(
             'Swipe to open drawer',
-            color: Colors.black,
+            color: ColorX.black,
             fontSize: 22.0,
             fontWeight: FontWeight.w700,
             textAlign: TextAlign.start,

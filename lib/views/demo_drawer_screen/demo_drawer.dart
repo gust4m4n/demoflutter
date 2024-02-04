@@ -7,7 +7,7 @@ class DemoDrawer extends StatelessWidget {
     return Drawer(
       elevation: 0.0,
       child: Container(
-        color: Colors.white,
+        color: ColorX.white,
         child: Column(
           children: [
             DrawerHeader(

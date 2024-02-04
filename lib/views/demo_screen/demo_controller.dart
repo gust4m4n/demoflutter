@@ -35,7 +35,7 @@ class DemoController extends GetxController {
   }
 
   btnLoginClicked() {
-    Get.to(DemoLoginScreen(), popGesture: true);
+    Get.to(DemoLoginScreen());
   }
 
   btnOtpClicked() {
@@ -54,11 +54,11 @@ class DemoController extends GetxController {
   }
 
   btnListViewClicked() {
-    Get.to(DemoListViewScreen(), popGesture: true);
+    Get.to(DemoListViewScreen());
   }
 
   btnGridViewClicked() {
-    Get.to(DemoGridViewScreen(), popGesture: true);
+    Get.to(DemoGridViewScreen());
   }
 
   btnDrawerClicked() {

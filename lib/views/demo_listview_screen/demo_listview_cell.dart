@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
 import '../../models/demo_movie_model.dart';
 import '../../viewmodels/demo_format_vm.dart';
-import '../../widgets/image_x.dart';
-import '../../widgets/text_x.dart';
+import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
 class DemoListViewCell extends StatelessWidget {
@@ -33,7 +31,7 @@ class DemoListViewCell extends StatelessWidget {
                 children: [
                   TextX(
                     movie.title,
-                    color: Colors.black,
+                    color: ColorX.black,
                     fontSize: 20.0,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w700,
@@ -43,7 +41,7 @@ class DemoListViewCell extends StatelessWidget {
                   SizedBox(height: 4.0),
                   TextX(
                     DemoFormatVM.currency(value: movie.revenue),
-                    color: Colors.black,
+                    color: ColorX.black,
                     fontSize: 17.0,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,

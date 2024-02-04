@@ -19,7 +19,7 @@ class DemoListViewScreen extends StatelessWidget {
               faIcon: FontAwesomeIcons.arrowLeft,
               width: 20.0,
               height: 20.0,
-              color: Colors.white,
+              color: ColorX.white,
               fit: BoxFit.contain,
             ),
             leftAction: () {
@@ -46,7 +46,7 @@ class DemoListViewScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       final movie = controller.movieListVM.list[index];
                       return Material(
-                          color: Colors.transparent,
+                          color: ColorX.transparent,
                           child: InkWell(
                               highlightColor: ColorX.highlight,
                               onTap: () {

@@ -21,7 +21,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                 faIcon: FontAwesomeIcons.arrowLeft,
                 width: 20.0,
                 height: 20.0,
-                color: Colors.white,
+                color: ColorX.white,
                 fit: BoxFit.contain,
               ),
               leftAction: () {
@@ -31,7 +31,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
             bottomPadding: true,
             bodyView: Center(
                 child: ContainerX(
-                    backgroundColor: Colors.white,
+                    backgroundColor: ColorX.white,
                     child: Wrap(children: [
                       ContainerX(height: 8.0),
                       Row(
@@ -122,7 +122,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                         ),
                       ),
                       ContainerX(
-                        backgroundColor: Colors.white,
+                        backgroundColor: ColorX.white,
                         child: Column(
                           children: [
                             SizedBox(height: 24.0),

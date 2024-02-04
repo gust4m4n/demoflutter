@@ -13,7 +13,7 @@ class InternetOfflineToast extends StatelessWidget {
             const Expanded(
               child: TextX(
                 'No internet connection',
-                color: Colors.white,
+                color: ColorX.white,
                 fontSize: 17.0,
                 fontWeight: FontWeight.w500,
                 textAlign: TextAlign.left,
@@ -23,9 +23,9 @@ class InternetOfflineToast extends StatelessWidget {
             const SizedBox(width: 8.0),
             ButtonX(
               title: 'OK',
-              backgroundColor: Colors.transparent,
+              backgroundColor: ColorX.transparent,
               borderWidth: 1.0,
-              borderColor: Colors.white,
+              borderColor: ColorX.white,
               width: 50.0,
               height: 32.0,
               onClicked: () async {
@@ -52,7 +52,7 @@ class InternetOnlineToast extends StatelessWidget {
             const Expanded(
               child: TextX(
                 'Back to online',
-                color: Colors.white,
+                color: ColorX.white,
                 fontSize: 17.0,
                 fontWeight: FontWeight.w500,
                 textAlign: TextAlign.start,
@@ -62,9 +62,9 @@ class InternetOnlineToast extends StatelessWidget {
             const SizedBox(width: 8.0),
             ButtonX(
               title: 'OK',
-              backgroundColor: Colors.transparent,
+              backgroundColor: ColorX.transparent,
               borderWidth: 1.0,
-              borderColor: Colors.white,
+              borderColor: ColorX.white,
               width: 50.0,
               height: 32.0,
               onClicked: () async {

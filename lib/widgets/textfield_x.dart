@@ -63,7 +63,7 @@ class TextFieldX extends StatelessWidget {
       width: 38.0 - (borderWidth * 1),
       height: height - (borderWidth * 2),
       child: Material(
-        color: Colors.transparent,
+        color: ColorX.transparent,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -72,7 +72,7 @@ class TextFieldX extends StatelessWidget {
         ),
         child: Theme(
           data: Theme.of(context).copyWith(
-            splashColor: Colors.transparent,
+            splashColor: ColorX.transparent,
           ),
           child: InkWell(
             onTap: () => rightAction != null ? rightAction!() : null,
@@ -85,7 +85,7 @@ class TextFieldX extends StatelessWidget {
 
   Widget rightContainerDropdown(BuildContext context) {
     return Material(
-        color: Colors.transparent,
+        color: ColorX.transparent,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
@@ -94,7 +94,7 @@ class TextFieldX extends StatelessWidget {
         ),
         child: Theme(
             data: Theme.of(context).copyWith(
-              splashColor: Colors.transparent,
+              splashColor: ColorX.transparent,
             ),
             child: PopupMenuButton(
               tooltip: '',
@@ -127,9 +127,9 @@ class TextFieldX extends StatelessWidget {
   Widget build(BuildContext context) {
     return ContainerX(
         backgroundColor: (rightIcon != null)
-            ? Colors.white
+            ? ColorX.white
             : readOnly == false
-                ? Colors.white
+                ? ColorX.white
                 : const Color(0xffF4F4F4),
         height: height,
         padding: EdgeInsets.only(

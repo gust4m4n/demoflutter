@@ -29,9 +29,9 @@ class ImageX extends StatelessWidget {
     this.cornerRadius = 0.0,
     this.topLeftRadius = 0.0,
     this.topRightRadius = 0.0,
-    this.placeholderColor = Colors.transparent,
+    this.placeholderColor = ColorX.transparent,
     this.placeholder = '',
-    this.backgroundColor = Colors.transparent,
+    this.backgroundColor = ColorX.transparent,
     this.padding = const EdgeInsets.all(0.0),
   }) : super(key: key);
 

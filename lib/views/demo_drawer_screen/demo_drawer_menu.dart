@@ -11,7 +11,7 @@ class DemoDrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        color: Colors.transparent,
+        color: ColorX.transparent,
         child: InkWell(
           highlightColor: ColorX.highlight,
           onTap: onClicked,

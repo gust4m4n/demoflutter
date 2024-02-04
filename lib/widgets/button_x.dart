@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'image_x.dart';
-import 'text_x.dart';
+import 'all_widgets.dart';
 
 class ButtonX extends StatelessWidget {
   final IconData? faIcon;
@@ -31,14 +29,14 @@ class ButtonX extends StatelessWidget {
     this.faHeight = 24.0,
     this.faColor = null,
     this.title = 'Button',
-    this.backgroundColor = Colors.black,
+    this.backgroundColor = ColorX.black,
     this.disabledBackgroundColor = const Color(0xffE0E5EF),
-    this.titleColor = Colors.white,
+    this.titleColor = ColorX.white,
     this.disabledTitleColor = const Color(0xff86898F),
     this.cornerRadius = 8.0,
     this.borderWidth = 0.0,
-    this.borderColor = Colors.transparent,
-    this.highlightColor = Colors.white,
+    this.borderColor = ColorX.transparent,
+    this.highlightColor = ColorX.white,
     this.width = double.infinity,
     this.height = 48.0,
     this.horizontalPadding = 8.0,
@@ -65,7 +63,7 @@ class ButtonX extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border.all(
                     width: borderWidth,
-                    color: enabled == true ? borderColor : Colors.transparent),
+                    color: enabled == true ? borderColor : ColorX.transparent),
                 borderRadius: BorderRadius.all(
                   Radius.circular(cornerRadius),
                 ),

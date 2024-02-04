@@ -11,7 +11,7 @@ class DialogX {
     required GestureTapCallback onRightBtnClicked,
   }) {
     return DialogX.showContent(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorX.white,
       cornerRadius: 8.0,
       contentMaxHeight: MediaQuery.of(Get.context!).size.height * 0.70,
       contentWidget: Padding(

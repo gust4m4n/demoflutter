@@ -39,7 +39,7 @@ class ScreenX extends StatelessWidget {
             },
             child: Scaffold(
                 key: scaffoldKey,
-                backgroundColor: Colors.white,
+                backgroundColor: ColorX.white,
                 drawer: drawer,
                 bottomNavigationBar: bottomNavigationBar,
                 body: Column(children: [
@@ -62,7 +62,7 @@ class ScreenX extends StatelessWidget {
                                 )
                               : bodyView ??
                                   ContainerX(
-                                      backgroundColor: Colors.transparent))),
+                                      backgroundColor: ColorX.transparent))),
                   SizedBox(
                     height: bottomPadding
                         ? MediaQuery.of(Get.context!).padding.bottom

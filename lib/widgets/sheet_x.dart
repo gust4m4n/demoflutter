@@ -12,7 +12,7 @@ class SheetX {
       VoidCallback? onRightBtnClicked,
       bool autoClose = true}) {
     return SheetX.showContent(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorX.white,
         cornerRadius: 24.0,
         avoidingKeyboard: false,
         contentMaxHeight: MediaQuery.of(Get.context!).size.height * 0.70,
@@ -92,7 +92,7 @@ class SheetX {
           isDismissible: autoClose,
           isScrollControlled: true,
           ignoreSafeArea: true,
-          backgroundColor: Colors.white,
+          backgroundColor: ColorX.white,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(cornerRadius),
@@ -101,7 +101,7 @@ class SheetX {
           widget);
     } else {
       return showModalBottomSheet(
-          backgroundColor: Colors.white,
+          backgroundColor: ColorX.white,
           isDismissible: autoClose,
           isScrollControlled: true,
           useSafeArea: false,
@@ -150,7 +150,7 @@ class SheetX {
       required Widget footerWidget,
       bool autoClose = true}) {
     return SheetX.showWithGrip(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorX.white,
         cornerRadius: 24.0,
         avoidingKeyboard: avoidingKeyboard,
         widget: Column(children: [

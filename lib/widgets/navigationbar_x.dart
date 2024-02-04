@@ -44,7 +44,7 @@ class NavigationBarX extends StatelessWidget {
                         Expanded(
                           child: TextX(
                             title ?? '',
-                            color: Colors.white,
+                            color: ColorX.white,
                             fontSize: 17.0,
                             fontFamily: 'Roboto',
                             fontWeight: FontWeight.w600,

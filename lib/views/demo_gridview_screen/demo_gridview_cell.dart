@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../models/demo_movie_model.dart';
 import '../../viewmodels/demo_format_vm.dart';
-import '../../widgets/image_x.dart';
-import '../../widgets/text_x.dart';
+import '../../widgets/all_widgets.dart';
 
 // ignore: must_be_immutable
 class DemoGridViewCell extends StatelessWidget {
@@ -28,7 +25,7 @@ class DemoGridViewCell extends StatelessWidget {
               const SizedBox(height: 4.0),
               TextX(
                 movie.title,
-                color: Colors.black,
+                color: ColorX.black,
                 fontSize: 20.0,
                 fontWeight: FontWeight.w700,
                 textAlign: TextAlign.center,
@@ -37,7 +34,7 @@ class DemoGridViewCell extends StatelessWidget {
               const SizedBox(height: 4.0),
               TextX(
                 DemoFormatVM.currency(value: movie.revenue),
-                color: Colors.black,
+                color: ColorX.black,
                 fontSize: 17.0,
                 fontWeight: FontWeight.w400,
                 textAlign: TextAlign.center,

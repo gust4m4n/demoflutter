@@ -19,7 +19,7 @@ class DemoHtmlScreen extends StatelessWidget {
                   faIcon: FontAwesomeIcons.arrowLeft,
                   width: 20.0,
                   height: 20.0,
-                  color: Colors.white,
+                  color: ColorX.white,
                   fit: BoxFit.contain,
                 ),
                 leftAction: () {

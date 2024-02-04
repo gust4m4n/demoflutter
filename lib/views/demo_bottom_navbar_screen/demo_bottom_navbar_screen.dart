@@ -21,6 +21,8 @@ class DemoBottomNavBarScreen extends StatelessWidget {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          
+          
             backgroundColor: ColorX.white,
             currentIndex: controller.tabBarIndex,
             onTap: (index) {

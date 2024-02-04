@@ -66,7 +66,6 @@ class MyApp extends StatelessWidget {
   final Widget firstScreen;
   MyApp(this.firstScreen);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -79,6 +78,9 @@ class MyApp extends StatelessWidget {
       title: 'DemoFlutter',
       home: firstScreen,
       theme: ThemeData(
+          splashColor: Colors.transparent,
+          highlightColor: Colors.transparent,
+          hoverColor: Colors.transparent,
           visualDensity: VisualDensity.standard,
           primarySwatch: Colors.grey,
           fontFamily: 'Roboto',

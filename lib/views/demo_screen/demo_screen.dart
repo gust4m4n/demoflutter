@@ -86,12 +86,7 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                            ],
-                          ),
-                          const SizedBox(height: 4.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
+                              const SizedBox(width: 4.0),
                               Expanded(
                                 child: ButtonX(
                                   title: 'PIN',
@@ -101,13 +96,28 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const SizedBox(width: 4.0),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
                               Expanded(
                                 child: ButtonX(
                                   title: 'PIN Sheet',
                                   backgroundColor: ColorX.green,
                                   onClicked: () {
                                     controller.btnPinSheetClicked();
+                                  },
+                                ),
+                              ),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Biometric',
+                                  backgroundColor: ColorX.green,
+                                  onClicked: () {
+                                    controller.btnBiometricClicked();
                                   },
                                 ),
                               ),

@@ -3,7 +3,7 @@ import '../utils/all_utils.dart';
 
 class DemoSecurityVM {
   static String securityKey =
-      'e00421650bc24d7a2df99fdd850555ede5e8cee949913a8378d4ff979eb036db';
+      'eb2d9519f39d359c7530943092453879e7b3556e5550feb0c25c7fd2bf68cffe';
 
   static Uint8List generateEncryptionKey() {
     var reversedChars = securityKey.split('');

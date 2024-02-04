@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demoflutter/viewmodels/demo_biometric_vm.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
@@ -72,6 +73,12 @@ class DemoController extends SuperController {
     final sheet = DemoPinSheet();
     sheet.show().then((value) {
       LoggerX.log('PIN: $value');
+    });
+  }
+
+  btnBiometricClicked() {
+    DemoBiometricVM.isAvailable().then((available) {
+      DemoBiometricVM.request().then((authenticated) {});
     });
   }
 

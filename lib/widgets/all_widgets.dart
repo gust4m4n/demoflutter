@@ -9,6 +9,8 @@ export 'package:share_plus/share_plus.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 export 'package:flutter_svg/svg.dart';
 export 'package:flash/flash.dart';
+export 'package:webview_flutter/webview_flutter.dart';
+export 'package:local_auth/local_auth.dart';
 export 'internet_toasts.dart';
 export 'sheet_x.dart';
 export 'button_x.dart';

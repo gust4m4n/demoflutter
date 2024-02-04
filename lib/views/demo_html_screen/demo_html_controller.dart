@@ -1,7 +1,4 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import '../../widgets/all_widgets.dart';
 
 class DemoHtmlController extends GetxController {
   final webController = WebViewController();

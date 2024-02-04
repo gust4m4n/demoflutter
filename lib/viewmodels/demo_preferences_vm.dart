@@ -124,19 +124,19 @@ class DemoPreferencesVM {
     return int.parse(value) == 1 ? true : false;
   }
 
-  static Future<void> setFirstInstall(bool value) async {
+  static Future<void> setFreshInstall(bool value) async {
     var flag = true;
     if (value == true) {
       flag = false;
     }
     await setBoolUnsecure(
-        '8a0b3b91860244e906fbad0f2701436a64a6316b8b10df2ccb9201ee508d262e',
+        '4dfd926498303ddc6dccd25c4289012e25102e2eb2ce7565cd3eec53e2c71315',
         flag);
   }
 
-  static Future<bool> getFirstInstall() async {
+  static Future<bool> getFreshInstall() async {
     var value = await getBoolUnsecure(
-        '8a0b3b91860244e906fbad0f2701436a64a6316b8b10df2ccb9201ee508d262e');
+        '4dfd926498303ddc6dccd25c4289012e25102e2eb2ce7565cd3eec53e2c71315');
     if (value == false) {
       return true;
     } else {

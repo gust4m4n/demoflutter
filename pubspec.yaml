@@ -39,6 +39,7 @@ dependencies:
   sqflite: ^2.3.0
   fl_chart: ^0.63.0
   screenshot: ^2.1.0
+  local_auth: ^2.1.8
 
 
 dev_dependencies: 

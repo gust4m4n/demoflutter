@@ -139,19 +139,7 @@ class DemoPreferencesVM {
     }
   }
 
-  static Future<void> setToken(String value) async {
-    await setString(
-        '81cd0129d09c01062bb0652902fe9188545070a9bb9478f01efcf65ba7e56f8a',
-        value);
-  }
-
-  static Future<String> getToken() async {
-    return await getString(
-        '81cd0129d09c01062bb0652902fe9188545070a9bb9478f01efcf65ba7e56f8a');
-  }
-
   static Future<void> deleteAll() async {
-    await setToken('');
     const storage = FlutterSecureStorage();
     await storage.deleteAll();
   }

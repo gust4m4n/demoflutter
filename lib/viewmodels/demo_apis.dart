@@ -1,7 +1,7 @@
+import 'demo_preferences_vm+users.dart';
 import 'demo_session_vm.dart';
 import '../utils/api_x.dart';
 import 'demo_baseurl_vm.dart';
-import 'demo_preferences_vm.dart';
 
 class DemoApiResponse extends ApiXResponse {
   DemoApiResponse(ApiXResponse resp) {
@@ -24,7 +24,7 @@ class DemoApi {
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
-    final accessToken = await DemoPreferencesVM.getToken();
+    final accessToken = await DemoUserPreferencesVM.getToken();
     if (accessToken.isNotEmpty) {
       newHeaders['Authorization'] = 'Bearer $accessToken';
     }
@@ -52,7 +52,7 @@ class DemoApi {
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
-    final accessToken = await DemoPreferencesVM.getToken();
+    final accessToken = await DemoUserPreferencesVM.getToken();
     if (accessToken.isNotEmpty) {
       newHeaders['Authorization'] = 'Bearer $accessToken';
     }
@@ -80,7 +80,7 @@ class DemoApi {
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
-    final accessToken = await DemoPreferencesVM.getToken();
+    final accessToken = await DemoUserPreferencesVM.getToken();
     if (accessToken.isNotEmpty) {
       newHeaders['Authorization'] = 'Bearer $accessToken';
     }
@@ -108,7 +108,7 @@ class DemoApi {
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
-    final accessToken = await DemoPreferencesVM.getToken();
+    final accessToken = await DemoUserPreferencesVM.getToken();
     if (accessToken.isNotEmpty) {
       newHeaders['Authorization'] = 'Bearer $accessToken';
     }
@@ -136,7 +136,7 @@ class DemoApi {
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
-    final accessToken = await DemoPreferencesVM.getToken();
+    final accessToken = await DemoUserPreferencesVM.getToken();
     if (accessToken.isNotEmpty) {
       newHeaders['Authorization'] = 'Bearer $accessToken';
     }
@@ -165,7 +165,7 @@ class DemoApi {
     headers?.forEach((key, value) {
       newHeaders[key] = value;
     });
-    final accessToken = await DemoPreferencesVM.getToken();
+    final accessToken = await DemoUserPreferencesVM.getToken();
     if (accessToken.isNotEmpty) {
       newHeaders['Authorization'] = 'Bearer $accessToken';
     }

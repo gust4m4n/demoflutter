@@ -1,12 +1,13 @@
 import 'dart:io';
 import 'package:flutter/services.dart';
+import 'demo_preferences_vm+users.dart';
 import 'demo_preferences_vm.dart';
 
 class DemoSessionVM {
   static String token = '';
 
   static load() async {
-    token = await DemoPreferencesVM.getToken();
+    token = await DemoUserPreferencesVM.getToken();
   }
 
   static logout() async {

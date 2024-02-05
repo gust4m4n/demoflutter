@@ -1,3 +1,4 @@
+import 'package:demoflutter/viewmodels/demo_preferences_vm+users.dart';
 import 'package:demoflutter/viewmodels/demo_reachability_vm.dart';
 import 'viewmodels/demo_anti_jailbreak_vm.dart';
 import 'viewmodels/demo_preferences_vm.dart';
@@ -16,7 +17,7 @@ Future<void> main() async {
   final freshInstall = await DemoPreferencesVM.getFreshInstall();
   if (freshInstall == true) {
     await DemoPreferencesVM.setFreshInstall(false);
-    await DemoPreferencesVM.deleteAll();
+    await DemoUserPreferencesVM.resetAll();
   }
 
   await DemoSessionVM.load();

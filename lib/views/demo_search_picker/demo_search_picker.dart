@@ -1,0 +1,88 @@
+import '../../widgets/all_widgets.dart';
+import 'demo_search_picker_controller.dart';
+import 'demo_search_picker_widget.dart';
+
+// ignore: must_be_immutable
+class DemoSearchPicker extends GetWidget<DemoSearchPickerController> {
+  final String title;
+  final List<String> list;
+  DemoSearchPicker({required this.title, required this.list});
+
+  Future<T?> show<T>() {
+    FocusManager.instance.primaryFocus?.unfocus();
+    return SheetX.showWithGrip(
+        backgroundColor: ColorX.white,
+        cornerRadius: 32.0,
+        avoidingKeyboard: false,
+        widget: this);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<DemoSearchPickerController>(
+      init: DemoSearchPickerController(),
+      builder: (controller) => ContainerX(
+        backgroundColor: ColorX.white,
+        topLeftRadius: 32.0,
+        topRightRadius: 32.0,
+        child: Wrap(children: [
+          ContainerX(height: 8.0),
+          Container(
+            margin: EdgeInsets.only(left: 32.0, right: 32.0),
+            child: Row(
+              children: [
+                ButtonX(
+                  backgroundColor: ColorX.transparent,
+                  faIcon: FontAwesomeIcons.xmark,
+                  faWidth: 16.0,
+                  faHeight: 16.0,
+                  faColor: ColorX.black,
+                  width: 32.0,
+                  height: 32.0,
+                  cornerRadius: 25.0,
+                  borderWidth: 1.0,
+                  borderColor: ColorX.black,
+                  onClicked: () {
+                    controller.btnCloseClicked();
+                  },
+                ),
+                Expanded(
+                  child: TextX(
+                    title,
+                    color: ColorX.black,
+                    fontSize: 17.0,
+                    fontWeight: FontWeight.w600,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                SizedBox(width: 32.0, height: 32.0),
+              ],
+            ),
+          ),
+          ContainerX(height: 8.0),
+          ListView.separated(
+            physics: ClampingScrollPhysics(),
+            shrinkWrap: true,
+            separatorBuilder: (context, index) => Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.0),
+                child: Divider(
+                  color: ColorX.gray,
+                  height: 1.0,
+                )),
+            itemCount: list.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                      highlightColor: ColorX.highlight,
+                      onTap: () {
+                        Get.back(result: list[index]);
+                      },
+                      child: DemoSearchPickerWidget(list[index])));
+            },
+          )
+        ]),
+      ),
+    );
+  }
+}

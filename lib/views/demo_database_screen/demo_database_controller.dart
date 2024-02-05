@@ -30,4 +30,9 @@ class DemoDatabaseController extends GetxController {
     loading = false;
     update();
   }
+
+    btnBackClicked() {
+    Get.back();
+  }
+
 }

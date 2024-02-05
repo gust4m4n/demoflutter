@@ -2,10 +2,6 @@ import '../../widgets/all_widgets.dart';
 import 'demo_html_controller.dart';
 
 class DemoHtmlScreen extends StatelessWidget {
-  backAction() {
-    Get.back();
-  }
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DemoHtmlController>(
@@ -22,7 +18,7 @@ class DemoHtmlScreen extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
                 leftAction: () {
-                  Get.back();
+                  controller.btnBackClicked();
                 },
               ),
               bottomPadding: false,

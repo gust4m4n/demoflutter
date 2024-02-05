@@ -25,7 +25,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                 fit: BoxFit.contain,
               ),
               leftAction: () {
-                Get.back();
+                controller.btnBackClicked();
               },
             ),
             bottomPadding: true,

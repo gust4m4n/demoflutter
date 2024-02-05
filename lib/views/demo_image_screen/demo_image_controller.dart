@@ -5,4 +5,8 @@ class DemoImageController extends GetxController {
   void onReady() {
     super.onReady();
   }
+
+  btnBackClicked() {
+    Get.back();
+  }
 }

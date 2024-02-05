@@ -15,4 +15,8 @@ class DemoOnboardingController extends GetxController {
       }
     });
   }
+
+  btnBackClicked() {
+    Get.back();
+  }
 }

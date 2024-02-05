@@ -12,4 +12,8 @@ class DemoGridViewController extends GetxController {
       update();
     });
   }
+
+  btnBackClicked() {
+    Get.back();
+  }
 }

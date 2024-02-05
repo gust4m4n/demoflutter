@@ -5,10 +5,6 @@ import 'demo_drawer_controller.dart';
 class DemoDrawerScreen extends StatelessWidget {
   DemoDrawerScreen({Key? key}) : super(key: key);
 
-  backAction() {
-    Get.back();
-  }
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DemoDrawerController>(

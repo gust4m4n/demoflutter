@@ -13,6 +13,10 @@ class DemoLoginController extends SuperController {
     super.onReady();
   }
 
+  btnBackClicked() {
+    Get.back();
+  }
+
   @override
   void onDetached() {
     LoggerX.log('[DemoLoginController] onDetached');

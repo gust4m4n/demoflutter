@@ -15,6 +15,10 @@ class DemoCarouselController extends GetxController {
     });
   }
 
+  btnBackClicked() {
+    Get.back();
+  }
+
   setPageIndex(int index) {
     pageIndex = index;
   }

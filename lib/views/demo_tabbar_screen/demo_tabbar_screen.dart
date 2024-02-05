@@ -19,7 +19,7 @@ class DemoTabBarScreen extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
                 leftAction: () {
-                  Get.back();
+                  controller.btnBackClicked();
                 },
               ),
               lightStatusBar: true,

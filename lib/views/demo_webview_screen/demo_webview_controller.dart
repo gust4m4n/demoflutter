@@ -26,4 +26,8 @@ class DemoWebViewController extends GetxController {
   void onReady() {
     super.onReady();
   }
+
+  btnBackClicked() {
+    Get.back();
+  }
 }

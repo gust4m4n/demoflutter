@@ -25,7 +25,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                 fit: BoxFit.contain,
               ),
               leftAction: () {
-                Get.back();
+                controller.btnBackClicked();
               },
             ),
             bottomPadding: true,

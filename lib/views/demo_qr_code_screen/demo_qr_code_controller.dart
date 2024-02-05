@@ -9,4 +9,9 @@ class DemoQRCodeController extends GetxController {
     code = 'Hello world!';
     update();
   }
+
+    btnBackClicked() {
+    Get.back();
+  }
+
 }

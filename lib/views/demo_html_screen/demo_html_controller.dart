@@ -17,6 +17,10 @@ class DemoHtmlController extends GetxController {
     });
   }
 
+  btnBackClicked() {
+    Get.back();
+  }
+
   static Future<String> buildHtmlAndFonts(String html) async {
     if (html.isNotEmpty) {
       if (kIsWeb) {

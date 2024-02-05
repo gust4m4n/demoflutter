@@ -21,7 +21,7 @@ class DemoQRCodeScreen extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
                 leftAction: () {
-                  Get.back();
+                  controller.btnBackClicked();
                 },
               ),
               bottomPadding: true,

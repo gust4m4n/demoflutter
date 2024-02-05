@@ -96,7 +96,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                       titleColor: ColorX.black,
                       backgroundColor: ColorX.transparent,
                       onClicked: () {
-                        Get.back();
+                        controller.btnBackClicked();
                       },
                     ))
               ],

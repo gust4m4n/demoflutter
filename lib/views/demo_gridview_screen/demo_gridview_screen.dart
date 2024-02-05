@@ -23,7 +23,7 @@ class DemoGridViewScreen extends StatelessWidget {
               fit: BoxFit.contain,
             ),
             leftAction: () {
-              Get.back();
+              controller.btnBackClicked();
             },
           ),
           bottomPadding: false,

@@ -9,6 +9,10 @@ class DemoDrawerController extends GetxController {
     super.onReady();
   }
 
+  btnBackClicked() {
+    Get.back();
+  }
+
   openDrawer() {
     scaffoldKey.currentState!.openDrawer();
   }

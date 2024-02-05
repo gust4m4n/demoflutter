@@ -15,4 +15,8 @@ class DemoLineChartController extends GetxController {
   void onReady() {
     super.onReady();
   }
+
+  btnBackClicked() {
+    Get.back();
+  }
 }

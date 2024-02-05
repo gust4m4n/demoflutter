@@ -12,4 +12,8 @@ class DemoListViewController extends GetxController {
       update();
     });
   }
+
+  btnBackClicked() {
+    Get.back();
+  }
 }

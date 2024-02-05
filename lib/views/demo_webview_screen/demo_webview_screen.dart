@@ -2,9 +2,6 @@ import '../../widgets/all_widgets.dart';
 import 'demo_webview_controller.dart';
 
 class DemoWebViewScreen extends StatelessWidget {
-  backAction() {
-    Get.back();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +19,7 @@ class DemoWebViewScreen extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
                 leftAction: () {
-                  Get.back();
+                  controller.btnBackClicked();
                 },
               ),
               bottomPadding: false,

@@ -4,6 +4,10 @@ class DemoOtpController extends GetxController {
   String pin = '';
   String error = '';
 
+  btnBackClicked() {
+    Get.back();
+  }
+
   btnCloseClicked() {
     Get.back(result: '');
   }

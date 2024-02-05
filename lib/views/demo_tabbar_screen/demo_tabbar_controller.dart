@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class DemoTabBarController extends GetxController
     with GetSingleTickerProviderStateMixin {
   late TabController tabController;
-  
+
   @override
   void onInit() {
     super.onInit();
@@ -14,5 +14,9 @@ class DemoTabBarController extends GetxController
   @override
   void onReady() {
     super.onReady();
+  }
+
+  btnBackClicked() {
+    Get.back();
   }
 }

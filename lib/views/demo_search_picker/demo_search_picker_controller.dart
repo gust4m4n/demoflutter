@@ -10,6 +10,7 @@ class DemoSearchPickerController extends GetxController {
     super.onReady();
     update();
     movieListVM.request().then((resp) {
+      movieListVM.sort();
       movieListVM.setFilter('');
       update();
     });

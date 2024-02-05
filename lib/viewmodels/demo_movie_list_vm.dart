@@ -30,6 +30,10 @@ class DemoMovieListVM {
     });
   }
 
+  sort() {
+    list.sort((a, b) => a.title.compareTo(b.title));
+  }
+
   setFilter(String keyword) {
     filtered = [];
     for (var item in list) {

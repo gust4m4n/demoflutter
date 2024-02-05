@@ -80,8 +80,6 @@ class MyApp extends StatelessWidget {
       home: firstScreen,
       theme: ThemeData(
           splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          hoverColor: Colors.transparent,
           visualDensity: VisualDensity.standard,
           primarySwatch: Colors.grey,
           fontFamily: 'Roboto',

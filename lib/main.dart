@@ -13,10 +13,10 @@ Future<void> main() async {
   await DemoAntiJailbreakVM.check();
   DemoReachabilityVM.startListening();
 
-  var firstInstall = await DemoPreferencesVM.getFreshInstall();
-  if (firstInstall == true) {
-    await DemoPreferencesVM.deleteAll();
+  final freshInstall = await DemoPreferencesVM.getFreshInstall();
+  if (freshInstall == true) {
     await DemoPreferencesVM.setFreshInstall(false);
+    await DemoPreferencesVM.deleteAll();
   }
 
   await DemoSessionVM.load();

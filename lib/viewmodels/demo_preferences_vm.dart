@@ -48,11 +48,6 @@ class DemoPreferencesVM {
     }
   }
 
-  static Future<void> deleteAll() async {
-    const storage = FlutterSecureStorage();
-    return await storage.deleteAll();
-  }
-
   static Future<void> setInt(String key, int value) async {
     await setString(key, value.toString());
   }
@@ -146,13 +141,19 @@ class DemoPreferencesVM {
 
   static Future<void> setToken(String value) async {
     await setString(
-        'fcaff9c9456c9a4b73cbd6e10b0bf23dfcf21ce6eb15fc46bd00a37a2bd523dd',
+        '81cd0129d09c01062bb0652902fe9188545070a9bb9478f01efcf65ba7e56f8a',
         value);
   }
 
   static Future<String> getToken() async {
     return await getString(
-        'fcaff9c9456c9a4b73cbd6e10b0bf23dfcf21ce6eb15fc46bd00a37a2bd523dd');
+        '81cd0129d09c01062bb0652902fe9188545070a9bb9478f01efcf65ba7e56f8a');
+  }
+
+  static Future<void> deleteAll() async {
+    await setToken('');
+    const storage = FlutterSecureStorage();
+    await storage.deleteAll();
   }
 
   static demo() async {

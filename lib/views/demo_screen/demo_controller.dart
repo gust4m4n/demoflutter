@@ -209,15 +209,18 @@ class DemoController extends SuperController {
     final sheet = DemoStringPicker(
         title: 'String Picker', list: ['One', 'Two', 'Three', 'Four', 'Five']);
     sheet.show().then((value) {
-      LoggerX.log('Selection: $value');
+      if (value != null) {
+        LoggerX.log('Selection: $value');
+      }
     });
   }
 
   btnSearchPickerClicked() {
-    final sheet = DemoSearchPicker(
-        title: 'Search Picker', list: ['One', 'Two', 'Three', 'Four', 'Five']);
+    final sheet = DemoSearchPicker(title: 'Search Picker');
     sheet.show().then((value) {
-      LoggerX.log('Selection: $value');
+      if (value != null) {
+        LoggerX.log('Selection: ${value.title}');
+      }
     });
   }
 

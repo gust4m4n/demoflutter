@@ -39,7 +39,7 @@ class DemoListViewScreen extends StatelessWidget {
                           child: ContainerX(
                             height: 0.5,
                             width: double.infinity,
-                            backgroundColor: Colors.grey,
+                            backgroundColor: ColorX.gray,
                           ));
                     },
                     itemCount: controller.movieListVM.list.length,

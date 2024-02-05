@@ -75,7 +75,7 @@ class DemoLoginScreen extends StatelessWidget {
                           fit: BoxFit.contain,
                         ),
                         rightIconColor: controller.securedPassword
-                            ? Colors.grey
+                            ? ColorX.gray
                             : ColorX.black,
                         rightAction: () {
                           controller.securedPassword =

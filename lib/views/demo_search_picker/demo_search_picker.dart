@@ -5,8 +5,7 @@ import 'demo_search_picker_widget.dart';
 // ignore: must_be_immutable
 class DemoSearchPicker extends GetWidget<DemoSearchPickerController> {
   final String title;
-  final List<String> list;
-  DemoSearchPicker({required this.title, required this.list});
+  DemoSearchPicker({required this.title});
 
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
@@ -59,27 +58,61 @@ class DemoSearchPicker extends GetWidget<DemoSearchPickerController> {
               ],
             ),
           ),
-          ContainerX(height: 8.0),
-          ListView.separated(
-            physics: ClampingScrollPhysics(),
-            shrinkWrap: true,
-            separatorBuilder: (context, index) => Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
-                child: Divider(
-                  color: ColorX.gray,
-                  height: 1.0,
-                )),
-            itemCount: list.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Material(
-                  color: Colors.transparent,
-                  child: InkWell(
-                      highlightColor: ColorX.highlight,
-                      onTap: () {
-                        Get.back(result: list[index]);
+          Container(height: 16.0),
+          Container(
+            height: (MediaQuery.of(Get.context!).size.height -
+                (MediaQuery.of(Get.context!).padding.top +
+                    4.0 + // grip
+                    16.0 +
+                    16.0 +
+                    50.0 + // navbar
+                    16.0)),
+            child: controller.movieListVM.loading == true
+                ? Center(
+                    child: CircularProgressIndicator(
+                        valueColor:
+                            AlwaysStoppedAnimation<Color>(Color(0xff404048))),
+                  )
+                : Container(
+                    child: Column(children: [
+                    Padding(
+                      padding: EdgeInsets.only(
+                          left: 24.0, top: 0.0, right: 24.0, bottom: 12.0),
+                      child: TextFieldX(
+                        hint: 'Keyword...',
+                        obscureText: false,
+                        keyboardType: TextInputType.text,
+                        readOnly: false,
+                        controller: controller.txtSearch,
+                        onChanged: (value) {
+                          controller.txtSearchChanged(value);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                        child: Scrollbar(
+                            child: ListView.separated(
+                      physics: ClampingScrollPhysics(),
+                      separatorBuilder: (context, index) => const Divider(
+                        color: ColorX.transparent,
+                        height: 0.0,
+                      ),
+                      itemCount: controller.movieListVM.filtered.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Material(
+                            color: ColorX.transparent,
+                            child: InkWell(
+                                highlightColor: ColorX.highlight,
+                                onTap: () {
+                                  Get.back(
+                                      result: controller
+                                          .movieListVM.filtered[index]);
+                                },
+                                child: DemoSearchPickerWidget(
+                                    controller.movieListVM.filtered[index])));
                       },
-                      child: DemoSearchPickerWidget(list[index])));
-            },
+                    )))
+                  ])),
           )
         ]),
       ),

@@ -30,8 +30,8 @@ class DemoDatabaseScreen extends StatelessWidget {
             },
           ),
           bottomPadding: false,
-          bodyView: Scrollbar(
-            child: Material(
+          bodyView: Material(
+            child: Scrollbar(
                 child: ListView.separated(
                     padding: EdgeInsets.only(
                         bottom: MediaQuery.of(Get.context!).padding.bottom),
@@ -42,7 +42,7 @@ class DemoDatabaseScreen extends StatelessWidget {
                           child: ContainerX(
                             height: 0.5,
                             width: double.infinity,
-                            backgroundColor: Colors.grey,
+                            backgroundColor: ColorX.gray,
                           ));
                     },
                     itemCount: controller.row_ids.length,

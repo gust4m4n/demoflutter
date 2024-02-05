@@ -72,7 +72,7 @@ class DemoStringPicker extends GetWidget<DemoStringPickerController> {
             itemCount: list.length,
             itemBuilder: (BuildContext context, int index) {
               return Material(
-                  color: Colors.transparent,
+                  color: ColorX.transparent,
                   child: InkWell(
                       highlightColor: ColorX.highlight,
                       onTap: () {

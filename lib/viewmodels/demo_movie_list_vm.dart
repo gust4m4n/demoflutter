@@ -5,6 +5,7 @@ import 'demo_apis.dart';
 class DemoMovieListVM {
   var loading = false;
   List<DemoMovieModel> list = [];
+  List<DemoMovieModel> filtered = [];
 
   Future<DemoApiResponse> request() {
     loading = true;
@@ -27,5 +28,18 @@ class DemoMovieListVM {
       }
       return resp;
     });
+  }
+
+  setFilter(String keyword) {
+    filtered = [];
+    for (var item in list) {
+      if (keyword.isEmpty) {
+        filtered.add(item);
+      } else {
+        if (item.title.toLowerCase().contains(keyword.toLowerCase())) {
+          filtered.add(item);
+        }
+      }
+    }
   }
 }

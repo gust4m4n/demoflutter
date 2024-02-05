@@ -80,7 +80,6 @@ class ButtonX extends StatelessWidget {
                           color:
                               enabled == true ? titleColor : disabledTitleColor,
                           fontSize: fontSize,
-                          fontFamily: 'Roboto',
                           fontWeight: fontWeight,
                           textAlign: TextAlign.start,
                           maxLines: 2048,

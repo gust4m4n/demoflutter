@@ -450,6 +450,15 @@ class DemoScreen extends StatelessWidget {
                             children: <Widget>[
                               Expanded(
                                   child: ButtonX(
+                                title: 'String Picker',
+                                backgroundColor: ColorX.red,
+                                onClicked: () {
+                                  controller.btnStringPickerClicked();
+                                },
+                              )),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                  child: ButtonX(
                                 title: 'Loading',
                                 backgroundColor: ColorX.red,
                                 onClicked: () {

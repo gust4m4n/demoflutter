@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:demoflutter/viewmodels/demo_biometric_vm.dart';
+import 'package:demoflutter/views/demo_string_picker/demo_string_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
@@ -201,6 +202,14 @@ class DemoController extends SuperController {
         onRightBtnClicked: () {
           Get.back();
         });
+  }
+
+  btnStringPickerClicked() {
+    final sheet = DemoStringPicker(
+        title: 'String Picker', list: ['One', 'Two', 'Three', 'Four', 'Five']);
+    sheet.show().then((value) {
+      LoggerX.log('Selection: $value');
+    });
   }
 
   btnLoadingClicked() {

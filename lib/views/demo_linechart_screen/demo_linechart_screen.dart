@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import '../../widgets/all_widgets.dart';
+import '../../utils/all_utils.dart';
 import 'demo_linechart_controller.dart';
 
 class DemoLineChartScreen extends StatelessWidget {
@@ -26,9 +27,41 @@ class DemoLineChartScreen extends StatelessWidget {
           bodyView: Container(
             padding: const EdgeInsets.all(16.0),
             child: LineChart(
-              LineChartData(lineBarsData: [
-                LineChartBarData(spots: controller.chartData),
-              ]),
+              LineChartData(
+                  gridData: FlGridData(
+                      drawHorizontalLine: false, drawVerticalLine: false),
+                  titlesData: FlTitlesData(
+                    show: true,
+                    rightTitles: const AxisTitles(
+                      sideTitles: SideTitles(showTitles: false),
+                    ),
+                    topTitles: const AxisTitles(
+                      sideTitles: SideTitles(showTitles: false),
+                    ),
+                  ),
+                  borderData: FlBorderData(show: false),
+                  lineBarsData: [
+                    LineChartBarData(
+                      spots: controller.chartData,
+                      color: ColorX.green,
+                      isCurved: false,
+                      barWidth: 3,
+                      isStrokeCapRound: true,
+                      dotData: FlDotData(
+                        show: false,
+                      ),
+                      belowBarData: BarAreaData(
+                          show: true,
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              ColorX.green.lighten(0.28),
+                              Colors.white,
+                            ],
+                          )),
+                    ),
+                  ]),
             ),
           )),
     );

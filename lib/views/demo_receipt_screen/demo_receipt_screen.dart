@@ -91,7 +91,7 @@ class DemoReceiptScreen extends StatelessWidget {
                                       titleColor: ColorX.black,
                                       backgroundColor: ColorX.white,
                                       borderWidth: 1.0,
-                                      borderColor: ColorX.black,
+                                      borderColor: ColorX.lightGray,
                                       onClicked: () {
                                         controller.btnShareClicked();
                                       }),

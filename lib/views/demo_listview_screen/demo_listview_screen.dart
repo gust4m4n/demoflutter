@@ -48,9 +48,9 @@ class DemoListViewScreen extends StatelessWidget {
                               return Padding(
                                   padding: EdgeInsets.only(left: 16.0),
                                   child: ContainerX(
-                                    height: 0.5,
+                                    height: 1.0,
                                     width: double.infinity,
-                                    backgroundColor: ColorX.gray,
+                                    backgroundColor: ColorX.lightGray,
                                   ));
                             },
                             itemCount: controller.movieListVM.list.length,

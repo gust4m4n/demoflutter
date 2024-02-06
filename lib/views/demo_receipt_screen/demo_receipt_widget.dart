@@ -10,8 +10,8 @@ class DemoReceiptWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (k == '-') {
       return ContainerX(
-        backgroundColor: ColorX.gray,
-        height: 0.5,
+        backgroundColor: ColorX.lightGray,
+        height: 1.0,
       );
     } else {
       return Row(children: [

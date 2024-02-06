@@ -65,9 +65,10 @@ class DemoStringPicker extends GetWidget<DemoStringPickerController> {
             shrinkWrap: true,
             separatorBuilder: (context, index) => Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0),
-                child: Divider(
-                  color: ColorX.gray,
+                child: ContainerX(
                   height: 1.0,
+                  width: double.infinity,
+                  backgroundColor: ColorX.lightGray,
                 )),
             itemCount: list.length,
             itemBuilder: (BuildContext context, int index) {

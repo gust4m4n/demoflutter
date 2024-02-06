@@ -311,7 +311,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                 SizedBox(width: 24.0),
                                 ButtonX(
                                   faIcon: FontAwesomeIcons.deleteLeft,
-                                  faColor: Color(0xff555555),
+                                  faColor: ColorX.black,
                                   width: 64.0,
                                   height: 64.0,
                                   cornerRadius: 32.0,

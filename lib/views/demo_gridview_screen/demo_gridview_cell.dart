@@ -17,7 +17,7 @@ class DemoGridViewCell extends StatelessWidget {
           width: double.infinity,
           height: (MediaQuery.of(Get.context!).size.width / 2.0) - 16.0,
           cornerRadius: 8.0,
-          placeholderColor: const Color(0xffDFE5F0),
+          placeholderColor: ColorX.lightGray,
         ),
         Padding(
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),

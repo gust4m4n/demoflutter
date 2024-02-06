@@ -28,9 +28,7 @@ class DemoReceiptScreen extends StatelessWidget {
             ),
             bottomPadding: false,
             bodyView: ContainerX(
-                backgroundColor: ColorX.white,
-                topLeftRadius: 32.0,
-                topRightRadius: 32.0,
+                backgroundColor: ColorX.lightGray.withOpacity(0.25),
                 child: Column(children: [
                   Expanded(
                     child: SingleChildScrollView(
@@ -40,7 +38,6 @@ class DemoReceiptScreen extends StatelessWidget {
                               controller: controller.screenshotController,
                               child: ContainerX(
                                   padding: EdgeInsets.all(24.0),
-                                  backgroundColor: Color(0xffF8F8F8),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -92,7 +89,7 @@ class DemoReceiptScreen extends StatelessWidget {
                                   ButtonX(
                                       title: 'Share',
                                       titleColor: ColorX.black,
-                                      backgroundColor: ColorX.transparent,
+                                      backgroundColor: ColorX.white,
                                       borderWidth: 1.0,
                                       borderColor: ColorX.black,
                                       onClicked: () {

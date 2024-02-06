@@ -22,7 +22,7 @@ class ButtonX extends StatelessWidget {
   final bool enabled;
   final GestureTapCallback? onClicked;
 
-  const ButtonX({
+  ButtonX({
     Key? key,
     this.faIcon = null,
     this.faWidth = 24.0,
@@ -30,9 +30,9 @@ class ButtonX extends StatelessWidget {
     this.faColor = null,
     this.title = 'Button',
     this.backgroundColor = ColorX.black,
-    this.disabledBackgroundColor = const Color(0xffE0E5EF),
+    this.disabledBackgroundColor = ColorX.lightGray,
     this.titleColor = ColorX.white,
-    this.disabledTitleColor = const Color(0xff86898F),
+    this.disabledTitleColor = ColorX.gray,
     this.cornerRadius = 8.0,
     this.borderWidth = 0.0,
     this.borderColor = ColorX.transparent,

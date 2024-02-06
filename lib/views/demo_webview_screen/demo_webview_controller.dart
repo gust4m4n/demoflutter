@@ -1,11 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import '../../widgets/all_widgets.dart';
 
 class DemoWebViewController extends GetxController {
   final webController = WebViewController()
     ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..setBackgroundColor(Color(0x00000000))
+    ..setBackgroundColor(ColorX.white)
     ..setNavigationDelegate(
       NavigationDelegate(
         onProgress: (int progress) {},

@@ -33,7 +33,7 @@ class DemoLoginScreen extends StatelessWidget {
                         'Username',
                         color: ColorX.gray,
                         fontSize: 17.0,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         textAlign: TextAlign.start,
                       ),
                       const SizedBox(height: 4.0),
@@ -43,7 +43,22 @@ class DemoLoginScreen extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         readOnly: false,
                         controller: controller.txtUsernameController,
+                        focusNode: controller.txtUsernameNode,
                       ),
+                      Visibility(
+                          visible: controller.txtUsernameError.isNotEmpty,
+                          child: Column(
+                            children: [
+                              const SizedBox(height: 4.0),
+                              TextX(
+                                controller.txtUsernameError,
+                                color: ColorX.red,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.start,
+                              ),
+                            ],
+                          )),
                     ],
                   ),
                 ),
@@ -57,7 +72,7 @@ class DemoLoginScreen extends StatelessWidget {
                         'Password',
                         color: ColorX.gray,
                         fontSize: 17.0,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         textAlign: TextAlign.start,
                       ),
                       const SizedBox(height: 4.0),
@@ -83,7 +98,22 @@ class DemoLoginScreen extends StatelessWidget {
                           controller.update();
                         },
                         controller: controller.txtPasswordController,
+                        focusNode: controller.txtPasswordNode,
                       ),
+                      Visibility(
+                          visible: controller.txtPasswordError.isNotEmpty,
+                          child: Column(
+                            children: [
+                              const SizedBox(height: 4.0),
+                              TextX(
+                                controller.txtPasswordError,
+                                color: ColorX.red,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.start,
+                              ),
+                            ],
+                          )),
                     ],
                   ),
                 ),
@@ -102,24 +132,36 @@ class DemoLoginScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 4.0),
                       TextFieldX(
-                          hint: 'Select your role...',
-                          obscureText: false,
-                          keyboardType: TextInputType.text,
-                          readOnly: true,
-                          rightIcon: ImageX(
-                            faIcon: FontAwesomeIcons.chevronDown,
-                            width: 16.0,
-                            height: 16.0,
-                            fit: BoxFit.contain,
-                          ),
-                          rightIconColor: ColorX.black,
-                          rightAction: () {},
-                          controller: controller.txtRoleController,
-                          dropdownList: const ['User', 'Admin'],
-                          dropdownKeys: const ['User', 'Admin'],
-                          dropdownSelected: (value) {
-                            controller.txtRoleController.text = value;
-                          }),
+                        hint: 'Select region...',
+                        obscureText: false,
+                        keyboardType: TextInputType.text,
+                        readOnly: true,
+                        rightIcon: ImageX(
+                          faIcon: FontAwesomeIcons.chevronDown,
+                          width: 16.0,
+                          height: 16.0,
+                          fit: BoxFit.contain,
+                        ),
+                        rightIconColor: ColorX.black,
+                        rightAction: () {
+                          controller.btnRegionDropdownClicked();
+                        },
+                        controller: controller.txtRegionController,
+                      ),
+                      Visibility(
+                          visible: controller.txtRegionError.isNotEmpty,
+                          child: Column(
+                            children: [
+                              const SizedBox(height: 4.0),
+                              TextX(
+                                controller.txtRegionError,
+                                color: ColorX.red,
+                                fontSize: 15.0,
+                                fontWeight: FontWeight.w400,
+                                textAlign: TextAlign.start,
+                              ),
+                            ],
+                          )),
                     ],
                   ),
                 ),

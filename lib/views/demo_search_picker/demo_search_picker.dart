@@ -70,8 +70,7 @@ class DemoSearchPicker extends GetWidget<DemoSearchPickerController> {
             child: controller.movieListVM.loading == true
                 ? Center(
                     child: CircularProgressIndicator(
-                        valueColor:
-                            AlwaysStoppedAnimation<Color>(Color(0xff404048))),
+                        valueColor: AlwaysStoppedAnimation<Color>(ColorX.gray)),
                   )
                 : Container(
                     child: Column(children: [

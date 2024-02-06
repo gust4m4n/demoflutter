@@ -47,7 +47,7 @@ Future<void> main() async {
   ]).then((value) {
     runApp(
       ContainerX(
-        backgroundColor: Color(0xff22303c),
+        backgroundColor: ColorX.white,
         child: Center(
           child: Container(
             width: kIsWeb ? 400.0 : double.infinity,

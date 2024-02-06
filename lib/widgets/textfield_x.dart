@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'all_widgets.dart';
 
 class TextFieldX extends StatelessWidget {
@@ -16,9 +15,6 @@ class TextFieldX extends StatelessWidget {
   final GestureTapCallback? rightAction;
   final TextEditingController? controller;
   final FocusNode? focusNode;
-  final List<String>? dropdownList;
-  final List<String>? dropdownKeys;
-  final Function(String key)? dropdownSelected;
   final Function(String value)? onChanged;
 
   const TextFieldX({
@@ -37,9 +33,6 @@ class TextFieldX extends StatelessWidget {
     this.rightAction,
     this.controller,
     this.focusNode,
-    this.dropdownList,
-    this.dropdownKeys,
-    this.dropdownSelected,
     this.onChanged,
   }) : super(key: key);
 
@@ -83,46 +76,6 @@ class TextFieldX extends StatelessWidget {
     );
   }
 
-  Widget rightContainerDropdown(BuildContext context) {
-    return Material(
-        color: ColorX.transparent,
-        clipBehavior: Clip.antiAlias,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(cornerRadius - (borderWidth * 2)),
-              bottomRight: Radius.circular(cornerRadius - (borderWidth * 2))),
-        ),
-        child: Theme(
-            data: Theme.of(context).copyWith(
-              splashColor: ColorX.transparent,
-            ),
-            child: PopupMenuButton(
-              tooltip: '',
-              elevation: 2.0,
-              shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.all(Radius.circular(cornerRadius))),
-              child: ContainerX(
-                width: 38.0 - (borderWidth * 1),
-                height: height - (borderWidth * 2),
-                child: rightIcon,
-              ),
-              onSelected: (value) {
-                dropdownSelected != null
-                    ? dropdownSelected!(value.toString())
-                    : null;
-              },
-              itemBuilder: (BuildContext context) {
-                return dropdownList!.mapIndexed((index, item) {
-                  return popupItemView(
-                      title: item,
-                      color: const Color(0xff0A0A0A),
-                      value: dropdownKeys![index]);
-                }).toList();
-              },
-            )));
-  }
-
   @override
   Widget build(BuildContext context) {
     return ContainerX(
@@ -130,7 +83,7 @@ class TextFieldX extends StatelessWidget {
             ? ColorX.white
             : readOnly == false
                 ? ColorX.white
-                : const Color(0xffF4F4F4),
+                : ColorX.gray,
         height: height,
         padding: EdgeInsets.only(
           left: borderWidth > 0.0 ? 12.0 : 0.0,
@@ -164,7 +117,7 @@ class TextFieldX extends StatelessWidget {
                 border: InputBorder.none,
                 hintText: hint,
                 hintStyle:
-                    const TextStyle(fontSize: 17.0, color: Color(0xffcccccc)),
+                    const TextStyle(fontSize: 17.0, color: ColorX.lightGray),
               ),
             ),
           ),
@@ -174,9 +127,7 @@ class TextFieldX extends StatelessWidget {
           ),
           Visibility(
             visible: (rightIcon != null) ? true : false,
-            child: (dropdownList != null && dropdownList!.isNotEmpty)
-                ? rightContainerDropdown(context)
-                : rightContainerButton(context),
+            child: rightContainerButton(context),
           ),
         ]));
   }

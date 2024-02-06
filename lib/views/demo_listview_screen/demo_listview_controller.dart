@@ -1,3 +1,4 @@
+import 'package:demoflutter/utils/all_utils.dart';
 import 'package:get/get.dart';
 import '../../viewmodels/demo_movie_list_vm.dart';
 
@@ -15,5 +16,9 @@ class DemoListViewController extends GetxController {
 
   btnBackClicked() {
     Get.back();
+  }
+
+  nextPage() {
+    LoggerX.log('nextPage');
   }
 }

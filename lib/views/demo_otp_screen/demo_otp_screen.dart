@@ -43,7 +43,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             height: 42,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
                               controller.pin.length >= 1
@@ -60,7 +60,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             height: 42,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
                               controller.pin.length >= 2
@@ -77,7 +77,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             height: 42,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
                               controller.pin.length >= 3
@@ -94,7 +94,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             height: 42,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
                               controller.pin.length >= 4
@@ -134,7 +134,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '1',
@@ -150,7 +150,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '2',
@@ -166,7 +166,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '3',
@@ -187,7 +187,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '4',
@@ -203,7 +203,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '5',
@@ -219,7 +219,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '6',
@@ -240,7 +240,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '7',
@@ -256,7 +256,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '8',
@@ -272,7 +272,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '9',
@@ -298,7 +298,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '0',
@@ -316,7 +316,7 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '',

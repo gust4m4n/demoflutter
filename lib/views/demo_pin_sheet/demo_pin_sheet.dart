@@ -66,68 +66,68 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                 children: [
                   ContainerX(
                     backgroundColor: controller.pin.length >= 1
-                        ? ColorX.black
+                        ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
                     height: 12,
                     cornerRadius: 6.0,
                     borderWidth: 1.0,
-                    borderColor: ColorX.black,
+                    borderColor: ColorX.gray,
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
                     backgroundColor: controller.pin.length >= 2
-                        ? ColorX.black
+                        ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
                     height: 12,
                     cornerRadius: 6.0,
                     borderWidth: 1.0,
-                    borderColor: ColorX.black,
+                    borderColor: ColorX.gray,
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
                     backgroundColor: controller.pin.length >= 3
-                        ? ColorX.black
+                        ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
                     height: 12,
                     cornerRadius: 6.0,
                     borderWidth: 1.0,
-                    borderColor: ColorX.black,
+                    borderColor: ColorX.gray,
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
                     backgroundColor: controller.pin.length >= 4
-                        ? ColorX.black
+                        ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
                     height: 12,
                     cornerRadius: 6.0,
                     borderWidth: 1.0,
-                    borderColor: ColorX.black,
+                    borderColor: ColorX.gray,
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
                     backgroundColor: controller.pin.length >= 5
-                        ? ColorX.black
+                        ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
                     height: 12,
                     cornerRadius: 6.0,
                     borderWidth: 1.0,
-                    borderColor: ColorX.black,
+                    borderColor: ColorX.gray,
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
                     backgroundColor: controller.pin.length >= 6
-                        ? ColorX.black
+                        ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
                     height: 12,
                     cornerRadius: 6.0,
                     borderWidth: 1.0,
-                    borderColor: ColorX.black,
+                    borderColor: ColorX.gray,
                   ),
                 ],
               ),
@@ -159,7 +159,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '1',
@@ -175,7 +175,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '2',
@@ -191,7 +191,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '3',
@@ -212,7 +212,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '4',
@@ -228,7 +228,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '5',
@@ -244,7 +244,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '6',
@@ -265,7 +265,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '7',
@@ -281,7 +281,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '8',
@@ -297,7 +297,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '9',
@@ -323,7 +323,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '0',
@@ -341,7 +341,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                           height: 64.0,
                           cornerRadius: 32.0,
                           borderWidth: 1.0,
-                          borderColor: ColorX.black,
+                          borderColor: ColorX.lightGray,
                           backgroundColor: ColorX.transparent,
                           titleColor: ColorX.black,
                           title: '',

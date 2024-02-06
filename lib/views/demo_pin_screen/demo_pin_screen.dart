@@ -39,68 +39,68 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                         children: [
                           ContainerX(
                             backgroundColor: controller.pin.length >= 1
-                                ? ColorX.black
+                                ? ColorX.gray
                                 : ColorX.transparent,
                             width: 12.0,
                             height: 12,
                             cornerRadius: 6.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: controller.pin.length >= 2
-                                ? ColorX.black
+                                ? ColorX.gray
                                 : ColorX.transparent,
                             width: 12.0,
                             height: 12,
                             cornerRadius: 6.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: controller.pin.length >= 3
-                                ? ColorX.black
+                                ? ColorX.gray
                                 : ColorX.transparent,
                             width: 12.0,
                             height: 12,
                             cornerRadius: 6.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: controller.pin.length >= 4
-                                ? ColorX.black
+                                ? ColorX.gray
                                 : ColorX.transparent,
                             width: 12.0,
                             height: 12,
                             cornerRadius: 6.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: controller.pin.length >= 5
-                                ? ColorX.black
+                                ? ColorX.gray
                                 : ColorX.transparent,
                             width: 12.0,
                             height: 12,
                             cornerRadius: 6.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: controller.pin.length >= 6
-                                ? ColorX.black
+                                ? ColorX.gray
                                 : ColorX.transparent,
                             width: 12.0,
                             height: 12,
                             cornerRadius: 6.0,
                             borderWidth: 1.0,
-                            borderColor: ColorX.black,
+                            borderColor: ColorX.gray,
                           ),
                         ],
                       ),
@@ -132,7 +132,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '1',
@@ -148,7 +148,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '2',
@@ -164,7 +164,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '3',
@@ -185,7 +185,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '4',
@@ -201,7 +201,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '5',
@@ -217,7 +217,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '6',
@@ -238,7 +238,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '7',
@@ -254,7 +254,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '8',
@@ -270,7 +270,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '9',
@@ -296,7 +296,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '0',
@@ -314,7 +314,7 @@ class DemoPinScreen extends GetWidget<DemoPinController> {
                                   height: 64.0,
                                   cornerRadius: 32.0,
                                   borderWidth: 1.0,
-                                  borderColor: ColorX.black,
+                                  borderColor: ColorX.lightGray,
                                   backgroundColor: ColorX.transparent,
                                   titleColor: ColorX.black,
                                   title: '',

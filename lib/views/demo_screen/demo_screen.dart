@@ -560,6 +560,16 @@ class DemoScreen extends StatelessWidget {
                                   },
                                 ),
                               ),
+                              const SizedBox(width: 4.0),
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Photo Picker',
+                                  backgroundColor: ColorX.green,
+                                  onClicked: () {
+                                    controller.btnPhotoPickerClicked();
+                                  },
+                                ),
+                              ),
                             ],
                           ),
                           const SizedBox(height: 4.0),

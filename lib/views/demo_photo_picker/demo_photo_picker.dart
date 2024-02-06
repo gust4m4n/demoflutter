@@ -1,13 +1,8 @@
 import '../../widgets/all_widgets.dart';
-import 'demo_string_picker_widget.dart';
-import 'demo_string_picker_controller.dart';
+import 'demo_photo_picker_controller.dart';
 
 // ignore: must_be_immutable
-class DemoStringPicker extends GetWidget<DemoStringPickerController> {
-  final String title;
-  final List<String> list;
-  DemoStringPicker({required this.title, required this.list});
-
+class DemoPhotoPicker extends GetWidget<AppxPhotoPickerController> {
   Future<T?> show<T>() {
     FocusManager.instance.primaryFocus?.unfocus();
     return SheetX.showWithGrip(
@@ -19,8 +14,8 @@ class DemoStringPicker extends GetWidget<DemoStringPickerController> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<DemoStringPickerController>(
-      init: DemoStringPickerController(),
+    return GetBuilder<AppxPhotoPickerController>(
+      init: AppxPhotoPickerController(),
       builder: (controller) => ContainerX(
         backgroundColor: ColorX.white,
         topLeftRadius: 32.0,
@@ -48,7 +43,7 @@ class DemoStringPicker extends GetWidget<DemoStringPickerController> {
                 ),
                 Expanded(
                   child: TextX(
-                    title,
+                    'Photo Picker',
                     color: ColorX.black,
                     fontSize: 17.0,
                     fontWeight: FontWeight.w600,
@@ -60,29 +55,33 @@ class DemoStringPicker extends GetWidget<DemoStringPickerController> {
             ),
           ),
           ContainerX(height: 24.0),
-          ListView.separated(
-            physics: ClampingScrollPhysics(),
-            shrinkWrap: true,
-            separatorBuilder: (context, index) => Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
-                child: ContainerX(
-                  height: 1.0,
-                  width: double.infinity,
-                  backgroundColor: ColorX.lightGray,
-                )),
-            itemCount: list.length,
-            itemBuilder: (BuildContext context, int index) {
-              return Material(
-                  color: ColorX.transparent,
-                  child: InkWell(
-                      highlightColor: ColorX.highlight,
-                      onTap: () {
-                        Get.back(result: list[index]);
-                      },
-                      child: DemoStringPickerWidget(list[index])));
-            },
-          ),
-          ContainerX(height: 24.0),
+          ContainerX(
+              padding: EdgeInsets.only(left: 24.0, right: 24.0),
+              child: Column(
+                children: [
+                  ButtonX(
+                      title: 'Camera',
+                      titleColor: ColorX.black,
+                      backgroundColor: ColorX.white,
+                      borderWidth: 1.0,
+                      borderColor: ColorX.lightGray,
+                      onClicked: () {
+                        controller.btnCameraClicked();
+                      }),
+                  SizedBox(height: 8.0),
+                  ButtonX(
+                      title: 'Gallery',
+                      titleColor: ColorX.black,
+                      backgroundColor: ColorX.white,
+                      borderWidth: 1.0,
+                      borderColor: ColorX.lightGray,
+                      onClicked: () {
+                        controller.btnGalleryClicked();
+                      }),
+                  SizedBox(height: 24.0),
+                  SizedBox(height: MediaQuery.of(Get.context!).padding.bottom)
+                ],
+              )),
         ]),
       ),
     );

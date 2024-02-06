@@ -35,12 +35,12 @@ class DemoSearchPicker extends GetWidget<DemoSearchPickerController> {
                   faIcon: FontAwesomeIcons.xmark,
                   faWidth: 16.0,
                   faHeight: 16.0,
-                  faColor: ColorX.black,
+                  faColor: ColorX.gray,
                   width: 32.0,
                   height: 32.0,
                   cornerRadius: 25.0,
                   borderWidth: 1.0,
-                  borderColor: ColorX.black,
+                  borderColor: ColorX.gray,
                   onClicked: () {
                     controller.btnCloseClicked();
                   },
@@ -58,12 +58,12 @@ class DemoSearchPicker extends GetWidget<DemoSearchPickerController> {
               ],
             ),
           ),
-          Container(height: 16.0),
+          Container(height: 24.0),
           Container(
             height: (MediaQuery.of(Get.context!).size.height -
                 (MediaQuery.of(Get.context!).padding.top +
                     4.0 + // grip
-                    16.0 +
+                    24.0 +
                     16.0 +
                     50.0 + // navbar
                     16.0)),

@@ -37,12 +37,12 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                       faIcon: FontAwesomeIcons.xmark,
                       faWidth: 16.0,
                       faHeight: 16.0,
-                      faColor: ColorX.black,
+                      faColor: ColorX.gray,
                       width: 32.0,
                       height: 32.0,
                       cornerRadius: 25.0,
                       borderWidth: 1.0,
-                      borderColor: ColorX.black,
+                      borderColor: ColorX.gray,
                       onClicked: () {
                         controller.btnCloseClicked();
                       },
@@ -60,7 +60,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                   ],
                 ),
               ),
-              ContainerX(height: 8.0),
+              ContainerX(height: 24.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

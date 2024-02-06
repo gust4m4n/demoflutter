@@ -7,6 +7,7 @@ import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
+import '../demo_photo_picker/demo_photo_picker.dart';
 import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import '../demo_carousel_screen/demo_carousel_screen.dart';
 import '../demo_database_screen/demo_database_screen.dart';
@@ -273,6 +274,38 @@ class DemoController extends SuperController {
           rightBtnTitle: '',
           onRightBtnClicked: () {});
     }
+  }
+
+  btnPhotoPickerClicked() async {
+    final sheet = DemoPhotoPicker();
+    sheet.show().then((value) async {
+      LoggerX.log('value: $value');
+      if (value == 'camera') {
+        final imagePicker = ImagePicker();
+        final pickedFile = await imagePicker.pickImage(
+            source: ImageSource.camera,
+            imageQuality: 80,
+            maxWidth: 1024.0,
+            maxHeight: 1024.0,
+            preferredCameraDevice: CameraDevice.front);
+        if (pickedFile != null) {
+          // photoSelfie = pickedFile.path;
+          Get.back();
+        }
+      } else if (value == 'gallery') {
+        final imagePicker = ImagePicker();
+        final pickedFile = await imagePicker.pickImage(
+            source: ImageSource.gallery,
+            imageQuality: 80,
+            maxWidth: 1024.0,
+            maxHeight: 1024.0,
+            preferredCameraDevice: CameraDevice.front);
+        if (pickedFile != null) {
+          // photoSelfie = pickedFile.path;
+          Get.back();
+        }
+      }
+    });
   }
 
   btnBase64Clicked() {

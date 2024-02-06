@@ -9,9 +9,7 @@ class DemoGridViewController extends GetxController {
   void onReady() {
     super.onReady();
     update();
-    movieListVM.request().then((resp) {
-      update();
-    });
+    nextPage();
   }
 
   btnBackClicked() {
@@ -19,6 +17,8 @@ class DemoGridViewController extends GetxController {
   }
 
   nextPage() {
-    LoggerX.log('nextPage');
+    movieListVM.nextPage().then((resp) {
+      update();
+    });
   }
 }

@@ -7,7 +7,11 @@ class DemoMovieListVM {
   List<DemoMovieModel> list = [];
   List<DemoMovieModel> filtered = [];
 
-  Future<DemoApiResponse> request() {
+  clear() {
+    list = [];
+  }
+
+  Future<DemoApiResponse> nextPage() {
     loading = true;
     return DemoApi.get(
             endpoint: '/movies',
@@ -18,13 +22,10 @@ class DemoMovieListVM {
         .then((resp) async {
       loading = false;
       if (resp.statusCode == 200) {
-        list = [];
         for (var item in resp.jason['result'].jasonListValue) {
           var movie = DemoMovieModel.fromJason(item);
           list.add(movie);
         }
-      } else {
-        list = [];
       }
       return resp;
     });

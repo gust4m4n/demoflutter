@@ -8,7 +8,7 @@ class DemoCarouselController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    movieListVM.request().then((resp) {
+    movieListVM.nextPage().then((resp) {
       if (resp.statusCode == 200) {
         update();
       }

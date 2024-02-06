@@ -1,4 +1,3 @@
-import 'package:demoflutter/utils/all_utils.dart';
 import 'package:get/get.dart';
 import '../../viewmodels/demo_movie_list_vm.dart';
 
@@ -9,9 +8,7 @@ class DemoListViewController extends GetxController {
   void onReady() {
     super.onReady();
     update();
-    movieListVM.request().then((resp) {
-      update();
-    });
+    nextPage();
   }
 
   btnBackClicked() {
@@ -19,6 +16,8 @@ class DemoListViewController extends GetxController {
   }
 
   nextPage() {
-    LoggerX.log('nextPage');
+    movieListVM.nextPage().then((resp) {
+      update();
+    });
   }
 }

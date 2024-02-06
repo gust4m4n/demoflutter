@@ -1,28 +1,31 @@
 import '../../widgets/all_widgets.dart';
 
 class DemoWebViewController extends GetxController {
-  final webController = WebViewController()
-    ..setJavaScriptMode(JavaScriptMode.unrestricted)
-    ..setBackgroundColor(ColorX.white)
-    ..setNavigationDelegate(
-      NavigationDelegate(
-        onProgress: (int progress) {},
-        onPageStarted: (String url) {},
-        onPageFinished: (String url) {},
-        onWebResourceError: (WebResourceError error) {},
-        onNavigationRequest: (NavigationRequest request) {
-          if (request.url.startsWith('https://www.youtube.com/')) {
-            return NavigationDecision.prevent;
-          }
-          return NavigationDecision.navigate;
-        },
-      ),
-    )
-    ..loadRequest(Uri.parse('https://flutter.dev'));
+  var loading = false;
+  final webController = WebViewController();
 
   @override
   void onReady() {
     super.onReady();
+    webController.setJavaScriptMode(JavaScriptMode.unrestricted);
+    webController.setBackgroundColor(ColorX.white);
+    webController.setNavigationDelegate(NavigationDelegate(
+      onProgress: (int progress) {},
+      onPageStarted: (String url) {
+        loading = true;
+        update();
+      },
+      onPageFinished: (String url) {
+        loading = false;
+        update();
+      },
+      onWebResourceError: (WebResourceError error) {},
+      onNavigationRequest: (NavigationRequest request) {
+        return NavigationDecision.navigate;
+      },
+    ));
+    webController.loadRequest(Uri.parse('https://flutter.dev'));
+    update();
   }
 
   btnBackClicked() {

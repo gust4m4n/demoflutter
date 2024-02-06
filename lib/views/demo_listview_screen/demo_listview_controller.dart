@@ -7,7 +7,6 @@ class DemoListViewController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    update();
     nextPage();
   }
 
@@ -16,6 +15,7 @@ class DemoListViewController extends GetxController {
   }
 
   nextPage() {
+    update();
     movieListVM.nextPage().then((resp) {
       update();
     });

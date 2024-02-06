@@ -8,31 +8,29 @@ class DemoPieChartScreen extends StatelessWidget {
     return GetBuilder<DemoPieChartController>(
         init: DemoPieChartController(),
         builder: (controller) => ScreenX(
-              lightStatusBar: true,
-              headerView: NavigationBarX(
-                title: 'PieChart',
-                leftBtn: ImageX(
-                  faIcon: FontAwesomeIcons.arrowLeft,
-                  width: 20.0,
-                  height: 20.0,
-                  color: ColorX.white,
-                  fit: BoxFit.contain,
-                ),
-                leftAction: () {
-                  controller.btnBackClicked();
-                },
+            lightStatusBar: true,
+            headerView: NavigationBarX(
+              title: 'PieChart',
+              leftBtn: ImageX(
+                faIcon: FontAwesomeIcons.arrowLeft,
+                width: 20.0,
+                height: 20.0,
+                color: ColorX.white,
+                fit: BoxFit.contain,
               ),
-              bottomPadding: false,
-              bodyView: ContainerX(
-                  padding: const EdgeInsets.all(16.0),
-                  child: AspectRatio(
-                    aspectRatio: 1.0,
-                    child: PieChart(
-                      PieChartData(
-                        sections: controller.pieChartData,
-                      ),
-                    ),
-                  )),
-            ));
+              leftAction: () {
+                controller.btnBackClicked();
+              },
+            ),
+            bottomPadding: false,
+            bodyView: ContainerX(
+              padding: const EdgeInsets.all(16.0),
+              child: PieChart(
+                PieChartData(
+                  centerSpaceRadius: 0,
+                  sections: controller.pieChartData,
+                ),
+              ),
+            )));
   }
 }

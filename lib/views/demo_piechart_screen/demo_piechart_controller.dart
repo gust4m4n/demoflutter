@@ -4,20 +4,11 @@ import '../../widgets/all_widgets.dart';
 class DemoPieChartController extends GetxController {
   List<PieChartSectionData> pieChartData = [
     PieChartSectionData(
-      value: 10,
-      title: '10%',
-      color: ColorX.teal,
-    ),
+        value: 10, title: '10%', color: ColorX.teal, radius: 150.0),
     PieChartSectionData(
-      value: 30,
-      title: '30%',
-      color: ColorX.green,
-    ),
+        value: 30, title: '30%', color: ColorX.green, radius: 150.0),
     PieChartSectionData(
-      value: 60,
-      title: '60%',
-      color: ColorX.red,
-    ),
+        value: 60, title: '60%', color: ColorX.red, radius: 150.0),
   ];
 
   @override

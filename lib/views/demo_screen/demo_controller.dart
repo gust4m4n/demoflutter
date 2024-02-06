@@ -206,25 +206,6 @@ class DemoController extends SuperController {
         });
   }
 
-  btnStringPickerClicked() {
-    final sheet = DemoStringPicker(
-        title: 'String Picker', list: ['One', 'Two', 'Three', 'Four', 'Five']);
-    sheet.show().then((value) {
-      if (value != null) {
-        LoggerX.log('Selection: $value');
-      }
-    });
-  }
-
-  btnSearchPickerClicked() {
-    final sheet = DemoSearchPicker(title: 'Search Picker');
-    sheet.show().then((value) {
-      if (value != null) {
-        LoggerX.log('Selection: ${value.title}');
-      }
-    });
-  }
-
   btnLoadingClicked() {
     Get.loading();
     Timer(Duration(seconds: 5), () {
@@ -304,6 +285,25 @@ class DemoController extends SuperController {
           // photoSelfie = pickedFile.path;
           Get.back();
         }
+      }
+    });
+  }
+
+  btnStringPickerClicked() {
+    final sheet = DemoStringPicker(
+        title: 'String Picker', list: ['One', 'Two', 'Three', 'Four', 'Five']);
+    sheet.show().then((value) {
+      if (value != null) {
+        LoggerX.log('Selection: $value');
+      }
+    });
+  }
+
+  btnSearchPickerClicked() {
+    final sheet = DemoSearchPicker(title: 'Search Picker');
+    sheet.show().then((value) {
+      if (value != null) {
+        LoggerX.log('Selection: ${value.title}');
       }
     });
   }

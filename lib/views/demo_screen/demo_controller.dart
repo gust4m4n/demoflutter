@@ -1,10 +1,8 @@
 import 'dart:async';
-import 'package:demoflutter/viewmodels/demo_biometric_vm.dart';
-import 'package:demoflutter/views/demo_search_picker/demo_search_picker.dart';
-import 'package:demoflutter/views/demo_string_picker/demo_string_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
+import '../../viewmodels/demo_biometric_vm.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_photo_picker/demo_photo_picker.dart';
@@ -26,6 +24,8 @@ import '../demo_pin_sheet/demo_pin_sheet.dart';
 import '../demo_qr_code_screen/demo_qr_code_screen.dart';
 import '../demo_qr_scan_screen/demo_qr_scan_screen.dart';
 import '../demo_receipt_screen/demo_receipt_screen.dart';
+import '../demo_search_picker/demo_search_picker.dart';
+import '../demo_string_picker/demo_string_picker.dart';
 import '../demo_tabbar_screen/demo_tabbar_screen.dart';
 import '../demo_webview_screen/demo_webview_screen.dart';
 

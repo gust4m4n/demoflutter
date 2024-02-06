@@ -11,6 +11,7 @@ export 'package:flutter_svg/svg.dart';
 export 'package:flash/flash.dart';
 export 'package:webview_flutter/webview_flutter.dart';
 export 'package:local_auth/local_auth.dart';
+export 'package:image_picker/image_picker.dart';
 export 'internet_toasts.dart';
 export 'sheet_x.dart';
 export 'button_x.dart';

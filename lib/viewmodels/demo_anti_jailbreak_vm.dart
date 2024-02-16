@@ -4,7 +4,6 @@ import '../widgets/all_widgets.dart';
 
 class DemoAntiJailbreakVM {
   static var jailbroken = false;
-  static var developerMode = false;
 
   static check() async {
     if (!kIsWeb) {
@@ -13,15 +12,6 @@ class DemoAntiJailbreakVM {
         if (jailbroken == true) {
           block();
           return;
-        }
-        if (Platform.isAndroid) {
-          developerMode = await FlutterJailbreakDetection.developerMode;
-          if (developerMode == true) {
-            if (kReleaseMode) {
-              block();
-              return;
-            }
-          }
         }
       }
     }

@@ -6,9 +6,6 @@ import 'viewmodels/demo_session_vm.dart';
 import 'views/demo_screen/demo_screen.dart';
 import 'widgets/all_widgets.dart';
 
-var jailbroken = false;
-var developerMode = false;
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DemoAntiJailbreakVM.check();

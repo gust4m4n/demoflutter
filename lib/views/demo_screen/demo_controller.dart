@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:demoflutter/views/demo_barcode_screen/demo_barcode_screen.dart';
+import 'package:intl/intl.dart';
 
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
@@ -300,6 +301,20 @@ class DemoController extends SuperController {
     sheet.show().then((value) {
       if (value != null) {
         LoggerX.log('Selection: $value');
+      }
+    });
+  }
+
+  btnDatePickerClicked() {
+    showDatePicker(
+      context: Get.context!,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime.now(),
+    ).then((date) {
+      if (date != null) {
+        final dt = DateFormat('dd MMMM yyyy').format(date);
+        LoggerX.log('date: $dt');
       }
     });
   }

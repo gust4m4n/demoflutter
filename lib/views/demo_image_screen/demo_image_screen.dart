@@ -10,25 +10,23 @@ class DemoImageScreen extends StatelessWidget {
     return GetBuilder<DemoImageController>(
       init: DemoImageController(),
       builder: (controller) => ScreenX(
-          lightStatusBar: true,
-          headerView: NavigationBarX(
-            title: 'Image',
-            leftBtn: ImageX(
-              faIcon: FontAwesomeIcons.arrowLeft,
-              width: 20.0,
-              height: 20.0,
-              color: ColorX.white,
-              fit: BoxFit.contain,
-            ),
-            leftAction: () {
-              controller.btnBackClicked();
-            },
-          ),
-          bottomPadding: false,
-          bodyView: ImageX(
-            url: url,
+        lightStatusBar: true,
+        headerView: NavigationBarX(
+          title: 'Image',
+          leftBtn: ImageX(
+            faIcon: FontAwesomeIcons.arrowLeft,
+            width: 20.0,
+            height: 20.0,
+            color: ColorX.white,
             fit: BoxFit.contain,
-          )),
+          ),
+          leftAction: () {
+            controller.btnBackClicked();
+          },
+        ),
+        bottomPadding: false,
+        bodyView: ImageX(url: url, fit: BoxFit.contain),
+      ),
     );
   }
 }

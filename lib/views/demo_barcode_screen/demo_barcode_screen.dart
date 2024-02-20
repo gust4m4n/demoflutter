@@ -1,5 +1,4 @@
 import 'package:barcode_widget/barcode_widget.dart';
-import 'package:qr_flutter/qr_flutter.dart';
 import '../../widgets/all_widgets.dart';
 import 'demo_barcode_controller.dart';
 

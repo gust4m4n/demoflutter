@@ -588,6 +588,20 @@ class DemoScreen extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'Date Picker',
+                                backgroundColor: ColorX.green,
+                                onClicked: () {
+                                  controller.btnDatePickerClicked();
+                                },
+                              )),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
                           const ContainerX(
                             backgroundColor: ColorX.gray,
                             width: double.infinity,

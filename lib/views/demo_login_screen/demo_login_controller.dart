@@ -94,4 +94,9 @@ class DemoLoginController extends SuperController {
 
     Get.back();
   }
+  
+  @override
+  void onHidden() {
+    // TODO: implement onHidden
+  }
 }

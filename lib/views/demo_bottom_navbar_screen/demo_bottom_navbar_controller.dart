@@ -57,4 +57,9 @@ class DemoBottomNavBarController extends SuperController {
         break;
     }
   }
+  
+  @override
+  void onHidden() {
+    // TODO: implement onHidden
+  }
 }

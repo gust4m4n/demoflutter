@@ -52,7 +52,7 @@ class DemoGridViewScreen extends StatelessWidget {
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         mainAxisSpacing: 8.0,
                         crossAxisSpacing: 8.0,
-                        childAspectRatio: 0.7,
+                        childAspectRatio: 0.65,
                         crossAxisCount: 2,
                       ),
                       itemBuilder: (BuildContext context, int index) {

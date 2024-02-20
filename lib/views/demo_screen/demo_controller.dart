@@ -481,4 +481,9 @@ class DemoController extends SuperController {
         rightBtnTitle: '',
         onRightBtnClicked: () {});
   }
+  
+  @override
+  void onHidden() {
+    // TODO: implement onHidden
+  }
 }

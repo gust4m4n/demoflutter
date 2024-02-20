@@ -1,4 +1,4 @@
-import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:pdfx/pdfx.dart';
 import '../../widgets/all_widgets.dart';
 import 'demo_pdf_controller.dart';
 
@@ -25,25 +25,8 @@ class DemoPdfScreen extends StatelessWidget {
                 },
               ),
               bottomPadding: true,
-              bodyView: PDFView(
-                filePath: controller.pathPDF,
-                autoSpacing: true,
-                enableSwipe: true,
-                pageSnap: true,
-                swipeHorizontal: true,
-                onRender: (_pages) {
-                  controller.update();
-                },
-                onError: (error) {
-                  print(error);
-                },
-                onPageError: (page, error) {
-                  print('$page: ${error.toString()}');
-                },
-                onViewCreated: (PDFViewController vc) {
-                  controller.pdfViewController = vc;
-                  //controller.update();
-                },
+              bodyView: PdfView(
+                controller: controller.pdfController!,
               ),
             ));
   }

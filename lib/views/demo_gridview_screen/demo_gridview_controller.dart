@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_movie_list_vm.dart';
 
 class DemoGridViewController extends GetxController {

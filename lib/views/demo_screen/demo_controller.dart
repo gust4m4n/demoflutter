@@ -1,5 +1,6 @@
 import 'dart:async';
-import 'package:image_picker/image_picker.dart';
+import 'package:demoflutter/views/demo_barcode_screen/demo_barcode_screen.dart';
+
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../viewmodels/demo_biometric_vm.dart';
@@ -126,6 +127,10 @@ class DemoController extends SuperController {
 
   btnQrScanClicked() {
     Get.to(DemoQRScanScreen());
+  }
+
+  btnBarcodeClicked() {
+    Get.to(DemoBarcodeScreen());
   }
 
   btnTabBarClicked() {

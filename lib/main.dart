@@ -76,6 +76,8 @@ class MyApp extends StatelessWidget {
       title: 'DemoFlutter',
       home: firstScreen,
       theme: ThemeData(
+          bottomSheetTheme:
+              BottomSheetThemeData(surfaceTintColor: Colors.white),
           splashColor: Colors.transparent,
           visualDensity: VisualDensity.standard,
           primarySwatch: Colors.grey,

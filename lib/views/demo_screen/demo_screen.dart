@@ -283,6 +283,21 @@ class DemoScreen extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                child: ButtonX(
+                                  title: 'Barcode',
+                                  backgroundColor: ColorX.teal,
+                                  onClicked: () {
+                                    controller.btnBarcodeClicked();
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
                           const ContainerX(
                             backgroundColor: ColorX.gray,
                             width: double.infinity,

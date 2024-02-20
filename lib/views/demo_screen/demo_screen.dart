@@ -245,6 +245,20 @@ class DemoScreen extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 4.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Expanded(
+                                  child: ButtonX(
+                                title: 'PDF',
+                                backgroundColor: ColorX.red,
+                                onClicked: () {
+                                  controller.btnPdfClicked();
+                                },
+                              )),
+                            ],
+                          ),
+                          const SizedBox(height: 4.0),
                           const ContainerX(
                             backgroundColor: ColorX.gray,
                             width: double.infinity,

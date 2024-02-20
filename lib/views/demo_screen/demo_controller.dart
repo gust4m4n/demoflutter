@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:demoflutter/views/demo_barcode_screen/demo_barcode_screen.dart';
+import 'package:demoflutter/views/demo_pdf_screen/demo_pdf_screen.dart';
 import 'package:intl/intl.dart';
 
 import '../../utils/all_utils.dart';
@@ -120,6 +121,10 @@ class DemoController extends SuperController {
 
   btnHtmlClicked() {
     Get.to(DemoHtmlScreen());
+  }
+
+  btnPdfClicked() {
+    Get.to(DemoPdfScreen());
   }
 
   btnQrCodeClicked() {

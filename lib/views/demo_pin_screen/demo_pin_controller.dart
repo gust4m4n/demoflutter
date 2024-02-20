@@ -22,6 +22,8 @@ class DemoPinController extends GetxController {
     update();
   }
 
+  btnFingerprintClicked() {}
+
   btnBackspaceClicked() {
     if (pin.length > 0) {
       pin = pin.substring(0, pin.length - 1);

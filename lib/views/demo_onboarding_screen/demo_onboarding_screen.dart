@@ -32,7 +32,7 @@ class DemoOnboardingScreen extends StatelessWidget {
                                 ),
                                 ContainerX(
                                   width: double.infinity,
-                                  height: 150.0,
+                                  height: 160.0,
                                   padding: const EdgeInsets.only(
                                       left: 24.0,
                                       top: 16.0,

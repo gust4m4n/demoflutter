@@ -147,7 +147,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                 ),
               ),
               ContainerX(
-                backgroundColor: ColorX.white,
+                backgroundColor: ColorX.transparent,
                 child: Column(
                   children: [
                     SizedBox(height: 24.0),

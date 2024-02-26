@@ -13,9 +13,9 @@ class DemoOtpController extends GetxController {
   }
 
   btnKeypadClicked(String digit) {
-    if (pin.length < 4) {
+    if (pin.length < 6) {
       pin = pin + digit;
-      if (pin.length == 4) {
+      if (pin.length == 6) {
         submit();
       }
     }
@@ -42,10 +42,10 @@ class DemoOtpController extends GetxController {
   submit() {
     Get.loading();
     Future.delayed(Duration(milliseconds: 2000), () {
-      if (pin == '9999') {
+      if (pin == '999999') {
         Get.back(result: pin);
       } else {
-        clear('OTP yang anda masukkan salah. OTP sebenarnya adalah 9999.');
+        clear('OTP yang anda masukkan salah. OTP sebenarnya adalah 999999.');
       }
       Get.back();
     });

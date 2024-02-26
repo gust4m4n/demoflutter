@@ -4,7 +4,6 @@ import 'demo_pin_controller.dart';
 // ignore: must_be_immutable
 class DemoPinScreen extends GetWidget<DemoPinController> {
   final String title;
-  double buttonSize = 60.0;
   TextEditingController pinController = TextEditingController();
 
   DemoPinScreen({this.title = 'Enter your PIN'});

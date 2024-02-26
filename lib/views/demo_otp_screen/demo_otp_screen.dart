@@ -4,7 +4,6 @@ import 'demo_otp_controller.dart';
 // ignore: must_be_immutable
 class DemoOtpScreen extends GetWidget<DemoOtpController> {
   final String title;
-  double buttonSize = 60.0;
   TextEditingController pinController = TextEditingController();
 
   DemoOtpScreen({this.title = 'Enter your OTP'});
@@ -39,8 +38,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                         children: [
                           ContainerX(
                             backgroundColor: ColorX.transparent,
-                            width: 42.0,
-                            height: 42,
+                            width: 32.0,
+                            height: 32.0,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
                             borderColor: ColorX.gray,
@@ -49,15 +48,15 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                               controller.pin.length >= 1
                                   ? controller.pin[0]
                                   : '',
-                              fontSize: 24.0,
+                              fontSize: 17.0,
                               fontWeight: FontWeight.w700,
                             )),
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: ColorX.transparent,
-                            width: 42.0,
-                            height: 42,
+                            width: 32.0,
+                            height: 32.0,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
                             borderColor: ColorX.gray,
@@ -66,15 +65,15 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                               controller.pin.length >= 2
                                   ? controller.pin[1]
                                   : '',
-                              fontSize: 24.0,
+                              fontSize: 17.0,
                               fontWeight: FontWeight.w700,
                             )),
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: ColorX.transparent,
-                            width: 42.0,
-                            height: 42,
+                            width: 32.0,
+                            height: 32.0,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
                             borderColor: ColorX.gray,
@@ -83,15 +82,15 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                               controller.pin.length >= 3
                                   ? controller.pin[2]
                                   : '',
-                              fontSize: 24.0,
+                              fontSize: 17.0,
                               fontWeight: FontWeight.w700,
                             )),
                           ),
                           SizedBox(width: 8.0),
                           ContainerX(
                             backgroundColor: ColorX.transparent,
-                            width: 42.0,
-                            height: 42,
+                            width: 32.0,
+                            height: 32.0,
                             cornerRadius: 8.0,
                             borderWidth: 1.0,
                             borderColor: ColorX.gray,
@@ -100,7 +99,41 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                               controller.pin.length >= 4
                                   ? controller.pin[3]
                                   : '',
-                              fontSize: 24.0,
+                              fontSize: 17.0,
+                              fontWeight: FontWeight.w700,
+                            )),
+                          ),
+                          SizedBox(width: 8.0),
+                          ContainerX(
+                            backgroundColor: ColorX.transparent,
+                            width: 32.0,
+                            height: 32.0,
+                            cornerRadius: 8.0,
+                            borderWidth: 1.0,
+                            borderColor: ColorX.gray,
+                            child: Center(
+                                child: TextX(
+                              controller.pin.length >= 5
+                                  ? controller.pin[4]
+                                  : '',
+                              fontSize: 17.0,
+                              fontWeight: FontWeight.w700,
+                            )),
+                          ),
+                          SizedBox(width: 8.0),
+                          ContainerX(
+                            backgroundColor: ColorX.transparent,
+                            width: 32.0,
+                            height: 32.0,
+                            cornerRadius: 8.0,
+                            borderWidth: 1.0,
+                            borderColor: ColorX.gray,
+                            child: Center(
+                                child: TextX(
+                              controller.pin.length >= 6
+                                  ? controller.pin[5]
+                                  : '',
+                              fontSize: 17.0,
                               fontWeight: FontWeight.w700,
                             )),
                           ),

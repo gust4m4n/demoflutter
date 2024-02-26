@@ -1,13 +1,12 @@
 import 'dart:async';
-import 'package:demoflutter/views/demo_barcode_screen/demo_barcode_screen.dart';
-import 'package:demoflutter/views/demo_pdf_screen/demo_pdf_screen.dart';
 import 'package:intl/intl.dart';
-
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../viewmodels/demo_biometric_vm.dart';
 import '../../viewmodels/demo_security_vm.dart';
 import '../../widgets/all_widgets.dart';
+import '../demo_barcode_screen/demo_barcode_screen.dart';
+import '../demo_pdf_screen/demo_pdf_screen.dart';
 import '../demo_photo_picker/demo_photo_picker.dart';
 import '../demo_bottom_navbar_screen/demo_bottom_navbar_screen.dart';
 import '../demo_carousel_screen/demo_carousel_screen.dart';

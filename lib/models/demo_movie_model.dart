@@ -1,4 +1,5 @@
-import 'package:demoflutter/utils/all_utils.dart';
+
+import '../utils/all_utils.dart';
 
 class DemoMovieModel {
   int movie_id = 0;

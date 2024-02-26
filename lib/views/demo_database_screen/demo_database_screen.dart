@@ -1,6 +1,6 @@
-import 'package:demoflutter/models/demo_movie_model.dart';
-import 'package:demoflutter/viewmodels/demo_database_vm.dart';
+import '../../models/demo_movie_model.dart';
 import '../../utils/all_utils.dart';
+import '../../viewmodels/demo_database_vm.dart';
 import '../../widgets/all_widgets.dart';
 import '../demo_image_screen/demo_image_screen.dart';
 import 'demo_database_controller.dart';

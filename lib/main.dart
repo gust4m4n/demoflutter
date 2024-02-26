@@ -1,7 +1,7 @@
-import 'package:demoflutter/viewmodels/demo_preferences_vm+users.dart';
-import 'package:demoflutter/viewmodels/demo_reachability_vm.dart';
 import 'viewmodels/demo_anti_jailbreak_vm.dart';
+import 'viewmodels/demo_preferences_vm+users.dart';
 import 'viewmodels/demo_preferences_vm.dart';
+import 'viewmodels/demo_reachability_vm.dart';
 import 'viewmodels/demo_session_vm.dart';
 import 'views/demo_screen/demo_screen.dart';
 import 'widgets/all_widgets.dart';

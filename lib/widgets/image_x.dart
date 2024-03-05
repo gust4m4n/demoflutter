@@ -133,13 +133,12 @@ class ImageX extends StatelessWidget {
 
   Widget imageAsset(BuildContext context, String name) {
     if (name.trim().toLowerCase().endsWith('.svg')) {
-      return SvgPicture.asset(
-        name,
-        width: width - (padding.left + padding.right),
-        height: height - (padding.top + padding.bottom),
-        fit: fit,
-        color: color,
-      );
+      return SvgPicture.asset(name,
+          width: width - (padding.left + padding.right),
+          height: height - (padding.top + padding.bottom),
+          fit: fit,
+          colorFilter: ColorFilter.mode(
+              color != null ? color! : Colors.transparent, BlendMode.srcIn));
     } else {
       return Image(
           image: AssetImage(name.trim()),

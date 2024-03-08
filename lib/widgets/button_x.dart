@@ -29,7 +29,7 @@ class ButtonX extends StatelessWidget {
     this.faHeight = 24.0,
     this.faColor = null,
     this.title = 'Button',
-    this.backgroundColor = ColorX.black,
+    this.backgroundColor = ColorX.theme,
     this.disabledBackgroundColor = ColorX.lightGray,
     this.titleColor = ColorX.white,
     this.disabledTitleColor = ColorX.gray,

@@ -16,7 +16,7 @@ class NavigationBarX extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ContainerX(
-        backgroundColor: ColorX.blue,
+        backgroundColor: ColorX.theme,
         height: MediaQuery.of(Get.context!).padding.top + 50.0,
         child: Column(children: [
           SizedBox(
@@ -25,7 +25,7 @@ class NavigationBarX extends StatelessWidget {
           ContainerX(
               height: 50.0,
               child: Material(
-                  color: ColorX.blue,
+                  color: ColorX.theme,
                   child: Column(children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,

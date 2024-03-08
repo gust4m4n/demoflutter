@@ -64,7 +64,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ContainerX(
-                    backgroundColor: controller.pin.length >= 1
+                    backgroundColor: controller.code.length >= 1
                         ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
@@ -75,7 +75,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
-                    backgroundColor: controller.pin.length >= 2
+                    backgroundColor: controller.code.length >= 2
                         ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
@@ -86,7 +86,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
-                    backgroundColor: controller.pin.length >= 3
+                    backgroundColor: controller.code.length >= 3
                         ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
@@ -97,7 +97,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
-                    backgroundColor: controller.pin.length >= 4
+                    backgroundColor: controller.code.length >= 4
                         ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
@@ -108,7 +108,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
-                    backgroundColor: controller.pin.length >= 5
+                    backgroundColor: controller.code.length >= 5
                         ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,
@@ -119,7 +119,7 @@ class DemoPinSheet extends GetWidget<DemoPinSheetController> {
                   ),
                   SizedBox(width: 8.0),
                   ContainerX(
-                    backgroundColor: controller.pin.length >= 6
+                    backgroundColor: controller.code.length >= 6
                         ? ColorX.gray
                         : ColorX.transparent,
                     width: 12.0,

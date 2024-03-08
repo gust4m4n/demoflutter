@@ -1,7 +1,7 @@
 import '../../widgets/all_widgets.dart';
 
 class DemoOtpController extends GetxController {
-  String pin = '';
+  String code = '';
   String error = '';
 
   btnBackClicked() {
@@ -13,9 +13,9 @@ class DemoOtpController extends GetxController {
   }
 
   btnKeypadClicked(String digit) {
-    if (pin.length < 6) {
-      pin = pin + digit;
-      if (pin.length == 6) {
+    if (code.length < 6) {
+      code = code + digit;
+      if (code.length == 6) {
         submit();
       }
     }
@@ -23,8 +23,8 @@ class DemoOtpController extends GetxController {
   }
 
   btnBackspaceClicked() {
-    if (pin.length > 0) {
-      pin = pin.substring(0, pin.length - 1);
+    if (code.length > 0) {
+      code = code.substring(0, code.length - 1);
     }
     update();
   }
@@ -34,7 +34,7 @@ class DemoOtpController extends GetxController {
   }
 
   clear(String error) {
-    pin = '';
+    code = '';
     this.error = error;
     update();
   }
@@ -42,10 +42,12 @@ class DemoOtpController extends GetxController {
   submit() {
     Get.loading();
     Future.delayed(Duration(milliseconds: 2000), () {
-      if (pin == '999999') {
-        Get.back(result: pin);
+      final hardcodedCode = '123456';
+      if (code == hardcodedCode) {
+        Get.back(result: code);
       } else {
-        clear('OTP yang anda masukkan salah. OTP sebenarnya adalah 999999.');
+        clear(
+            'OTP yang anda masukkan salah. OTP sebenarnya adalah $hardcodedCode.');
       }
       Get.back();
     });

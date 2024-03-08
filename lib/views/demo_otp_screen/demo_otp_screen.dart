@@ -45,8 +45,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
-                              controller.pin.length >= 1
-                                  ? controller.pin[0]
+                              controller.code.length >= 1
+                                  ? controller.code[0]
                                   : '',
                               fontSize: 17.0,
                               fontWeight: FontWeight.w700,
@@ -62,8 +62,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
-                              controller.pin.length >= 2
-                                  ? controller.pin[1]
+                              controller.code.length >= 2
+                                  ? controller.code[1]
                                   : '',
                               fontSize: 17.0,
                               fontWeight: FontWeight.w700,
@@ -79,8 +79,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
-                              controller.pin.length >= 3
-                                  ? controller.pin[2]
+                              controller.code.length >= 3
+                                  ? controller.code[2]
                                   : '',
                               fontSize: 17.0,
                               fontWeight: FontWeight.w700,
@@ -96,8 +96,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
-                              controller.pin.length >= 4
-                                  ? controller.pin[3]
+                              controller.code.length >= 4
+                                  ? controller.code[3]
                                   : '',
                               fontSize: 17.0,
                               fontWeight: FontWeight.w700,
@@ -113,8 +113,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
-                              controller.pin.length >= 5
-                                  ? controller.pin[4]
+                              controller.code.length >= 5
+                                  ? controller.code[4]
                                   : '',
                               fontSize: 17.0,
                               fontWeight: FontWeight.w700,
@@ -130,8 +130,8 @@ class DemoOtpScreen extends GetWidget<DemoOtpController> {
                             borderColor: ColorX.gray,
                             child: Center(
                                 child: TextX(
-                              controller.pin.length >= 6
-                                  ? controller.pin[5]
+                              controller.code.length >= 6
+                                  ? controller.code[5]
                                   : '',
                               fontSize: 17.0,
                               fontWeight: FontWeight.w700,

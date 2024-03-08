@@ -28,7 +28,9 @@ class DemoCarouselScreen extends StatelessWidget {
         bottomPadding: false,
         bodyView: controller.movieListVM.list.length > 0
             ? CarouselSlider.builder(
+              
                 options: CarouselOptions(
+                  
                   padEnds: false,
                   autoPlay: true,
                   viewportFraction: 0.85,
@@ -45,7 +47,7 @@ class DemoCarouselScreen extends StatelessWidget {
                       color: ColorX.transparent,
                       child: InkWell(
                           customBorder: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0)),
+                              borderRadius: BorderRadius.circular(.0)),
                           highlightColor: ColorX.highlight,
                           onTap: () {
                             Get.to(DemoImageScreen(url: movie.poster));

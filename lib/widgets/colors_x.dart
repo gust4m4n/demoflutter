@@ -12,4 +12,5 @@ class ColorX {
   static const Color transparent = Colors.transparent;
   static const Color white = Colors.white;
   static const Color highlight = Color(0xffE3E3E3);
+  static const Color theme = Color(0xff007bff);
 }

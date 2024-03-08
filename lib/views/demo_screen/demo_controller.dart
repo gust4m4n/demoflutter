@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demoflutter/views/demo_profile_screen/demo_profile_screen.dart';
 import 'package:intl/intl.dart';
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
@@ -64,6 +65,10 @@ class DemoController extends SuperController {
 
   btnLoginClicked() {
     Get.to(DemoLoginScreen());
+  }
+
+  btnProfileClicked() {
+    Get.to(DemoProfileScreen());
   }
 
   btnOtpClicked() {

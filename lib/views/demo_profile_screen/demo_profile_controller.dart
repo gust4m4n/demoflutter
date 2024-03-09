@@ -1,101 +1,19 @@
-import '../../utils/all_utils.dart';
-import '../../viewmodels/demo_anti_jailbreak_vm.dart';
+import 'package:demoflutter/viewmodels/demo_profile_vm.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import '../../widgets/all_widgets.dart';
-import '../demo_string_picker/demo_string_picker.dart';
 
-class DemoProfileController extends SuperController {
-  final txtUsernameController = TextEditingController();
-  final txtUsernameNode = FocusNode();
-  var txtUsernameError = '';
-  bool securedPassword = true;
-  final txtPasswordController = TextEditingController();
-  final txtPasswordNode = FocusNode();
-  var txtPasswordError = '';
-  final txtRegionController = TextEditingController();
-  var txtRegionError = '';
+class DemoProfileController extends GetxController {
+  var version = '';
 
   @override
   void onReady() {
     super.onReady();
-    txtUsernameError = '';
-    txtPasswordError = '';
-    txtRegionError = '';
-    update();
-  }
-
-  btnBackClicked() {
-    Get.back();
-  }
-
-  @override
-  void onDetached() {
-    LoggerX.log('[DemoProfileController] onDetached');
-  }
-
-  @override
-  void onInactive() {
-    LoggerX.log('[DemoProfileController] onInactive');
-  }
-
-  @override
-  void onPaused() {
-    LoggerX.log('[DemoProfileController] onPaused');
-  }
-
-  @override
-  Future<void> onResumed() async {
-    LoggerX.log('[DemoProfileController] onResumed');
-    await DemoAntiJailbreakVM.check();
-  }
-
-  btnRegionDropdownClicked() {
-    final sheet = DemoStringPicker(
-        title: 'String Picker',
-        list: ['Klaten', 'Jakarta', 'Surabaya', 'Singapura']);
-    sheet.show().then((value) {
-      if (value != null) {
-        LoggerX.log('Selection: $value');
-        txtRegionController.text = value;
-      }
+    PackageInfo.fromPlatform().then((info) {
+      version = 'Version ${info.version}.${info.buildNumber}';
+      update();
     });
-  }
-
-  btnForgotPasswordClicked() {
-    FocusManager.instance.primaryFocus?.unfocus();
-    Get.back();
-  }
-
-  btnSignInClicked() {
-    FocusManager.instance.primaryFocus?.unfocus();
-    txtUsernameError = '';
-    txtPasswordError = '';
-    txtRegionError = '';
-    update();
-
-    if (txtUsernameController.text.trim().isEmpty) {
-      txtUsernameError = 'Username cannot be empty.';
-      FocusScope.of(Get.context!).requestFocus(txtUsernameNode);
+    DemoProfileVM.request().then((resp) {
       update();
-      return;
-    }
-
-    if (txtPasswordController.text.trim().isEmpty) {
-      txtPasswordError = 'Password cannot be empty.';
-      FocusScope.of(Get.context!).requestFocus(txtPasswordNode);
-      update();
-      return;
-    }
-
-    if (txtRegionController.text.trim().isEmpty) {
-      txtRegionError = 'You must select region.';
-      update();
-      return;
-    }
-
-    Get.back();
-  }
-  
-  @override
-  void onHidden() {
+    });
   }
 }

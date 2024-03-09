@@ -52,7 +52,6 @@ class DialogX {
             Expanded(
               child: ButtonX(
                 title: leftBtnTitle,
-                backgroundColor: ColorX.green,
                 onClicked: onLeftBtnClicked,
               ),
             ),

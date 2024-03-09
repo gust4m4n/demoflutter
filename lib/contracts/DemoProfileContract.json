@@ -1,0 +1,11 @@
+{
+	"status": 200,
+	"message": "Get profile success",
+	"result": {
+	  "name": "Kirsten Doe",
+	  "email": "kirsten.doe@example.com",
+	  "photo": "https://www.unwomen.org/sites/default/files/Headquarters/Images/Sections/Partnerships/GoodwillAmbassadors/UNwomen_AH_Photo_400px.jpg?h=375&la=en&w=300"
+	}
+  }
+
+  

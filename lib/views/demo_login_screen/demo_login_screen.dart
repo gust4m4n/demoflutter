@@ -185,7 +185,6 @@ class DemoLoginScreen extends StatelessWidget {
                         SizedBox(height: 16.0),
                         ButtonX(
                           title: 'Sign In',
-                          backgroundColor: ColorX.green,
                           onClicked: () {
                             controller.btnSignInClicked();
                           },

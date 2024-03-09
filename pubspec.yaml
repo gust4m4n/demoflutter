@@ -42,6 +42,7 @@ dependencies:
   local_auth: ^2.1.8
   barcode_widget: ^2.0.4
   pdfx: ^2.6.0
+  package_info_plus: ^4.2.0
 
 
 dev_dependencies: 

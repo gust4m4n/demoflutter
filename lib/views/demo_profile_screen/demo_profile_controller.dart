@@ -1,3 +1,5 @@
+import 'package:package_info_plus/package_info_plus.dart';
+
 import '../../utils/all_utils.dart';
 import '../../viewmodels/demo_anti_jailbreak_vm.dart';
 import '../../widgets/all_widgets.dart';
@@ -13,6 +15,7 @@ class DemoProfileController extends SuperController {
   var txtPasswordError = '';
   final txtRegionController = TextEditingController();
   var txtRegionError = '';
+  var version = '';
 
   @override
   void onReady() {
@@ -21,6 +24,10 @@ class DemoProfileController extends SuperController {
     txtPasswordError = '';
     txtRegionError = '';
     update();
+    PackageInfo.fromPlatform().then((info) {
+      version = 'Version ${info.version}.${info.buildNumber}';
+      update();
+    });
   }
 
   btnBackClicked() {
@@ -94,8 +101,7 @@ class DemoProfileController extends SuperController {
 
     Get.back();
   }
-  
+
   @override
-  void onHidden() {
-  }
+  void onHidden() {}
 }

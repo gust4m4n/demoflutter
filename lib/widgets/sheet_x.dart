@@ -56,7 +56,6 @@ class SheetX {
                 child: Expanded(
                   child: ButtonX(
                     title: leftBtnTitle,
-                    backgroundColor: ColorX.green,
                     onClicked: onLeftBtnClicked,
                   ),
                 ),

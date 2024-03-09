@@ -1,0 +1,8 @@
+{
+	"status": 200,
+	"message": "Get profile success",
+	"result": {
+		"name" : "Kirsten Doe",
+		"email" : "kirsten.doe@example.com" 
+	}
+  }

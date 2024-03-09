@@ -1,3 +1,4 @@
+import '../../viewmodels/demo_profile_vm.dart';
 import '../../widgets/all_widgets.dart';
 import 'demo_profile_controller.dart';
 
@@ -25,21 +26,32 @@ class DemoProfileScreen extends StatelessWidget {
                           cornerRadius: 55.0,
                           child: Center(
                               child: ImageX(
-                            url:
-                                'https://www.unwomen.org/sites/default/files/Headquarters/Images/Sections/Partnerships/GoodwillAmbassadors/UNwomen_AH_Photo_400px.jpg?h=375&la=en&w=300',
-                            width: 100.0,
+                            faIcon: DemoProfileVM.profile.photo.isEmpty
+                                ? FontAwesomeIcons.user
+                                : null,
+                            color: DemoProfileVM.profile.photo.isEmpty
+                                ? ColorX.gray
+                                : null,
+                            url: DemoProfileVM.profile.photo,
+                            width: DemoProfileVM.profile.photo.isEmpty
+                                ? 50.0
+                                : 100.0,
                             height: 100.0,
-                            cornerRadius: 64.0,
+                            cornerRadius: 50.0,
                           ))),
                       SizedBox(height: 8.0),
                       TextX(
-                        'Kirsten Doe',
+                        DemoProfileVM.profile.name.isEmpty
+                            ? '-'
+                            : DemoProfileVM.profile.name,
                         fontSize: 17.0,
                         fontWeight: FontWeight.w700,
                         color: ColorX.white,
                       ),
                       TextX(
-                        'kirsten.doe@example.com',
+                        DemoProfileVM.profile.email.isEmpty
+                            ? '-'
+                            : DemoProfileVM.profile.email,
                         fontSize: 13.0,
                         fontWeight: FontWeight.w400,
                         color: ColorX.white,

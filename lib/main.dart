@@ -1,8 +1,8 @@
 import 'viewmodels/demo_anti_jailbreak_vm.dart';
 import 'viewmodels/demo_preferences_vm+users.dart';
 import 'viewmodels/demo_preferences_vm.dart';
+import 'viewmodels/demo_profile_vm.dart';
 import 'viewmodels/demo_reachability_vm.dart';
-import 'viewmodels/demo_session_vm.dart';
 import 'views/demo_screen/demo_screen.dart';
 import 'widgets/all_widgets.dart';
 
@@ -17,7 +17,7 @@ Future<void> main() async {
     await DemoUserPreferencesVM.resetAll();
   }
 
-  await DemoSessionVM.load();
+  await DemoProfileVM.load();
 
   Widget firstScreen;
 

@@ -1,4 +1,6 @@
 import '../../widgets/all_widgets.dart';
+import '../demo_home_page/demo_home_page.dart';
+import '../demo_profile_page/demo_profile_page.dart';
 import 'demo_bottom_navbar_controller.dart';
 
 // ignore: must_be_immutable
@@ -13,11 +15,8 @@ class DemoBottomNavBarScreen extends StatelessWidget {
               bodyView: IndexedStack(
                 index: controller.tabBarIndex,
                 children: <Widget>[
-                  ContainerX(backgroundColor: ColorX.blue),
-                  ContainerX(backgroundColor: ColorX.teal),
-                  ContainerX(backgroundColor: ColorX.green),
-                  ContainerX(backgroundColor: ColorX.red),
-                  ContainerX(backgroundColor: ColorX.yellow),
+                  DemoHomePage(),
+                  DemoProfilePage(),
                 ],
               ),
               bottomNavigationBar: Theme(
@@ -50,7 +49,7 @@ class DemoBottomNavBarScreen extends StatelessWidget {
                               TextX(
                                 'Home',
                                 fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 color: ColorX.gray,
                                 textAlign: TextAlign.center,
                               ),
@@ -68,83 +67,7 @@ class DemoBottomNavBarScreen extends StatelessWidget {
                               TextX(
                                 'Home',
                                 fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorX.gray.withOpacity(0.60),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          label: ''),
-                      BottomNavigationBarItem(
-                          activeIcon: Column(
-                            children: [
-                              ImageX(
-                                faIcon: FontAwesomeIcons.database,
-                                height: 24.0,
-                                width: 24.0,
-                                color: ColorX.gray,
-                              ),
-                              SizedBox(height: 4.0),
-                              TextX(
-                                'Database',
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorX.gray,
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          icon: Column(
-                            children: [
-                              ImageX(
-                                faIcon: FontAwesomeIcons.database,
-                                height: 24.0,
-                                width: 24.0,
-                                color: ColorX.gray.withOpacity(0.60),
-                              ),
-                              SizedBox(height: 4.0),
-                              TextX(
-                                'Database',
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorX.gray.withOpacity(0.60),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          label: ''),
-                      BottomNavigationBarItem(
-                          activeIcon: Column(
-                            children: [
-                              ImageX(
-                                faIcon: FontAwesomeIcons.chartSimple,
-                                height: 24.0,
-                                width: 24.0,
-                                color: ColorX.gray,
-                              ),
-                              SizedBox(height: 4.0),
-                              TextX(
-                                'Charts',
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorX.gray,
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          icon: Column(
-                            children: [
-                              ImageX(
-                                faIcon: FontAwesomeIcons.chartSimple,
-                                height: 24.0,
-                                width: 24.0,
-                                color: ColorX.gray.withOpacity(0.60),
-                              ),
-                              SizedBox(height: 4.0),
-                              TextX(
-                                'Charts',
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 color: ColorX.gray.withOpacity(0.60),
                                 textAlign: TextAlign.center,
                               ),
@@ -164,7 +87,7 @@ class DemoBottomNavBarScreen extends StatelessWidget {
                               TextX(
                                 'Profile',
                                 fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 color: ColorX.gray,
                                 textAlign: TextAlign.center,
                               ),
@@ -182,45 +105,7 @@ class DemoBottomNavBarScreen extends StatelessWidget {
                               TextX(
                                 'Profile',
                                 fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorX.gray.withOpacity(0.60),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          label: ''),
-                      BottomNavigationBarItem(
-                          activeIcon: Column(
-                            children: [
-                              ImageX(
-                                faIcon: FontAwesomeIcons.gear,
-                                height: 24.0,
-                                width: 24.0,
-                                color: ColorX.gray,
-                              ),
-                              SizedBox(height: 4.0),
-                              TextX(
-                                'Settings',
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
-                                color: ColorX.gray,
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
-                          ),
-                          icon: Column(
-                            children: [
-                              ImageX(
-                                faIcon: FontAwesomeIcons.gear,
-                                height: 24.0,
-                                width: 24.0,
-                                color: ColorX.gray.withOpacity(0.60),
-                              ),
-                              SizedBox(height: 4.0),
-                              TextX(
-                                'Settings',
-                                fontSize: 15.0,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w500,
                                 color: ColorX.gray.withOpacity(0.60),
                                 textAlign: TextAlign.center,
                               ),

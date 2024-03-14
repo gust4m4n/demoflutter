@@ -1,5 +1,5 @@
 import '../../../utils/all_utils.dart';
-import '../../viewmodels/demo_anti_jailbreak_vm.dart';
+import '../../viewmodels/demo_profile_vm.dart';
 import '../../widgets/all_widgets.dart';
 
 class DemoBottomNavBarController extends SuperController {
@@ -10,6 +10,9 @@ class DemoBottomNavBarController extends SuperController {
   void onReady() {
     super.onReady();
     StatusBarX.setDark();
+    DemoProfileVM.request().then((resp) {
+      update();
+    });
   }
 
   @override
@@ -30,7 +33,7 @@ class DemoBottomNavBarController extends SuperController {
   @override
   Future<void> onResumed() async {
     LoggerX.log('[DemoBottomNavBarController] onResumed');
-    await DemoAntiJailbreakVM.check();
+    //await DemoAntiJailbreakVM.check();
   }
 
   @override
@@ -41,24 +44,21 @@ class DemoBottomNavBarController extends SuperController {
   onChange(int index) {
     LoggerX.log('DemoBottomNavBarController.onChange: $index');
     tabBarIndex = index;
-    update();
 
     switch (index) {
-      case 0:
+      case 0: // Home
         StatusBarX.setLight();
         //final HomeController controller = Get.find();
         //controller.reloadAll();
+        update();
         break;
-      case 1:
+      case 1: // Profile
         StatusBarX.setLight();
-        break;
-      case 2:
-        StatusBarX.setLight();
+        update();
         break;
     }
   }
-  
+
   @override
-  void onHidden() {
-  }
+  void onHidden() {}
 }

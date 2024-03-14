@@ -2,19 +2,19 @@ import 'dart:async';
 import 'demo_preferences_vm.dart';
 
 extension DemoUserPreferencesVM on DemoPreferencesVM {
-  static Future<void> setToken(String value) async {
+  static Future<void> setProfile(String value) async {
     await DemoPreferencesVM.setString(
-        '81cd0129d09c01062bb0652902fe9188545070a9bb9478f01efcf65ba7e56f8a',
+        'ffaa1ca7884538c1f480d413a183db1c2df42f8cc5e6b48e791e07549d556796',
         value);
   }
 
-  static Future<String> getToken() async {
+  static Future<String> getProfile() async {
     return await DemoPreferencesVM.getString(
-        '81cd0129d09c01062bb0652902fe9188545070a9bb9478f01efcf65ba7e56f8a');
+        'ffaa1ca7884538c1f480d413a183db1c2df42f8cc5e6b48e791e07549d556796');
   }
 
   static Future<void> resetAll() async {
-    await setToken('');
+    await setProfile('');
     await DemoPreferencesVM.deleteAll();
   }
 }

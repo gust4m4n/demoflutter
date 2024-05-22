@@ -11,9 +11,6 @@ class DemoLauncherCell extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width =
-        ((MediaQuery.of(Get.context!).size.width - (8.0 * 2)) - (4.0 * 16.0)) /
-            4.0;
     return Material(
         color: ColorX.transparent,
         child: InkWell(

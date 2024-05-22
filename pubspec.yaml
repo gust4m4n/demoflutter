@@ -2,7 +2,7 @@ name: demoflutter
 description: DemoFlutter.
 version: 1.0.0+1
 environment: 
-  sdk: '>=2.19.0 <=3.3.2'
+  sdk: '>=3.3.2 <=3.4.0'
 dependencies: 
   flutter: 
     sdk: flutter
@@ -38,11 +38,11 @@ dependencies:
   carousel_slider: ^4.2.1
   sqflite: ^2.3.0
   fl_chart: ^0.66.2
-  screenshot: ^2.1.0
   local_auth: ^2.1.8
   barcode_widget: ^2.0.4
   pdfx: ^2.6.0
   package_info_plus: ^4.2.0
+  screenshot: ^3.0.0
 
 
 dev_dependencies: 
